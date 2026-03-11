@@ -1,5 +1,6 @@
 import { buildConfig } from 'payload'
 import { sqliteAdapter } from '@payloadcms/db-sqlite'
+import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
 import { fileURLToPath } from 'url'
@@ -18,6 +19,8 @@ const getEnv = (key: string, fallback: string) => {
   return process.env[key] || fallback
 }
 
+const databaseUri = getEnv('DATABASE_URI', '')
+
 export default buildConfig({
   secret: getEnv('PAYLOAD_SECRET', 'seu-secret-seguro-aqui-desenvolvimento'),
   serverURL: getEnv('PAYLOAD_PUBLIC_SERVER_URL', 'http://localhost:3001'),
@@ -30,11 +33,17 @@ export default buildConfig({
     Services,
   ],
   editor: lexicalEditor({}),
-  db: sqliteAdapter({
-    client: {
-      url: 'file:payload.db',
-    },
-  }),
+  db: databaseUri && databaseUri.startsWith('postgres')
+    ? postgresAdapter({
+        pool: {
+          connectionString: databaseUri,
+        },
+      })
+    : sqliteAdapter({
+        client: {
+          url: 'file:payload.db',
+        },
+      }),
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
