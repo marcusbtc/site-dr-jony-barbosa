@@ -1,0 +1,35 @@
+---
+import type { ExtendedServiceItem } from '../../types';
+import { getRelatedServices } from '../../data/services-extended';
+import Card from '../ui/Card.astro';
+
+interface Props {
+  service: ExtendedServiceItem;
+  category: string;
+}
+
+const { service, category } = Astro.props;
+const relatedServices = getRelatedServices(service, 3);
+---
+
+{relatedServices.length > 0 && (
+  <section class="py-20 md:py-28 bg-white border-t border-slate-100">
+    <div class="container mx-auto px-6 max-w-7xl">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary text-center mb-4">Serviços Relacionados</h2>
+      <p class="text-lg text-slate-600 text-center font-light mb-12">
+        Conheça outros serviços que podem complementar seu tratamento
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {relatedServices.map(relatedService => (
+          <Card
+            title={relatedService.title}
+            description={relatedService.description}
+            href={`/${category}/${relatedService.slug}`}
+            linkText="Saiba Mais"
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+)}

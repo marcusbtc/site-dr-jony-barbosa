@@ -1,0 +1,52 @@
+---
+import Slider from './ui/Slider.astro';
+import Button from './ui/Button.astro';
+import { servicesExtended } from '../data/services-extended';
+
+// Get non-surgical services (consultas, avaliações, etc)
+const servicosGerais = servicesExtended
+  .filter(s => s.category === 'servico')
+  .filter(s => ['consulta-medica-goiania', 'avaliacao-fetal-goiania', 'cirurgia-ginecologica-goiania'].includes(s.slug));
+---
+
+<section id="servicos-gerais" class="py-24 lg:py-32 bg-white">
+  <div class="container mx-auto px-6 lg:px-16 max-w-7xl">
+    <Slider
+      id="servicos-slider"
+      title="Serviços"
+      subtitle="Atendimento Humanizado e Personalizado"
+    >
+      {servicosGerais.map((servico) => (
+        <a
+          href={`/servicos/${servico.slug}`}
+          class="block bg-white p-8 rounded-xl border border-slate-200 hover:border-accent hover:shadow-lg transition-all h-full"
+        >
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-serif font-bold text-primary mb-2">{servico.title}</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">{servico.description}</p>
+            </div>
+          </div>
+          <div class="flex items-center text-accent text-sm font-semibold mt-4">
+            Saiba mais
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </div>
+        </a>
+      ))}
+    </Slider>
+
+    <div class="text-center mt-12">
+      <Button variant="primary" href="/servicos">
+        Ver Todos os Serviços
+      </Button>
+    </div>
+  </div>
+</section>

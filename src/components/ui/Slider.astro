@@ -1,0 +1,600 @@
+---
+interface Props {
+  id: string;
+  title?: string;
+  subtitle?: string;
+  autoplay?: boolean;
+  autoplayInterval?: number;
+}
+
+const { id, title, subtitle, autoplay = true, autoplayInterval = 4000 } = Astro.props;
+---
+
+<div class="slider-wrapper">
+  {(title || subtitle) && (
+    <div class="slider-header">
+      {title && (
+        <h2 class="slider-title">
+          <span class="title-accent"></span>
+          {title}
+        </h2>
+      )}
+      {subtitle && <p class="slider-subtitle">{subtitle}</p>}
+    </div>
+  )}
+
+  <div class="slider-stage">
+    <button
+      class="nav-button nav-prev"
+      data-slider={id}
+      data-direction="prev"
+      aria-label="Anterior"
+    >
+      <div class="nav-button-inner">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </div>
+    </button>
+
+    <div class="slider-viewport">
+      <div
+        id={id}
+        class="slider-track"
+        data-slider-track
+        data-autoplay={autoplay}
+        data-autoplay-interval={autoplayInterval}
+      >
+        <slot />
+      </div>
+    </div>
+
+    <button
+      class="nav-button nav-next"
+      data-slider={id}
+      data-direction="next"
+      aria-label="Próximo"
+    >
+      <div class="nav-button-inner">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </div>
+    </button>
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-dots" id={`${id}-dots`}></div>
+  </div>
+</div>
+
+<style>
+  .slider-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 0;
+  }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     HEADER - Refined typography with accent element
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  .slider-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+  }
+
+  .slider-title {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-family: var(--font-serif);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.02em;
+    position: relative;
+    display: inline-block;
+  }
+
+  .title-accent {
+    position: absolute;
+    top: -0.5rem;
+    left: -1rem;
+    width: 3rem;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-secondary) 0%, transparent 100%);
+    border-radius: 2px;
+  }
+
+  .slider-subtitle {
+    font-size: 1.125rem;
+    color: #64748b;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    margin: 0;
+  }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     STAGE - Container for slider and navigation (FULLWIDTH)
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  .slider-stage {
+    position: relative;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     VIEWPORT & TRACK - Smooth scrolling container
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  .slider-viewport {
+    overflow: visible; /* Allow cards to show shadow/scale without cutoff */
+    position: relative;
+  }
+
+  .slider-track {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 1rem 0.25rem 2rem;
+    margin: 0;
+  }
+
+  @media (min-width: 1024px) {
+    .slider-track {
+      gap: 2rem;
+      padding: 1rem 0.5rem 2rem;
+    }
+  }
+
+  .slider-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .slider-track > :global(*) {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    width: calc(100% - 1rem);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+                opacity 0.4s ease;
+  }
+
+  .slider-track:hover > :global(*) {
+    opacity: 0.7;
+  }
+
+  .slider-track > :global(*:hover) {
+    transform: translateY(-8px) scale(1.02);
+    opacity: 1 !important;
+    z-index: 10;
+  }
+
+  @media (min-width: 640px) {
+    .slider-track {
+      gap: 1.5rem;
+    }
+
+    .slider-track > :global(*) {
+      width: calc(50% - 0.75rem);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .slider-track {
+      gap: 2rem;
+    }
+
+    .slider-track > :global(*) {
+      width: calc(33.333% - 1.333rem);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .slider-track > :global(*) {
+      width: calc(25% - 1.5rem);
+    }
+  }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     NAVIGATION BUTTONS - Elegant glass-morphism pills
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: none;
+    opacity: 0;
+    animation: fadeInNav 0.6s ease forwards;
+    animation-delay: 0.3s;
+  }
+
+  @keyframes fadeInNav {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .nav-button {
+      display: block;
+    }
+  }
+
+  .nav-button-inner {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid var(--color-secondary);
+    box-shadow: 0 4px 12px rgba(184, 146, 116, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .nav-button-inner svg {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-button:hover .nav-button-inner {
+    background: var(--color-secondary);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(184, 146, 116, 0.3);
+  }
+
+  .nav-button:hover .nav-button-inner svg {
+    color: white;
+  }
+
+  .nav-button:active .nav-button-inner {
+    transform: scale(0.98);
+  }
+
+  .nav-prev {
+    left: 0rem;
+  }
+
+  .nav-next {
+    right: 0rem;
+  }
+
+  @media (min-width: 1024px) {
+    .nav-prev {
+      left: -1.75rem;
+    }
+
+    .nav-next {
+      right: -1.75rem;
+    }
+  }
+
+  .nav-prev .nav-button-inner svg {
+    transform: translateX(-1px);
+  }
+
+  .nav-next .nav-button-inner svg {
+    transform: translateX(1px);
+  }
+
+  .nav-button:hover.nav-prev .nav-button-inner svg {
+    transform: translateX(-3px) scale(1.1);
+  }
+
+  .nav-button:hover.nav-next .nav-button-inner svg {
+    transform: translateX(3px) scale(1.1);
+  }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     PROGRESS INDICATORS - Refined progress bars
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  .progress-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    padding: 0 1rem;
+  }
+
+  .progress-dots {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: white;
+    border-radius: 2rem;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 2px 8px rgba(30, 77, 123, 0.04);
+  }
+
+  .progress-dots:empty {
+    display: none;
+  }
+
+  :global(.slider-dot) {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  :global(.slider-dot:hover) {
+    background: var(--color-secondary);
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+
+  :global(.slider-dot.active) {
+    background: var(--color-secondary);
+    width: 2rem;
+    border-radius: 4px;
+  }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     CARD ENHANCEMENTS - Applied to slotted content
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  .slider-track > :global(a),
+  .slider-track > :global(.card) {
+    background: white;
+    border-radius: 1.25rem;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow:
+      0 2px 8px rgba(30, 77, 123, 0.04),
+      0 1px 4px rgba(30, 77, 123, 0.02);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slider-track > :global(a:hover),
+  .slider-track > :global(.card:hover) {
+    border-color: var(--color-secondary);
+    box-shadow: 0 12px 32px rgba(184, 146, 116, 0.15);
+  }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     LOADING STATE - Elegant entrance animation
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  .slider-track > :global(*) {
+    animation: slideIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+  }
+
+  .slider-track > :global(*:nth-child(1)) { animation-delay: 0.1s; }
+  .slider-track > :global(*:nth-child(2)) { animation-delay: 0.15s; }
+  .slider-track > :global(*:nth-child(3)) { animation-delay: 0.2s; }
+  .slider-track > :global(*:nth-child(4)) { animation-delay: 0.25s; }
+  .slider-track > :global(*:nth-child(n+5)) { animation-delay: 0.3s; }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     MOBILE REFINEMENTS
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  @media (max-width: 1023px) {
+    .slider-track {
+      padding: 1.5rem 0.25rem;
+      margin: -1.5rem -0.25rem;
+    }
+
+    .progress-dots {
+      padding: 0.5rem 1rem;
+    }
+
+    :global(.slider-dot) {
+      width: 1.5rem;
+    }
+
+    :global(.slider-dot.active) {
+      width: 2.5rem;
+    }
+  }
+</style>
+
+<script>
+  function initSliders() {
+    const sliders = document.querySelectorAll('[data-slider-track]');
+
+    sliders.forEach((slider) => {
+      const id = slider.id;
+      const prevBtn = document.querySelector(`[data-slider="${id}"][data-direction="prev"]`) as HTMLElement;
+      const nextBtn = document.querySelector(`[data-slider="${id}"][data-direction="next"]`) as HTMLElement;
+      const dotsContainer = document.getElementById(`${id}-dots`) as HTMLElement;
+
+      if (!slider || !prevBtn || !nextBtn || !dotsContainer) return;
+
+      const itemCount = slider.children.length;
+      const autoplay = slider.dataset.autoplay === 'true';
+      const autoplayInterval = parseInt(slider.dataset.autoplayInterval || '4000');
+
+      let autoplayTimer: number | null = null;
+      let isHovering = false;
+      let manualInteraction = false;
+
+      function getItemsPerView(): number {
+        const width = window.innerWidth;
+        if (width >= 1280) return 4;
+        if (width >= 1024) return 3;
+        if (width >= 640) return 2;
+        return 1;
+      }
+
+      function createDots() {
+        const itemsPerView = getItemsPerView();
+        const dotsCount = Math.ceil(itemCount / itemsPerView);
+
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < dotsCount; i++) {
+          const dot = document.createElement('div');
+          dot.className = 'slider-dot';
+          dot.dataset.index = i.toString();
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function getCurrentIndex(): number {
+        const scrollLeft = slider.scrollLeft;
+        const itemWidth = slider.children[0]?.getBoundingClientRect().width || 0;
+        const gap = parseFloat(getComputedStyle(slider).gap) || 24;
+        return Math.round(scrollLeft / (itemWidth + gap));
+      }
+
+      function updateDots() {
+        const currentIndex = getCurrentIndex();
+        const dots = dotsContainer.querySelectorAll('.slider-dot');
+
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === currentIndex);
+        });
+      }
+
+      function scrollToIndex(index: number) {
+        const itemWidth = slider.children[0]?.getBoundingClientRect().width || 0;
+        const gap = parseFloat(getComputedStyle(slider).gap) || 24;
+        slider.scrollTo({
+          left: index * (itemWidth + gap),
+          behavior: 'smooth'
+        });
+      }
+
+      function goToNext() {
+        const itemsPerView = getItemsPerView();
+        const maxIndex = Math.ceil(itemCount / itemsPerView) - 1;
+        const currentIndex = getCurrentIndex();
+        const nextIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+        scrollToIndex(nextIndex);
+      }
+
+      function startAutoplay() {
+        if (!autoplay) return;
+        stopAutoplay();
+        autoplayTimer = window.setInterval(goToNext, autoplayInterval);
+      }
+
+      function stopAutoplay() {
+        if (autoplayTimer) {
+          clearInterval(autoplayTimer);
+          autoplayTimer = null;
+        }
+      }
+
+      // Navigation buttons
+      prevBtn.addEventListener('click', () => {
+        manualInteraction = true;
+        stopAutoplay();
+        const itemWidth = slider.children[0]?.getBoundingClientRect().width || 0;
+        const gap = parseFloat(getComputedStyle(slider).gap) || 24;
+        slider.scrollBy({
+          left: -(itemWidth + gap),
+          behavior: 'smooth'
+        });
+        setTimeout(() => {
+          manualInteraction = false;
+          if (!isHovering) startAutoplay();
+        }, 1000);
+      });
+
+      nextBtn.addEventListener('click', () => {
+        manualInteraction = true;
+        stopAutoplay();
+        const itemWidth = slider.children[0]?.getBoundingClientRect().width || 0;
+        const gap = parseFloat(getComputedStyle(slider).gap) || 24;
+        slider.scrollBy({
+          left: itemWidth + gap,
+          behavior: 'smooth'
+        });
+        setTimeout(() => {
+          manualInteraction = false;
+          if (!isHovering) startAutoplay();
+        }, 1000);
+      });
+
+      // Dot navigation
+      dotsContainer.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        if (target.classList.contains('slider-dot')) {
+          manualInteraction = true;
+          stopAutoplay();
+          const index = parseInt(target.dataset.index || '0');
+          scrollToIndex(index);
+          setTimeout(() => {
+            manualInteraction = false;
+            if (!isHovering) startAutoplay();
+          }, 1000);
+        }
+      });
+
+      // Hover pause
+      slider.addEventListener('mouseenter', () => {
+        isHovering = true;
+        stopAutoplay();
+      });
+
+      slider.addEventListener('mouseleave', () => {
+        isHovering = false;
+        if (!manualInteraction) startAutoplay();
+      });
+
+      // Scroll listener
+      let scrollTimeout: number;
+      slider.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = window.setTimeout(updateDots, 50);
+      });
+
+      // Resize handler
+      let resizeTimeout: number;
+      let previousItemsPerView = getItemsPerView();
+
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = window.setTimeout(() => {
+          const currentItemsPerView = getItemsPerView();
+          if (currentItemsPerView !== previousItemsPerView) {
+            createDots();
+            updateDots();
+            previousItemsPerView = currentItemsPerView;
+          }
+        }, 150);
+      });
+
+      // Initialize
+      createDots();
+      updateDots();
+
+      // Start autoplay after a brief delay
+      if (autoplay) {
+        setTimeout(startAutoplay, 500);
+      }
+    });
+  }
+
+  // Run on load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSliders);
+  } else {
+    initSliders();
+  }
+</script>

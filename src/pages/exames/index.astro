@@ -1,0 +1,12 @@
+---
+import CategoryLayout from '../../layouts/CategoryLayout.astro';
+import { serviceCategories } from '../../data/categories';
+import { getAllServicesByCategory } from '../../data/services-extended';
+
+const category = serviceCategories.find(cat => cat.slug === 'exames');
+if (!category) throw new Error('Categoria exames não encontrada');
+
+const services = getAllServicesByCategory('exames');
+---
+
+<CategoryLayout category={category} services={services} />

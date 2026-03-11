@@ -1,0 +1,56 @@
+---
+import type { ClinicLocation } from '../../../data/neighborhoods';
+
+export interface Props {
+  neighborhoodName: string;
+  url: string;
+  clinic: ClinicLocation;
+  image?: string;
+}
+
+const { 
+  neighborhoodName, 
+  url,
+  clinic,
+  image = "https://drjonybarbosa.com.br/dr-jony-profile.webp"
+} = Astro.props;
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": ["MedicalBusiness", "Gynecologic", "Obstetric"],
+  "name": `Dr. Jony Barbosa - Ginecologista e Obstetra em Goiânia (${neighborhoodName})`,
+  "image": image,
+  "url": url,
+  "telephone": clinic.phone,
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": clinic.address.split(' - ')[0],
+    "addressLocality": "Goiânia",
+    "addressRegion": "GO",
+    "postalCode": clinic.address.match(/\d{5}-\d{3}/)?.[0] || "74000-000",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": clinic.geo.latitude,
+    "longitude": clinic.geo.longitude
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Goiânia"
+    },
+    {
+      "@type": "Neighborhood",
+      "name": neighborhoodName
+    }
+  ],
+  "medicalSpecialty": [
+    "Gynecology",
+    "Obstetrics"
+  ]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />

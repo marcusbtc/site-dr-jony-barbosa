@@ -1,0 +1,73 @@
+---
+import Button from './ui/Button.astro';
+---
+
+<section id="home" class="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-slate-50 relative overflow-hidden border-b border-slate-200">
+  <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
+  
+  <div class="container mx-auto px-6 lg:px-12 max-w-7xl relative z-10">
+    <div class="flex flex-col lg:flex-row items-center justify-between">
+      <!-- Content on the left (wider) -->
+      <div class="lg:w-3/5 space-y-8 relative z-20 pb-12 lg:pb-0">
+        <div class="space-y-4">
+          <h1 class="text-5xl lg:text-7xl font-serif font-bold text-primary leading-[1.1] tracking-tight">
+            Dr. Jony Barbosa
+          </h1>
+          <p class="text-xl lg:text-2xl text-secondary font-medium tracking-wide">
+            Ginecologista e Obstetra
+          </p>
+          <p class="text-xs text-secondary/70 uppercase tracking-[0.2em] font-bold">
+            CRM: 7652 | RQE Nº 3900 | RQE Nº 9229
+          </p>
+        </div>
+
+        <div class="h-px bg-secondary/30 w-24"></div>
+
+        <p class="text-lg text-slate-600 leading-relaxed font-light">
+          Atendimento humanizado e especializado em ginecologia, obstetrícia e medicina fetal em Goiânia.
+          Cuidado integral da saúde da mulher com tecnologia de ponta e acolhimento profissional.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 pt-6">
+          <Button variant="primary" class="text-base px-10 py-4 shadow-xl shadow-primary/20">
+            Agendar Consulta
+          </Button>
+          <Button variant="outline" href="/especialidades" class="text-base px-10 py-4 border-slate-300 text-slate-600 hover:border-secondary">
+            Especialidades
+          </Button>
+        </div>
+      </div>
+
+      <!-- Image on the right (overlapping style) -->
+      <div class="lg:w-2/5 relative mt-12 lg:mt-0">
+        <div class="relative w-full max-w-md mx-auto">
+          <!-- Decorative backing -->
+          <div class="absolute inset-0 bg-primary rounded-2xl transform translate-x-4 translate-y-4"></div>
+          
+          <img
+            src="/dr-jony-profile.webp"
+            alt="Dr. Jony Barbosa Ginecologista Goiânia"
+            width="504"
+            height="619"
+            class="w-full h-auto object-cover rounded-2xl shadow-lg relative z-10 border border-slate-200"
+          />
+          
+          <!-- Experience Card (Overlapping the image) -->
+          <div class="absolute -bottom-6 -left-6 lg:-left-12 bg-white border border-slate-200 p-5 rounded-xl shadow-xl z-20 max-w-xs">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center text-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-bold text-primary text-sm">Cuidado Premium</p>
+                <p class="text-xs text-slate-500">Mais de 15 anos de foco na saúde feminina</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

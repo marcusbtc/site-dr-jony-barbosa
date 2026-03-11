@@ -1,0 +1,19 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  class?: string;
+}
+
+const { title, subtitle, class: className = '' } = Astro.props;
+---
+
+<div class={`text-center mb-12 ${className}`}>
+  {subtitle && (
+    <span class="text-accent uppercase tracking-widest text-sm font-bold mb-2 block">
+      {subtitle}
+    </span>
+  )}
+  <h2 class="text-3xl md:text-4xl font-serif text-primary mb-4">{title}</h2>
+  <div class="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+</div>

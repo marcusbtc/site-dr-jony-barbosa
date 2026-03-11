@@ -1,0 +1,12 @@
+---
+import SectionTitle from './ui/SectionTitle.astro';
+import Accordion from './Accordion';
+import { faqs } from '../data/site-data';
+---
+
+<section id="faq" class="py-24 bg-blue-50/50">
+  <div class="container mx-auto px-6">
+    <SectionTitle title="Perguntas Frequentes (FAQ)" />
+    <Accordion items={faqs} client:visible />
+  </div>
+</section>

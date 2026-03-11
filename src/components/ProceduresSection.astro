@@ -1,0 +1,51 @@
+---
+import Slider from './ui/Slider.astro';
+import Button from './ui/Button.astro';
+import { servicesExtended } from '../data/services-extended';
+
+// Get surgical procedures only
+const procedimentos = servicesExtended
+  .filter(s => s.category === 'servico')
+  .filter(s => ['videolaparoscopia-goiania', 'histeroscopia-goiania', 'histerectomia-goiania', 'videohisteroscopia-goiania'].includes(s.slug));
+---
+
+<section id="procedimentos" class="py-24 lg:py-32 bg-slate-50">
+  <div class="container mx-auto px-6 lg:px-16 max-w-7xl">
+    <Slider
+      id="procedimentos-slider"
+      title="Procedimentos Cirúrgicos"
+      subtitle="Cirurgias Minimamente Invasivas com Segurança"
+    >
+      {procedimentos.map((proc) => (
+        <a
+          href={`/servicos/${proc.slug}`}
+          class="block bg-white p-8 rounded-xl border border-slate-200 hover:border-accent hover:shadow-lg transition-all h-full"
+        >
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                <path d="M11 2a2 2 0 0 0-2 2v5H4a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h5v5c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-5h5a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-5V4a2 2 0 0 0-2-2h-2z"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-serif font-bold text-primary mb-2">{proc.title}</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">{proc.description}</p>
+            </div>
+          </div>
+          <div class="flex items-center text-accent text-sm font-semibold mt-4">
+            Saiba mais
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </div>
+        </a>
+      ))}
+    </Slider>
+
+    <div class="text-center mt-12">
+      <Button variant="primary" href="/servicos">
+        Ver Todos os Procedimentos
+      </Button>
+    </div>
+  </div>
+</section>

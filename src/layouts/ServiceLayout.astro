@@ -1,0 +1,62 @@
+---
+import type { ExtendedServiceItem } from '../types';
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/seo/Breadcrumbs.astro';
+import SchemaMarkup from '../components/seo/SchemaMarkup.astro';
+import ServiceHero from '../components/service-page/ServiceHero.astro';
+import ServiceContent from '../components/service-page/ServiceContent.astro';
+import RelatedServices from '../components/service-page/RelatedServices.astro';
+import ServiceFaq from '../components/service-page/ServiceFaq.astro';
+import ServiceCta from '../components/service-page/ServiceCta.astro';
+
+interface Props {
+  service: ExtendedServiceItem;
+  category: string;
+}
+
+const { service, category } = Astro.props;
+
+// Mapeamento de categorias para nomes de exibição
+const categoryNames: Record<string, string> = {
+  'especialidades': 'Especialidades',
+  'exames': 'Exames',
+  'servicos': 'Serviços'
+};
+
+const breadcrumbItems = [
+  { label: 'Início', href: '/' },
+  { label: categoryNames[category] || category, href: `/${category}` },
+  { label: service.title, href: `/${category}/${service.slug}` }
+];
+---
+
+<BaseLayout
+  title={service.metaTitle}
+  description={service.metaDescription}
+  canonicalUrl={service.canonicalUrl}
+  ogImage={service.ogImage}
+  keywords={service.keywords}
+>
+  <SchemaMarkup slot="head" service={service} category={category} />
+
+  <Header />
+
+  <main class="min-h-screen pt-20 pb-12">
+    <div class="mx-auto px-6 lg:px-12 max-w-7xl pt-0 pb-0">
+      <Breadcrumbs items={breadcrumbItems} />
+    </div>
+
+    <ServiceHero service={service} />
+    <ServiceContent service={service} />
+    <RelatedServices service={service} category={category} />
+    <ServiceFaq faqs={service.faq} serviceTitle={service.title} />
+    <ServiceCta service={service} />
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+</style>

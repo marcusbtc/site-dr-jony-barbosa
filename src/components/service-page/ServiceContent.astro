@@ -1,0 +1,72 @@
+---
+import type { ExtendedServiceItem } from '../../types';
+
+interface Props {
+  service: ExtendedServiceItem;
+}
+
+const { service } = Astro.props;
+---
+
+<section id="sobre" class="py-16 md:py-24 bg-white">
+  <div class="container mx-auto px-6 max-w-4xl">
+    <!-- O que é -->
+    <div class="mb-14">
+      <h2 class="text-3xl font-serif font-bold text-primary mb-6">O que é {service.title}?</h2>
+      <p class="text-lg text-slate-700 leading-relaxed font-light">{service.whatIsIt}</p>
+    </div>
+
+    <!-- Quando é indicado -->
+    {service.whoNeedsIt && service.whoNeedsIt.length > 0 && (
+      <div class="mb-14">
+        <h2 class="text-2xl font-serif font-bold text-primary mb-6">Quando é Indicado?</h2>
+        <ul class="space-y-4">
+          {service.whoNeedsIt.map(indication => (
+            <li class="flex items-start gap-3 text-slate-700 text-lg font-light leading-relaxed">
+              <svg class="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>{indication}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    <!-- Como funciona -->
+    {service.howItWorks && service.howItWorks.length > 0 && (
+      <div class="mb-14">
+        <h2 class="text-2xl font-serif font-bold text-primary mb-6">Como Funciona?</h2>
+        <ol class="space-y-6">
+          {service.howItWorks.map((step, index) => (
+            <li class="flex items-start gap-4">
+              <div class="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-primary to-[#1a3f63] text-white font-bold text-lg flex-shrink-0 shadow-md">
+                {index + 1}
+              </div>
+              <p class="text-lg text-slate-700 font-light leading-relaxed pt-1">{step}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    )}
+
+    <!-- Benefícios -->
+    {service.benefits && service.benefits.length > 0 && (
+      <div>
+        <h2 class="text-2xl font-serif font-bold text-primary mb-6">Benefícios</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {service.benefits.map(benefit => (
+            <div class="flex items-start gap-4 p-6 bg-slate-50 rounded-xl border border-slate-200 transition-all hover:-translate-y-1 hover:shadow-lg group">
+              <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <p class="text-slate-700 font-light leading-relaxed">{benefit}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</section>

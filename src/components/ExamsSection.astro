@@ -1,0 +1,29 @@
+---
+import Slider from './ui/Slider.astro';
+import Card from './ui/Card.astro';
+import Button from './ui/Button.astro';
+import { servicesExtended } from '../data/services-extended';
+
+// Get all exams for homepage
+const exames = servicesExtended.filter(s => s.category === 'exame');
+---
+
+<section id="exames" class="py-24 lg:py-32 bg-slate-50">
+  <div class="container mx-auto px-6 lg:px-16 max-w-7xl">
+    <Slider
+      id="exames-slider"
+      title="Exames Especializados"
+      subtitle="Diagnóstico de Precisão com Tecnologia Avançada"
+    >
+      {exames.map((exam) => (
+        <Card item={exam} type="exam" />
+      ))}
+    </Slider>
+
+    <div class="text-center mt-12">
+      <Button variant="accent" href="/exames">
+        Ver Todos os Exames
+      </Button>
+    </div>
+  </div>
+</section>

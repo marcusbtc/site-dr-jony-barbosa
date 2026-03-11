@@ -1,0 +1,20 @@
+---
+import type { GetStaticPaths } from 'astro';
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import { servicesExtended } from '../../data/services-extended';
+
+export const getStaticPaths = (() => {
+  const servicoServices = servicesExtended.filter(
+    service => service.category === 'servico'
+  );
+
+  return servicoServices.map(service => ({
+    params: { slug: service.slug },
+    props: { service, category: 'servicos' }
+  }));
+}) satisfies GetStaticPaths;
+
+const { service, category } = Astro.props;
+---
+
+<ServiceLayout service={service} category={category} />

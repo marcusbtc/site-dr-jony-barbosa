@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+
+  --color-primary: #1e4d7b; /* Azul Profundo */
+  --color-secondary: #4fb3bf; /* Azul Ciano/Claro */
+  --color-accent: #f59e0b; /* Laranja Original */
+  --color-bgLight: #f0f4f8; /* Azul Claro/Gelo */
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for horizontal scroll sections */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

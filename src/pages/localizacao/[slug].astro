@@ -1,0 +1,150 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import LocalSchema from '../../components/seo/LocalSchema.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import Button from '../../components/ui/Button.astro';
+import WhyChooseSection from '../../components/WhyChooseSection.astro';
+import ServicesSection from '../../components/ServicesSection.astro';
+import CategoriesSection from '../../components/CategoriesSection.astro';
+import PrenatalHighlight from '../../components/PrenatalHighlight.astro';
+import ExamsSection from '../../components/ExamsSection.astro';
+import ProceduresSection from '../../components/ProceduresSection.astro';
+import AboutDoctor from '../../components/AboutDoctor.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import CtaSection from '../../components/CtaSection.astro';
+import { nobleNeighborhoods, type NeighborhoodData } from '../../data/neighborhoods';
+
+export const getStaticPaths = (() => {
+  return nobleNeighborhoods.map((neighborhood) => ({
+    params: { slug: neighborhood.slug },
+    props: { neighborhood }
+  }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+  neighborhood: NeighborhoodData;
+}
+
+const { neighborhood } = Astro.props;
+
+const breadcrumbItems = [
+  { label: 'Início', href: '/' },
+  { label: 'Localização', href: '#' },
+  { label: neighborhood.name, href: `/localizacao/${neighborhood.slug}` }
+];
+
+// Localized SEO Meta
+const title = `Ginecologista e Obstetra no ${neighborhood.name} - Goiânia | Dr. Jony Barbosa`;
+const description = `Dr. Jony Barbosa: Atendimento premium em Ginecologia e Obstetrícia no ${neighborhood.name}, Goiânia. Agende sua consulta. ${neighborhood.description.substring(0, 80)}...`;
+const canonicalUrl = `https://drjonybarbosa.com.br/localizacao/${neighborhood.slug}`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalUrl={canonicalUrl}
+>
+  <LocalSchema slot="head" neighborhoodName={neighborhood.name} url={canonicalUrl} clinic={neighborhood.clinic} />
+  
+  <div class="min-h-screen flex flex-col font-sans text-slate-600">
+    <Header />
+    
+    <div class="mx-auto px-6 lg:px-12 max-w-7xl pt-[90px] pb-2">
+      <Breadcrumbs items={breadcrumbItems} />
+    </div>
+
+    <!-- Localized Hero Section -->
+    <section class="pt-8 pb-16 lg:pt-12 lg:pb-24 bg-slate-50 relative overflow-hidden border-b border-slate-200">
+      <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
+      
+      <div class="container mx-auto px-6 lg:px-12 max-w-7xl relative z-10">
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <div class="lg:w-3/5 space-y-8 relative z-20 pb-12 lg:pb-0">
+            <div class="space-y-4">
+              <span class="text-sm font-bold tracking-wider text-accent uppercase">Atendimento Premium em Goiânia</span>
+              <h1 class="text-5xl lg:text-7xl font-serif font-bold text-primary leading-[1.1] tracking-tight">
+                Ginecologista no <br/> <span class="text-secondary">{neighborhood.name}</span>
+              </h1>
+              <p class="text-xs text-secondary/70 uppercase tracking-[0.2em] font-bold">
+                Dr. Jony Barbosa | CRM 7652 | RQE 3900 | RQE 9229
+              </p>
+            </div>
+
+            <div class="h-px bg-secondary/30 w-24"></div>
+
+            <p class="text-lg text-slate-600 leading-relaxed font-light">
+              {neighborhood.description}
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 pt-6">
+              <Button variant="primary" href="#contato" class="text-base px-10 py-4 shadow-xl shadow-primary/20">
+                Agendar Consulta
+              </Button>
+              <Button variant="outline" href="/especialidades" class="text-base px-10 py-4 border-slate-300 text-slate-600 hover:border-secondary">
+                Especialidades
+              </Button>
+            </div>
+          </div>
+
+          <div class="lg:w-2/5 relative mt-12 lg:mt-0">
+            <div class="relative w-full max-w-md mx-auto">
+              <div class="absolute inset-0 bg-primary rounded-2xl transform translate-x-4 translate-y-4"></div>
+              
+              <img
+                src="/dr-jony-profile.webp"
+                alt={`Dr. Jony Barbosa Ginecologista ${neighborhood.name} Goiânia`}
+                width="504"
+                height="619"
+                class="w-full h-auto object-cover rounded-2xl shadow-lg relative z-10 border border-slate-200"
+              />
+              
+              <div class="absolute -bottom-6 -left-6 lg:-left-12 bg-white border border-slate-200 p-5 rounded-xl shadow-xl z-20 max-w-xs">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center text-primary flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-bold text-primary text-sm flex items-center gap-1">
+                      {neighborhood.clinic.name}
+                    </p>
+                    <p class="text-[10px] sm:text-xs text-slate-500 line-clamp-2 md:line-clamp-none" title={neighborhood.clinic.address}>
+                      {neighborhood.clinic.address.split('-')[0]}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="relative z-20">
+      <CategoriesSection />
+    </div>
+
+    <WhyChooseSection />
+    
+    <PrenatalHighlight />
+    
+    <ExamsSection />
+    
+    <ProceduresSection />
+    
+    <ServicesSection />
+    
+    <AboutDoctor />
+    
+    <FaqSection />
+    
+    <CtaSection />
+    
+    <Footer />
+  </div>
+</BaseLayout>

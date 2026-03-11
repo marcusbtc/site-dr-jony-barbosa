@@ -1,0 +1,87 @@
+---
+import type { ExtendedServiceItem } from '../../types';
+
+interface Props {
+  service: ExtendedServiceItem;
+  category: string;
+}
+
+const { service, category } = Astro.props;
+
+// Provider Schema (Dr. Jony)
+const providerSchema = {
+  "@type": "Physician",
+  "name": "Dr. Jony Rodrigues Barbosa",
+  "medicalSpecialty": ["Gynecology", "Obstetrics", "Fetal Medicine"],
+  "telephone": "+55-62-9950-4788",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua 3A, Policlínica Sao Luiz, 211",
+    "addressLocality": "Goiânia",
+    "addressRegion": "GO",
+    "postalCode": "74075-090",
+    "addressCountry": "BR"
+  }
+};
+
+// Base service schema
+const baseSchema = {
+  "@context": "https://schema.org",
+  "@type": service.schemaType,
+  "name": service.title,
+  "description": service.longDescription,
+  "provider": providerSchema,
+  "areaServed": {
+    "@type": "City",
+    "name": "Goiânia",
+    "addressRegion": "GO",
+    "addressCountry": "BR"
+  }
+};
+
+// Add duration if available
+if (service.estimatedDuration) {
+  baseSchema.estimatedDuration = service.estimatedDuration;
+}
+
+// Procedural enhancements based on schema type
+if (service.schemaType === 'MedicalProcedure') {
+  Object.assign(baseSchema, {
+    "procedureType": service.category === 'servico' ? 'Surgical' : 'Diagnostic',
+    "followup": "Acompanhamento pós-procedimento conforme necessidade",
+    "preparation": "Consulta pré-procedimento para orientações específicas"
+  });
+}
+
+if (service.schemaType === 'MedicalTest') {
+  Object.assign(baseSchema, {
+    "usesDevice": "Equipamento de ultrassonografia de alta resolução",
+    "signDetected": service.whoNeedsIt.join(', ')
+  });
+}
+
+// FAQ Schema (if FAQs exist)
+let faqSchema = null;
+if (service.faq && service.faq.length > 0) {
+  faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": service.faq.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+}
+---
+
+<!-- Main Service Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(baseSchema)} />
+
+<!-- FAQ Schema (if exists) -->
+{faqSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+)}
