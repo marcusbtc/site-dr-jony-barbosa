@@ -1,12 +1,29 @@
 ---
 import SectionTitle from './ui/SectionTitle.astro';
 import Button from './ui/Button.astro';
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+}
+
+const { 
+  title = "Especialidades e Cuidados",
+  subtitle = "Soluções completas para a saúde da mulher"
+} = Astro.props;
 ---
 
 <section class="pb-24 lg:pb-32 bg-slate-50 relative z-20">
   <div class="container mx-auto px-6 lg:px-12 max-w-7xl">
-    <!-- Offset grid to overlap the Hero section above -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative -mt-16 lg:-mt-24">
+    {title && (
+      <div class="text-center mb-16 lg:mb-24">
+        <h2 class="text-4xl lg:text-5xl font-serif font-bold text-primary mb-4">{title}</h2>
+        {subtitle && <p class="text-slate-500 text-lg max-w-2xl mx-auto">{subtitle}</p>}
+      </div>
+    )}
+    
+    <!-- Offset grid to overlap the Hero section above if no title, otherwise normal grid -->
+    <div class={`grid grid-cols-1 md:grid-cols-3 gap-8 relative ${!title ? '-mt-16 lg:-mt-24' : ''}`}>
       <!-- Especialidades -->
       <div class="bg-white p-8 rounded-xl border border-slate-200 hover:border-primary/30 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col">
         <div class="text-secondary mb-6 bg-bgLight w-16 h-16 rounded-full flex items-center justify-center">

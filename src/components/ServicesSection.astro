@@ -4,6 +4,16 @@ import Card from './ui/Card.astro';
 import Button from './ui/Button.astro';
 import { servicesExtended } from '../data/services-extended';
 
+interface Props {
+  title?: string;
+  subtitle?: string;
+}
+
+const { 
+  title = "Especialidades",
+  subtitle = "Cuidado Integral da Saúde Feminina"
+} = Astro.props;
+
 // Get all especialidades for homepage
 const especialidades = servicesExtended.filter(s => s.category === 'especialidade');
 ---
@@ -12,8 +22,8 @@ const especialidades = servicesExtended.filter(s => s.category === 'especialidad
   <div class="container mx-auto px-6 lg:px-16 max-w-7xl">
     <Slider
       id="especialidades-slider"
-      title="Especialidades"
-      subtitle="Cuidado Integral da Saúde Feminina"
+      title={title}
+      subtitle={subtitle}
     >
       {especialidades.map((service) => (
         <Card item={service} type="service" />
