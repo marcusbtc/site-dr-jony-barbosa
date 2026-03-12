@@ -34,17 +34,13 @@ const HeroSection: React.FC = () => {
               </Button>
             </div>
 
-            <div className="mt-12 flex items-center gap-6 justify-center lg:justify-start">
-              <div className="flex -space-x-3">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
-                    <img src="/dr-jony-profile.webp" alt="Dr. Jony Barbosa" className="w-full h-full object-cover" />
-                  </div>
-                ))}
-              </div>
-              <div className="text-sm text-slate-500 font-medium">
+            <div className="mt-12 inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white px-5 py-3 shadow-sm">
+              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+              </span>
+              <p className="text-sm text-slate-500 font-medium">
                 <span className="text-primary font-bold">+5.000</span> pacientes atendidas
-              </div>
+              </p>
             </div>
           </div>
 
