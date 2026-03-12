@@ -150,8 +150,8 @@ export const servicesExtended: ExtendedServiceItem[] = [
     relatedServices: [
       'consulta-medica-goiania',
       'ultrassom-mamas-goiania',
-      'histeroscopia-goiania',
-      'videolaparoscopia-goiania'
+      'insercao-diu-goiania',
+      'colposcopia-goiania'
     ],
 
     faq: [
@@ -847,7 +847,7 @@ export const servicesExtended: ExtendedServiceItem[] = [
   },
 
   // ============================================
-  // SERVIÇOS/PROCEDIMENTOS (6)
+  // SERVIÇOS/PROCEDIMENTOS (7)
   // ============================================
   {
     title: 'Avaliação Fetal',
@@ -905,7 +905,7 @@ export const servicesExtended: ExtendedServiceItem[] = [
     whoNeedsIt: ['Miomas volumosos com sangramento intenso', 'Adenomiose refratária a tratamento clínico', 'Prolapso uterino grave', 'Sangramento uterino anormal sem resposta a tratamento', 'Câncer de endométrio ou colo (após avaliação oncológica)'],
     howItWorks: ['Consulta pré-operatória com exames', 'Cirurgia sob anestesia geral', '3-4 pequenas incisões (0,5-1cm) no abdome', 'Remoção do útero por via laparoscópica', 'Internação de 1-2 dias', 'Recuperação completa em 2-4 semanas'],
     benefits: ['Via laparoscópica: menor dor pós-operatória', 'Recuperação mais rápida', 'Cicatrizes mínimas (estética)', 'Menor risco de infecção', 'Retorno às atividades em 2-3 semanas'],
-    relatedServices: ['videolaparoscopia-goiania', 'consulta-medica-goiania', 'ginecologia-goiania'],
+    relatedServices: ['laqueadura-tubaria-goiania', 'consulta-medica-goiania', 'ginecologia-goiania'],
     faq: [{question: 'Histerectomia causa menopausa?', answer: 'Não. Menopausa ocorre quando ovários param de funcionar. Na histerectomia removemos útero, mas ovários são preservados. Você continua ovulando normalmente, apenas não menstrua mais.'}],
     schemaType: 'MedicalProcedure',
     performedAt: 'Goiânia, Goiás',
@@ -913,90 +913,90 @@ export const servicesExtended: ExtendedServiceItem[] = [
   },
 
   {
-    title: 'Histeroscopia',
-    slug: 'histeroscopia-goiania',
-    description: 'Visualização interna do útero com câmera para diagnóstico e tratamento.',
+    title: 'Vasectomia',
+    slug: 'vasectomia-goiania',
+    description: 'Procedimento definitivo de contracepção masculina com recuperação rápida.',
     category: 'servico',
-    metaTitle: 'Histeroscopia em Goiânia | Dr. Jony Barbosa - Diagnóstica e Cirúrgica',
-    metaDescription: 'Histeroscopia diagnóstica e cirúrgica em Goiânia. Remoção de pólipos e miomas. Dr. Jony Barbosa. Agende: (62) 9950-4788',
-    keywords: ['histeroscopia goiânia', 'remoção pólipo útero goiás', 'histeroscopia cirúrgica goiânia'],
-    canonicalUrl: 'https://drjonybarbosa.com.br/servicos/histeroscopia-goiania',
-    longDescription: 'Exame e procedimento que permite visualizar e tratar o interior do útero.',
-    whatIsIt: 'Histeroscopia introduz câmera fina pelo colo uterino para visualizar cavidade uterina. Pode ser diagnóstica (apenas visualização) ou cirúrgica (remove pólipos, miomas submucosos, septo uterino). Feita ambulatorialmente ou com sedação conforme complexidade.',
-    whoNeedsIt: ['Sangramento uterino anormal', 'Pólipos endometriais', 'Mioma submucoso', 'Sinéquias (aderências intrauterinas)', 'Investigação de infertilidade', 'Abortos de repetição'],
-    howItWorks: ['Histeroscopia diagnóstica: ambulatorial, anestesia local', 'Histeroscopia cirúrgica: sedação ou anestesia geral', 'Introdução de histeroscópio pelo colo uterino', 'Visualização da cavidade e ressecção de lesões', 'Procedimento dura 10-30 minutos', 'Alta no mesmo dia'],
-    benefits: ['Diagnóstico e tratamento em mesmo procedimento', 'Minimamente invasivo (sem incisões)', 'Recuperação rápida (1-3 dias)', 'Resolve sangramento anormal', 'Melhora fertilidade quando há lesões intrauterinas'],
-    relatedServices: ['videolaparoscopia-goiania', 'ginecologia-goiania', 'consulta-medica-goiania'],
-    faq: [{question: 'Histeroscopia dói?', answer: 'A diagnóstica ambulatorial causa desconforto leve tipo cólica. A cirúrgica é feita com sedação/anestesia, então não há dor durante. Após, cólica leve controlada com analgésicos.'}],
+    metaTitle: 'Vasectomia em Goiânia | Dr. Jony Barbosa - Planejamento Familiar',
+    metaDescription: 'Vasectomia em Goiânia com técnica segura, recuperação rápida e orientação completa de planejamento familiar. Agende: (62) 9950-4788',
+    keywords: ['vasectomia goiânia', 'planejamento familiar masculino goiás', 'cirurgia contraceptiva masculina goiânia'],
+    canonicalUrl: 'https://drjonybarbosa.com.br/servicos/vasectomia-goiania',
+    longDescription: 'Procedimento cirúrgico definitivo para contracepção masculina com recuperação rápida.',
+    whatIsIt: 'A vasectomia é um procedimento cirúrgico de pequeno porte que interrompe a passagem dos espermatozoides pelos canais deferentes. É uma opção definitiva de planejamento familiar para homens que já definiram o número de filhos ou desejam um método contraceptivo duradouro para o casal.',
+    whoNeedsIt: ['Homens com prole definida', 'Casais que desejam método contraceptivo definitivo', 'Quem busca alternativa à laqueadura tubária', 'Pacientes que não desejam manter uso contínuo de anticoncepcionais', 'Casais em planejamento familiar definitivo'],
+    howItWorks: ['Consulta inicial para avaliação clínica e alinhamento sobre planejamento familiar', 'Procedimento realizado com anestesia local e técnica minimamente invasiva', 'Pequena abertura na bolsa escrotal para acesso aos canais deferentes', 'Bloqueio e secção dos canais deferentes', 'Alta no mesmo dia com orientações de repouso curto', 'Espermograma de controle após o procedimento para confirmar a eficácia'],
+    benefits: ['Método contraceptivo definitivo', 'Recuperação rápida', 'Procedimento ambulatorial', 'Baixo índice de complicações quando realizado com técnica adequada', 'Reduz a necessidade de métodos contraceptivos contínuos no casal'],
+    relatedServices: ['laqueadura-tubaria-goiania', 'consulta-medica-goiania', 'ginecologia-goiania'],
+    faq: [{question: 'A vasectomia faz efeito imediatamente?', answer: 'Não. É necessário manter outro método contraceptivo até o espermograma confirmar ausência de espermatozoides no sêmen, conforme orientação médica.'}],
     schemaType: 'MedicalProcedure',
     performedAt: 'Goiânia, Goiás',
-    estimatedDuration: '15-30 minutos'
+    estimatedDuration: '30-45 minutos'
   },
 
   {
-    title: 'Videolaparoscopia',
-    slug: 'videolaparoscopia-goiania',
-    description: 'Cirurgia ginecológica minimamente invasiva por pequenas incisões.',
+    title: 'Inserção de DIU',
+    slug: 'insercao-diu-goiania',
+    description: 'Colocação de DIU hormonal ou de cobre com orientação individualizada.',
     category: 'servico',
-    metaTitle: 'Videolaparoscopia em Goiânia | Dr. Jony Barbosa - Cirurgia Minimamente Invasiva',
-    metaDescription: 'Videolaparoscopia ginecológica em Goiânia. Tratamento de endometriose, cistos, miomas. Dr. Jony Barbosa. Agende: (62) 9950-4788',
-    keywords: ['videolaparoscopia goiânia', 'cirurgia minimamente invasiva goiás', 'endometriose laparoscopia goiânia'],
-    canonicalUrl: 'https://drjonybarbosa.com.br/servicos/videolaparoscopia-goiania',
-    longDescription: 'Cirurgia através de 3-4 pequenas incisões com câmera e instrumentos especializados.',
-    whatIsIt: 'Videolaparoscopia é técnica cirúrgica que utiliza câmera e instrumentos finos inseridos por pequenas incisões (0,5-1cm) no abdome. Permite tratar endometriose, cistos ovarianos, miomas, gravidez ectópica, laqueadura tubária e outras condições com mínimo trauma.',
-    whoNeedsIt: ['Endometriose com dor pélvica crônica', 'Cistos ovarianos >5cm ou suspeitos', 'Miomas pediculados ou subserosos', 'Gravidez ectópica íntegra', 'Investigação de infertilidade (verificar tubas)', 'Laqueadura tubária definitiva'],
-    howItWorks: ['Cirurgia sob anestesia geral', '3-4 pequenas incisões no abdome', 'Insuflação de CO2 para criar espaço', 'Câmera HD e instrumentos cirúrgicos especializados', 'Realização do procedimento visualizando em monitor', 'Internação de 12-24 horas', 'Recuperação em 7-14 dias'],
-    benefits: ['Incisões mínimas (melhor estética)', 'Menos dor pós-operatória', 'Recuperação 3-4x mais rápida que cirurgia aberta', 'Menor risco de aderências', 'Retorno ao trabalho em 1-2 semanas'],
-    relatedServices: ['histerectomia-goiania', 'consulta-medica-goiania', 'ginecologia-goiania'],
-    faq: [{question: 'Quanto tempo de recuperação da videolaparoscopia?', answer: 'Depende do procedimento. Cirurgias simples: 7-10 dias. Cirurgias complexas (endometriose avançada): 2-3 semanas. Sempre menor que cirurgia aberta equivalente.'}],
+    metaTitle: 'Inserção de DIU em Goiânia | Dr. Jony Barbosa - Contracepção',
+    metaDescription: 'Inserção de DIU hormonal ou de cobre em Goiânia com avaliação cuidadosa e orientação completa. Agende: (62) 9950-4788',
+    keywords: ['inserção diu goiânia', 'diu hormonal goiás', 'diu de cobre goiânia'],
+    canonicalUrl: 'https://drjonybarbosa.com.br/servicos/insercao-diu-goiania',
+    longDescription: 'Procedimento para colocação de DIU hormonal ou de cobre com foco em segurança e conforto.',
+    whatIsIt: 'A inserção de DIU é um procedimento ambulatorial para posicionar o dispositivo intrauterino dentro do útero. Pode ser feita com DIU hormonal ou de cobre, conforme o perfil clínico e os objetivos contraceptivos da paciente.',
+    whoNeedsIt: ['Mulheres que desejam contracepção de longa duração', 'Pacientes que preferem método sem uso diário', 'Quem busca alternativa à pílula anticoncepcional', 'Mulheres em pós-parto ou pós-aborto, conforme avaliação', 'Pacientes que desejam método reversível de alta eficácia'],
+    howItWorks: ['Consulta para avaliação clínica e escolha do tipo de DIU', 'Exame ginecológico prévio e, quando necessário, ultrassonografia', 'Inserção ambulatorial com técnica asséptica', 'Orientações sobre desconforto esperado e sinais de alerta', 'Revisão do posicionamento conforme necessidade', 'Acompanhamento após o procedimento'],
+    benefits: ['Alta eficácia contraceptiva', 'Longa duração', 'Método reversível', 'Reduz falhas associadas ao esquecimento de medicações', 'Opções hormonais e não hormonais conforme o perfil da paciente'],
+    relatedServices: ['consulta-medica-goiania', 'ginecologia-goiania', 'colposcopia-goiania'],
+    faq: [{question: 'A inserção de DIU dói muito?', answer: 'A intensidade varia conforme cada paciente, mas geralmente o desconforto é breve e controlável. A avaliação prévia ajuda a definir a melhor forma de realizar o procedimento com mais conforto.'}],
     schemaType: 'MedicalProcedure',
     performedAt: 'Goiânia, Goiás',
-    estimatedDuration: '60-180 minutos (conforme procedimento)'
+    estimatedDuration: '20-30 minutos'
   },
 
   {
-    title: 'Videohisteroscopia',
-    slug: 'videohisteroscopia-goiania',
-    description: 'Histeroscopia com sistema de vídeo de alta definição para diagnóstico e cirurgia.',
+    title: 'Colposcopia',
+    slug: 'colposcopia-goiania',
+    description: 'Avaliação detalhada do colo do útero, vagina e vulva para investigação preventiva.',
     category: 'servico',
-    metaTitle: 'Videohisteroscopia em Goiânia | Dr. Jony Barbosa',
-    metaDescription: 'Videohisteroscopia diagnóstica e cirúrgica em Goiânia com alta definição. Dr. Jony Barbosa. Agende: (62) 9950-4788',
-    keywords: ['videohisteroscopia goiânia', 'histeroscopia hd goiás', 'pólipo útero cirurgia goiânia'],
-    canonicalUrl: 'https://drjonybarbosa.com.br/servicos/videohisteroscopia-goiania',
-    longDescription: 'Histeroscopia com câmera de alta definição e sistema de vídeo para precisão diagnóstica.',
-    whatIsIt: 'Videohisteroscopia é histeroscopia realizada com sistema de vídeo HD que permite visualização ampliada e detalhada da cavidade uterina. A imagem ampliada facilita identificação de lesões pequenas e melhora precisão cirúrgica na remoção de pólipos, miomas e septos.',
-    whoNeedsIt: ['Sangramento uterino anormal', 'Pólipos endometriais', 'Espessamento endometrial em pós-menopausa', 'Mioma submucoso pequeno', 'Septo uterino', 'Remoção de DIU retido'],
-    howItWorks: ['Sistema de vídeo HD conectado ao histeroscópio', 'Visualização ampliada em monitor', 'Permite documentação em foto/vídeo', 'Maior precisão na ressecção de lesões', 'Mesma técnica da histeroscopia, com melhor visualização'],
-    benefits: ['Imagem HD permite detectar lesões menores', 'Documentação visual para acompanhamento', 'Maior precisão cirúrgica', 'Paciente pode ver imagens após (se desejar)'],
-    relatedServices: ['histeroscopia-goiania', 'videolaparoscopia-goiania', 'ginecologia-goiania'],
-    faq: [{question: 'Qual diferença entre histeroscopia e videohisteroscopia?', answer: 'Tecnicamente são a mesma coisa. "Vídeo" refere-se ao sistema de câmera HD acoplado. Atualmente a maioria das histeroscopias usa sistema de vídeo.'}],
+    metaTitle: 'Colposcopia em Goiânia | Dr. Jony Barbosa - Exame do Colo do Útero',
+    metaDescription: 'Colposcopia em Goiânia para investigação do colo do útero, HPV e alterações no preventivo. Agende: (62) 9950-4788',
+    keywords: ['colposcopia goiânia', 'exame colo do útero goiás', 'hpv colposcopia goiânia'],
+    canonicalUrl: 'https://drjonybarbosa.com.br/servicos/colposcopia-goiania',
+    longDescription: 'Exame ginecológico que amplia a visualização do colo do útero para investigação de alterações.',
+    whatIsIt: 'A colposcopia é um exame realizado com aparelho de aumento que permite avaliar de forma detalhada o colo do útero, a vagina e a vulva. É indicada principalmente quando há alterações no preventivo, suspeita de HPV ou necessidade de investigar lesões precursoras.',
+    whoNeedsIt: ['Pacientes com preventivo alterado', 'Suspeita de HPV', 'Investigação de lesões no colo do útero', 'Acompanhamento de alterações cervicais', 'Avaliação complementar após exame ginecológico'],
+    howItWorks: ['Consulta e revisão dos exames prévios', 'Exame ginecológico com visualização ampliada por colposcópio', 'Aplicação de soluções específicas para destacar áreas suspeitas', 'Registro das alterações encontradas', 'Biópsia direcionada quando necessário', 'Definição de acompanhamento ou tratamento conforme o resultado'],
+    benefits: ['Ajuda na detecção precoce de alterações cervicais', 'Permite investigação mais precisa', 'Pode ser feita em ambiente ambulatorial', 'Direciona conduta e acompanhamento com mais segurança'],
+    relatedServices: ['consulta-medica-goiania', 'ginecologia-goiania', 'insercao-diu-goiania'],
+    faq: [{question: 'Colposcopia substitui o preventivo?', answer: 'Não. A colposcopia é complementar ao preventivo e costuma ser indicada quando o resultado do Papanicolau ou o exame ginecológico mostram necessidade de investigação mais detalhada.'}],
     schemaType: 'MedicalProcedure',
     performedAt: 'Goiânia, Goiás',
-    estimatedDuration: '15-30 minutos'
+    estimatedDuration: '20-30 minutos'
   },
 
   {
-    title: 'Cirurgia Ginecológica',
-    slug: 'cirurgia-ginecologica-goiania',
-    description: 'Histerectomia, miomectomia e procedimentos minimamente invasivos.',
+    title: 'Laqueadura Tubária',
+    slug: 'laqueadura-tubaria-goiania',
+    description: 'Procedimento definitivo de contracepção feminina com planejamento e segurança.',
     category: 'servico',
-    metaTitle: 'Cirurgia Ginecológica em Goiânia | Dr. Jony Barbosa',
-    metaDescription: 'Cirurgia ginecológica minimamente invasiva em Goiânia: histerectomia, miomectomia, laparoscopia. Dr. Jony Barbosa. Agende: (62) 9950-4788',
-    keywords: ['cirurgia ginecológica goiânia', 'miomectomia goiás', 'histerectomia laparoscópica goiânia'],
-    canonicalUrl: 'https://drjonybarbosa.com.br/servicos/cirurgia-ginecologica-goiania',
-    longDescription: 'Cirurgias ginecológicas realizadas preferencialmente por técnicas minimamente invasivas.',
-    whatIsIt: 'Conjunto de procedimentos cirúrgicos para tratamento de condições ginecológicas. Dr. Jony Barbosa é habilitado em cirurgias minimamente invasivas (videolaparoscopia e videohisteroscopia), que resultam em menor trauma, recuperação mais rápida e melhor resultado estético. Inclui histerectomia, miomectomia, tratamento de endometriose, cistos ovarianos e muito mais.',
-    whoNeedsIt: ['Miomas uterinos sintomáticos', 'Endometriose com dor pélvica', 'Cistos ovarianos complexos ou volumosos', 'Sangramento uterino anormal refratário', 'Prolapso genital', 'Necessidade de laqueadura tubária'],
-    howItWorks: ['Consulta pré-operatória detalhada', 'Avaliação com exames de imagem (ultrassom/ressonância)', 'Cirurgia sob anestesia geral', 'Técnica minimamente invasiva quando possível', 'Internação de 1-2 dias', 'Acompanhamento pós-operatório'],
-    benefits: ['Preferência por técnicas minimamente invasivas', 'Menor dor e trauma cirúrgico', 'Recuperação mais rápida', 'Cicatrizes menores', 'Retorno precoce às atividades', 'Menor risco de complicações'],
-    relatedServices: ['videolaparoscopia-goiania', 'histerectomia-goiania', 'histeroscopia-goiania'],
+    metaTitle: 'Laqueadura Tubária em Goiânia | Dr. Jony Barbosa - Planejamento Familiar',
+    metaDescription: 'Laqueadura tubária em Goiânia com avaliação individualizada e foco em planejamento familiar definitivo. Agende: (62) 9950-4788',
+    keywords: ['laqueadura tubária goiânia', 'laqueadura goiás', 'planejamento familiar definitivo goiânia'],
+    canonicalUrl: 'https://drjonybarbosa.com.br/servicos/laqueadura-tubaria-goiania',
+    longDescription: 'Procedimento cirúrgico definitivo para contracepção feminina com avaliação individualizada.',
+    whatIsIt: 'A laqueadura tubária é um método contraceptivo definitivo que bloqueia as trompas, impedindo o encontro entre óvulo e espermatozoide. Pode ser planejada em contexto cirúrgico apropriado, sempre com avaliação clínica, orientações detalhadas e respeito às normas vigentes para planejamento familiar.',
+    whoNeedsIt: ['Mulheres com prole definida', 'Pacientes que desejam método contraceptivo definitivo', 'Quem busca alternativa ao uso prolongado de anticoncepcionais', 'Casais em planejamento familiar definitivo', 'Pacientes que desejam discutir esterilização cirúrgica com avaliação médica'],
+    howItWorks: ['Consulta para avaliação clínica e orientação sobre o caráter definitivo do método', 'Planejamento do momento cirúrgico mais adequado', 'Procedimento realizado em ambiente hospitalar', 'Bloqueio ou secção das trompas conforme a técnica indicada', 'Recuperação pós-operatória com acompanhamento médico', 'Revisão após o procedimento com orientações sobre retorno às atividades'],
+    benefits: ['Método definitivo de alta eficácia', 'Reduz dependência de métodos de uso contínuo', 'Possibilidade de planejamento familiar mais previsível', 'Realização com acompanhamento médico e segurança'],
+    relatedServices: ['vasectomia-goiania', 'consulta-medica-goiania', 'histerectomia-goiania'],
     faq: [
-      {question: 'Todas cirurgias podem ser feitas por videolaparoscopia?', answer: 'A maioria sim. Dr. Jony avalia cada caso individualmente. Algumas condições (massas muito volumosas, aderências extensas) podem necessitar cirurgia aberta, mas mesmo assim priorizamos a menor incisão possível.'},
-      {question: 'Quanto tempo de afastamento após cirurgia ginecológica?', answer: 'Depende do procedimento. Histeroscopia: 3-5 dias. Laparoscopia simples: 7-14 dias. Histerectomia: 2-4 semanas. Sempre menor que cirurgia aberta equivalente.'}
+      {question: 'Laqueadura tubária é reversível?', answer: 'A laqueadura deve ser encarada como método definitivo. Embora existam tentativas de reversão em contextos específicos, o procedimento deve ser escolhido apenas quando houver convicção sobre o planejamento familiar.'},
+      {question: 'Qual a diferença entre laqueadura e DIU?', answer: 'O DIU é um método reversível de longa duração. Já a laqueadura é definitiva e exige avaliação específica antes de ser indicada.'}
     ],
     schemaType: 'MedicalProcedure',
     performedAt: 'Goiânia, Goiás',
-    estimatedDuration: '60-180 minutos'
+    estimatedDuration: '60-90 minutos'
   }
 ];
 

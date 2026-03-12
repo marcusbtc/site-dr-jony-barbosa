@@ -7,7 +7,7 @@ import { servicesExtended } from '../data/services-extended';
 // Helper to filter and type items correctly
 const procedimentos = servicesExtended
   .filter(s => s.category === 'servico')
-  .filter(s => ['videolaparoscopia-goiania', 'histeroscopia-goiania', 'histerectomia-goiania', 'videohisteroscopia-goiania'].includes(s.slug));
+  .filter(s => ['histerectomia-goiania', 'vasectomia-goiania', 'insercao-diu-goiania', 'colposcopia-goiania'].includes(s.slug));
 
 const ProceduresSection: React.FC = () => {
   return (
@@ -15,8 +15,8 @@ const ProceduresSection: React.FC = () => {
       <div className="container mx-auto px-6 lg:px-16 max-w-7xl">
         <Slider
           id="procedimentos-slider"
-          title="Procedimentos Cirúrgicos"
-          subtitle="Cirurgias Minimamente Invasivas com Segurança"
+          title="Procedimentos e Planejamento Familiar"
+          subtitle="Atendimentos ambulatoriais e cirúrgicos com foco em cuidado individualizado"
         >
           {procedimentos.map((proc, i) => (
             <Card 
