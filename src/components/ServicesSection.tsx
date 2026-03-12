@@ -12,7 +12,7 @@ const ServicesSection: React.FC<Props> = ({ title, subtitle }) => {
       title: "Consulta Médica",
       desc: "Check-up ginecológico completo e humanizado.",
       price: "Sob Consulta",
-      img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=400"
+      img: "/dr-jony-profile.webp"
     },
     {
       title: "Medicina Fetal",

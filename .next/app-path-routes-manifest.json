@@ -1,0 +1,14 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/contato/page": "/contato",
+  "/especialidades/[slug]/page": "/especialidades/[slug]",
+  "/especialidades/page": "/especialidades",
+  "/exames/[slug]/page": "/exames/[slug]",
+  "/exames/page": "/exames",
+  "/localizacao/[slug]/page": "/localizacao/[slug]",
+  "/page": "/",
+  "/servicos/[slug]/page": "/servicos/[slug]",
+  "/servicos/page": "/servicos",
+  "/sobre/page": "/sobre"
+}

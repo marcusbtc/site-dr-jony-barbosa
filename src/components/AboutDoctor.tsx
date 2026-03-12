@@ -10,7 +10,7 @@ const AboutDoctor: React.FC = () => {
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl animate-pulse"></div>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-[12px] border-white z-10">
               <img 
-                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=800" 
+                src="/dr-jony-profile.webp" 
                 alt="Dr. Jony Barbosa atendendo" 
                 className="w-full h-[600px] object-cover"
               />

@@ -62,7 +62,7 @@ const WhyChooseSection: React.FC = () => {
             <div className="absolute inset-0 bg-primary/20 rounded-[3rem] blur-2xl -z-10"></div>
             <div className="relative overflow-hidden rounded-[3rem] border border-white/10 shadow-3xl bg-slate-800 p-2">
               <img 
-                src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=800" 
+                src="/dr-jony-profile.webp" 
                 alt="Excelência médica" 
                 className="w-full h-full object-cover rounded-[2.5rem]"
               />

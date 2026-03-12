@@ -1,0 +1,4 @@
+:HL["/_next/static/chunks/208007abd5d2c930.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap","style"]
+:HL["/dr-jony-profile.webp","image"]
+0:{"buildId":"1b8l-2c1HzmAyBYY8Ng6s","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"sobre","paramType":null,"paramKey":"sobre","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

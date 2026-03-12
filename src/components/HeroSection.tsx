@@ -52,7 +52,7 @@ const HeroSection: React.FC = () => {
             <div className="absolute inset-0 bg-primary/5 rounded-3xl -rotate-2 transform transition-transform group-hover:rotate-0 duration-700"></div>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl z-10 border-8 border-white">
               <img 
-                src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=800" 
+                src="/dr-jony-profile.webp" 
                 alt="Dr. Jony Barbosa" 
                 className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-105"
               />

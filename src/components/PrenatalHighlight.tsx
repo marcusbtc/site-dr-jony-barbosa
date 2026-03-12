@@ -10,7 +10,7 @@ const PrenatalHighlight: React.FC = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-secondary/10 rounded-3xl blur-2xl -z-10"></div>
               <img
-                src="https://images.unsplash.com/photo-1559839734-2b71f1536783?auto=format&fit=crop&q=80&w=800"
+                src="/dr-jony-profile.webp"
                 alt="Ultrassom Obstétrico em Goiânia"
                 className="rounded-3xl shadow-2xl border-8 border-white object-cover"
               />
