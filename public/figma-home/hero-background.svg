@@ -1,0 +1,86 @@
+<svg width="1920" height="677" viewBox="0 0 1920 677" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="baseFade" x1="0" y1="338.5" x2="1920" y2="338.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#BCD5DD"/>
+      <stop offset="0.22" stop-color="#DBE7EB"/>
+      <stop offset="0.52" stop-color="#F1F4F6"/>
+      <stop offset="0.78" stop-color="#D3E2E8"/>
+      <stop offset="1" stop-color="#A9C7D2"/>
+    </linearGradient>
+    <linearGradient id="leftTint" x1="0" y1="338.5" x2="460" y2="338.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6CA1B3" stop-opacity="0.58"/>
+      <stop offset="1" stop-color="#6CA1B3" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="rightTint" x1="1510" y1="338.5" x2="1920" y2="338.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6CA1B3" stop-opacity="0"/>
+      <stop offset="1" stop-color="#5D9AAE" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="centerGlow" x1="960" y1="0" x2="960" y2="677" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.12"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="677" fill="url(#baseFade)"/>
+
+  <image
+    href="/figma-home/hero-ultrasound.png"
+    x="-56"
+    y="-8"
+    width="430"
+    height="724"
+    preserveAspectRatio="xMidYMid slice"
+    opacity="0.94"
+  />
+  <rect x="0" y="0" width="500" height="677" fill="url(#leftTint)"/>
+
+  <rect x="294" y="0" width="1068" height="677" fill="url(#centerGlow)"/>
+  <path
+    d="M420 66C548 108 529 177 604 220C678 262 781 236 846 275C914 316 926 404 1012 433C1100 462 1214 416 1294 470"
+    stroke="#C6CCD0"
+    stroke-width="4"
+    stroke-linecap="round"
+    opacity="0.42"
+  />
+  <path
+    d="M575 16C612 60 593 132 621 178C661 244 760 266 794 336C826 401 804 486 858 536"
+    stroke="#D7DCDD"
+    stroke-width="3"
+    stroke-linecap="round"
+    opacity="0.34"
+  />
+  <path
+    d="M882 94C1012 140 1102 113 1178 182C1233 231 1236 311 1302 353"
+    stroke="#D0D5D8"
+    stroke-width="3"
+    stroke-linecap="round"
+    opacity="0.28"
+  />
+  <path
+    d="M664 534C748 493 828 492 905 529C974 562 1054 622 1143 610"
+    stroke="#D6DBDE"
+    stroke-width="4"
+    stroke-linecap="round"
+    opacity="0.26"
+  />
+
+  <image
+    href="/figma-home/hero-doctor.png"
+    x="1060"
+    y="44"
+    width="590"
+    height="633"
+    preserveAspectRatio="xMidYMid meet"
+  />
+
+  <image
+    href="/figma-home/hero-pregnant.png"
+    x="1596"
+    y="6"
+    width="336"
+    height="677"
+    preserveAspectRatio="xMidYMid slice"
+    opacity="0.5"
+  />
+  <rect x="1504" y="0" width="416" height="677" fill="url(#rightTint)"/>
+</svg>

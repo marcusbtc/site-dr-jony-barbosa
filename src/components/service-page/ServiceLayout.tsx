@@ -29,18 +29,18 @@ const ServiceLayout: React.FC<Props> = ({ service, category, children }) => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col font-sans text-slate-600">
+    <div className="page-shell flex min-h-screen flex-col">
       <Header />
 
-      <main className="min-h-screen pt-20 pb-12">
-        <div className="mx-auto px-6 lg:px-12 max-w-7xl pt-8 pb-4">
+      <main className="page-main min-h-screen">
+        <div className="page-container page-breadcrumbs max-w-[1280px] pt-2 pb-4">
           <Breadcrumbs items={breadcrumbItems} />
         </div>
 
         <ServiceHero service={service} />
         <ServiceContent service={service} />
         {children}
-        <RelatedServices service={service} category={category} />
+        <RelatedServices service={service} />
         <ServiceFaq faqs={service.faq || []} serviceTitle={service.title} />
         <ServiceCta service={service} />
       </main>

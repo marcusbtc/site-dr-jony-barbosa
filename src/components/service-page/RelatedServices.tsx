@@ -5,19 +5,24 @@ import Card from '../ui/Card';
 
 interface Props {
   service: ExtendedServiceItem;
-  category: string;
 }
 
-const RelatedServices: React.FC<Props> = ({ service, category }) => {
+const categoryPaths: Record<ExtendedServiceItem['category'], string> = {
+  especialidade: 'especialidades',
+  exame: 'exames',
+  servico: 'servicos',
+};
+
+const RelatedServices: React.FC<Props> = ({ service }) => {
   const relatedServices = getRelatedServices(service, 3);
 
   if (relatedServices.length === 0) return null;
 
   return (
-    <section className="py-20 md:py-28 bg-white border-t border-slate-100">
-      <div className="container mx-auto px-6 max-w-7xl">
-        <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary text-center mb-4">Serviços Relacionados</h2>
-        <p className="text-lg text-slate-600 text-center font-light mb-12">
+    <section className="py-20 md:py-28">
+      <div className="page-container max-w-7xl page-section p-8 md:p-10">
+        <h2 className="text-center font-['EB_Garamond'] text-[38px] font-medium tracking-[0.4px] text-[var(--ds-color-text-strong)] md:text-[44px]">Serviços Relacionados</h2>
+        <p className="mb-12 mt-3 text-center font-['Questrial'] text-[18px] leading-[32px] text-[var(--ds-color-text-muted)]">
           Conheça outros serviços que podem complementar seu tratamento
         </p>
 
@@ -27,7 +32,7 @@ const RelatedServices: React.FC<Props> = ({ service, category }) => {
               key={i}
               title={relatedService.title}
               description={relatedService.description}
-              href={`/${category}/${relatedService.slug}`}
+              href={`/${categoryPaths[relatedService.category]}/${relatedService.slug}`}
               linkText="Saiba Mais"
             />
           ))}

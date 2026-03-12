@@ -1,0 +1,83 @@
+:root {
+  /* Core palette from Figma variables and repeated fills */
+  --ds-color-brand-700: #486284;
+  --ds-color-brand-500: #8ca2c0;
+  --ds-color-brand-300: #adbdd2;
+  --ds-color-brand-200: #c8d4d9;
+  --ds-color-brand-tint: #a2c9de;
+  --ds-color-hero-base: #9aacb4;
+  --ds-color-neutral-0: #ffffff;
+  --ds-color-neutral-50: #eff2f6;
+  --ds-color-neutral-100: #edf4f6;
+  --ds-color-neutral-150: #ebedee;
+  --ds-color-neutral-200: #e1e6e7;
+  --ds-color-neutral-250: #d3dde3;
+  --ds-color-text-strong: #1f1f1f;
+  --ds-color-text-body: #2f2f2f;
+  --ds-color-text-muted: #4c5253;
+  --ds-color-text-alt: #36416e;
+  --ds-color-map-text: #5b5b5b;
+  --ds-color-map-link: #1a73e8;
+
+  /* Typography */
+  --ds-font-display: "EB Garamond", serif;
+  --ds-font-body: "Questrial", sans-serif;
+  --ds-font-ui: "DM Sans", sans-serif;
+  --ds-font-label: "Poppins", sans-serif;
+  --ds-font-cta: "Lato", sans-serif;
+  --ds-font-emphasis: "Inter", sans-serif;
+  --ds-font-embed: "Roboto", sans-serif;
+
+  /* Type scale */
+  --ds-type-hero-size: 56px;
+  --ds-type-hero-line: 66px;
+  --ds-type-section-size: 48px;
+  --ds-type-section-line: 70px;
+  --ds-type-body-size: 18px;
+  --ds-type-body-line: 32px;
+  --ds-type-ui-size: 16px;
+  --ds-type-ui-line: 24px;
+  --ds-type-label-size: 20px;
+  --ds-type-label-line: 30px;
+  --ds-type-map-title-size: 14px;
+  --ds-type-map-body-size: 12px;
+  --ds-letter-wide: 0.5px;
+
+  /* Layout */
+  --ds-content-max: 1280px;
+  --ds-text-column: 700px;
+  --ds-media-column: 517px;
+  --ds-gap-xl: 68px;
+  --ds-gap-lg: 41px;
+  --ds-gap-md: 24px;
+  --ds-gap-sm: 16px;
+  --ds-section-y: 80px;
+
+  /* Radius */
+  --ds-radius-photo: 16px;
+  --ds-radius-pill: 26px;
+  --ds-radius-cta: 36px;
+  --ds-radius-service: 30px;
+  --ds-radius-badge: 9px;
+  --ds-radius-faq: 7px;
+  --ds-radius-card: 10px;
+
+  /* Shadows */
+  --ds-shadow-soft: 0 24px 60px rgba(72, 98, 132, 0.08);
+  --ds-shadow-card: 0 12px 36px rgba(72, 98, 132, 0.08);
+  --ds-shadow-faq: 0 10px 24px rgba(72, 98, 132, 0.05);
+
+  /* Decorative treatments */
+  --ds-gradient-hero:
+    linear-gradient(
+      120deg,
+      rgba(154, 172, 180, 0.18) 12%,
+      rgba(185, 201, 208, 0.92) 38%,
+      rgba(185, 201, 208, 0.28) 72%,
+      rgba(185, 201, 208, 0) 100%
+    );
+  --ds-gradient-marble:
+    radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.8), transparent 32%),
+    radial-gradient(circle at 78% 14%, rgba(255, 255, 255, 0.65), transparent 24%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0));
+}

@@ -18,26 +18,27 @@ const ServiceHero: React.FC<Props> = ({ service }) => {
   const heroImage = specialtyHeroImages[service.slug];
 
   return (
-    <section className="bg-primary text-white pt-10 pb-16 lg:pt-14 lg:pb-24 text-center">
-      <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
-        <div className={`${heroImage ? 'grid lg:grid-cols-2 gap-10 items-center text-left' : 'max-w-4xl mx-auto'}`}>
+    <section className="pb-10">
+      <div className="page-container max-w-[1280px]">
+        <div className={`page-hero ${heroImage ? 'grid items-center gap-10 text-left lg:grid-cols-2' : 'mx-auto max-w-4xl'}`}>
           <div className={heroImage ? 'order-2 lg:order-1' : ''}>
-            <h1 className="text-3xl md:text-5xl font-serif font-bold leading-tight mb-6">{service.title}</h1>
-            <p className="text-lg md:text-xl font-light leading-relaxed opacity-95 mb-8">
+            <p className="eyebrow-label mb-4">Atendimento especializado</p>
+            <h1 className="font-['EB_Garamond'] text-[42px] font-medium leading-[1.1] tracking-[0.5px] text-[var(--ds-color-text-strong)] md:text-[56px]">{service.title}</h1>
+            <p className="mt-6 max-w-[42rem] font-['Questrial'] text-[18px] leading-[32px] tracking-[0.3px] text-[var(--ds-color-text-muted)] md:text-[20px]">
               {service.description}
             </p>
 
-            <div className={`flex flex-col sm:flex-row gap-4 ${heroImage ? 'justify-start' : 'justify-center'}`}>
+            <div className={`mt-8 flex flex-col gap-4 sm:flex-row ${heroImage ? 'justify-start' : 'justify-center'}`}>
               <Button
-                variant="accent"
-                className="px-8 py-3 bg-accent text-white hover:bg-opacity-90 shadow-lg"
+                variant="primary"
+                className="px-8 py-3"
                 href={`https://wa.me/556299504788?text=Olá! Gostaria de agendar ${service.title}`}
               >
                 Agendar Agora
               </Button>
               <Button
                 variant="outline"
-                className="px-8 py-3 shadow-lg border-white text-white hover:bg-white hover:text-primary"
+                className="px-8 py-3"
                 href="#sobre"
               >
                 Saiba Mais
@@ -46,7 +47,7 @@ const ServiceHero: React.FC<Props> = ({ service }) => {
           </div>
 
           {heroImage && (
-            <div className="order-1 lg:order-2 rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
+            <div className="surface-card order-1 overflow-hidden rounded-[18px] lg:order-2">
               <img
                 src={heroImage}
                 alt={service.title}

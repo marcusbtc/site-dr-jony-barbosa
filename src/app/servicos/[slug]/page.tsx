@@ -5,11 +5,12 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const service = servicesExtended.find(s => s.slug === params.slug && s.category === 'servico');
+  const { slug } = await params;
+  const service = servicesExtended.find(s => s.slug === slug && s.category === 'servico');
   if (!service) return {};
 
   return {
@@ -29,8 +30,9 @@ export async function generateStaticParams() {
     }));
 }
 
-export default function ServicePage({ params }: Props) {
-  const service = servicesExtended.find(s => s.slug === params.slug && s.category === 'servico');
+export default async function ServicePage({ params }: Props) {
+  const { slug } = await params;
+  const service = servicesExtended.find(s => s.slug === slug && s.category === 'servico');
   if (!service) notFound();
 
   return (

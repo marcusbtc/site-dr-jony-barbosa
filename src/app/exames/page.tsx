@@ -19,20 +19,22 @@ export default function ExamsIndex() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col font-sans text-slate-600">
+    <div className="page-shell flex min-h-screen flex-col">
       <Header />
-      <main className="flex-grow pt-32 pb-20">
-        <div className="container mx-auto px-6 max-w-7xl">
+      <main className="page-main flex-grow">
+        <div className="page-container max-w-7xl">
           <Breadcrumbs items={breadcrumbs} />
-          
-          <div className="text-center mb-16 mt-8">
-            <h1 className="text-4xl lg:text-6xl font-serif font-bold text-primary mb-6">Exames Especializados</h1>
-            <p className="text-xl text-slate-500 max-w-2xl mx-auto font-light">
-              Precisão diagnóstica em medicina fetal e saúde da mulher com tecnologia de última geração.
+
+          <div className="page-hero mt-4 mb-12">
+            <p className="eyebrow-label mb-4">Exames</p>
+            <h1 className="page-title mb-6">Exames Especializados</h1>
+            <p className="page-intro">
+              Precisão diagnóstica em medicina fetal e saúde da mulher com tecnologia de
+              última geração.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {exams.map((s, i) => (
               <Card key={i} item={s} type="exam" />
             ))}

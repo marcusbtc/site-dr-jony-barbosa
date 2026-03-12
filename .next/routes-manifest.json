@@ -92,6 +92,12 @@
       "namedRegex": "^/exames(?:/)?$"
     },
     {
+      "page": "/localizacao",
+      "regex": "^/localizacao(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/localizacao(?:/)?$"
+    },
+    {
       "page": "/servicos",
       "regex": "^/servicos(?:/)?$",
       "routeKeys": {},

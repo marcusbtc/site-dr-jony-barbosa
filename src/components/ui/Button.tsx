@@ -14,14 +14,20 @@ const Button: React.FC<Props> = ({
   href,
   ...props 
 }) => {
-  const baseStyles = "inline-flex items-center justify-center px-8 py-3.5 rounded-full font-bold transition-all duration-300 transform active:scale-95 text-center";
+  const baseStyles =
+    "inline-flex items-center justify-center rounded-[26px] px-6 py-3 font-['DM_Sans'] text-[16px] font-normal tracking-[0.5px] transition-all duration-200 active:scale-[0.98] text-center";
   
   const variants = {
-    primary: "bg-[#004aad] text-white hover:bg-[#003d8f] hover:shadow-lg hover:shadow-[#004aad]/20",
-    secondary: "bg-[#e6f0ff] text-[#004aad] hover:bg-[#cce0ff] hover:shadow-lg hover:shadow-[#004aad]/20",
-    accent: "bg-[#25D366] text-white hover:bg-[#1ebe55]",
-    outline: "bg-transparent border-2 border-[#004aad] text-[#004aad] hover:bg-[#004aad] hover:text-white",
-    ghost: "bg-transparent text-[#004aad] hover:bg-[#004aad]/10"
+    primary:
+      "bg-[var(--ds-color-brand-700)] text-white shadow-[0_14px_28px_rgba(72,98,132,0.16)] hover:bg-[var(--ds-color-primary-hover)]",
+    secondary:
+      "bg-[rgba(173,189,210,0.32)] text-[var(--ds-color-brand-700)] hover:bg-[rgba(173,189,210,0.5)]",
+    accent:
+      "bg-[var(--ds-color-brand-300)] text-[var(--ds-color-brand-700)] hover:bg-[var(--ds-color-brand-500)] hover:text-white",
+    outline:
+      "border border-[var(--ds-color-brand-700)] bg-transparent text-[var(--ds-color-brand-700)] hover:bg-[var(--ds-color-brand-700)] hover:text-white",
+    ghost:
+      "bg-transparent text-[var(--ds-color-brand-700)] hover:bg-[rgba(72,98,132,0.08)]"
   };
 
   const widthStyle = fullWidth ? "w-full" : "";

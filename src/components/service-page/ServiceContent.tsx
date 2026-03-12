@@ -7,22 +7,22 @@ interface Props {
 
 const ServiceContent: React.FC<Props> = ({ service }) => {
   return (
-    <section id="sobre" className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-6 max-w-4xl">
+    <section id="sobre" className="py-16 md:py-24">
+      <div className="page-container max-w-4xl">
         {/* O que é */}
-        <div className="mb-14">
-          <h2 className="text-3xl font-serif font-bold text-primary mb-6">O que é {service.title}?</h2>
-          <p className="text-lg text-slate-700 leading-relaxed font-light">{service.whatIsIt}</p>
+        <div className="page-section mb-10 p-8 md:p-10">
+          <h2 className="mb-6 font-['EB_Garamond'] text-[40px] font-medium tracking-[0.4px] text-[var(--ds-color-text-strong)]">O que é {service.title}?</h2>
+          <p className="font-['Questrial'] text-[18px] leading-[32px] tracking-[0.3px] text-[var(--ds-color-text-body)]">{service.whatIsIt}</p>
         </div>
 
         {/* Quando é indicado */}
         {service.whoNeedsIt && service.whoNeedsIt.length > 0 && (
-          <div className="mb-14">
-            <h2 className="text-2xl font-serif font-bold text-primary mb-6">Quando é Indicado?</h2>
+          <div className="page-section mb-10 p-8 md:p-10">
+            <h2 className="mb-6 font-['EB_Garamond'] text-[34px] font-medium tracking-[0.35px] text-[var(--ds-color-text-strong)]">Quando é Indicado?</h2>
             <ul className="space-y-4">
               {service.whoNeedsIt.map((indication, i) => (
-                <li key={i} className="flex items-start gap-3 text-slate-700 text-lg font-light leading-relaxed">
-                  <svg className="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <li key={i} className="flex items-start gap-3 font-['Questrial'] text-[18px] leading-[32px] text-[var(--ds-color-text-body)]">
+                  <svg className="mt-1 h-6 w-6 flex-shrink-0 text-[var(--ds-color-brand-500)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
                   <span>{indication}</span>
@@ -34,15 +34,15 @@ const ServiceContent: React.FC<Props> = ({ service }) => {
 
         {/* Como funciona */}
         {service.howItWorks && service.howItWorks.length > 0 && (
-          <div className="mb-14">
-            <h2 className="text-2xl font-serif font-bold text-primary mb-6">Como Funciona?</h2>
+          <div className="page-section mb-10 p-8 md:p-10">
+            <h2 className="mb-6 font-['EB_Garamond'] text-[34px] font-medium tracking-[0.35px] text-[var(--ds-color-text-strong)]">Como Funciona?</h2>
             <ol className="space-y-6">
               {service.howItWorks.map((step, index) => (
                 <li key={index} className="flex items-start gap-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-primary to-[#1a3f63] text-white font-bold text-lg flex-shrink-0 shadow-md">
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[var(--ds-color-brand-700)] font-['DM_Sans'] text-lg text-white shadow-[0_10px_22px_rgba(72,98,132,0.18)]">
                     {index + 1}
                   </div>
-                  <p className="text-lg text-slate-700 font-light leading-relaxed pt-1">{step}</p>
+                  <p className="pt-1 font-['Questrial'] text-[18px] leading-[32px] text-[var(--ds-color-text-body)]">{step}</p>
                 </li>
               ))}
             </ol>
@@ -51,17 +51,17 @@ const ServiceContent: React.FC<Props> = ({ service }) => {
 
         {/* Benefícios */}
         {service.benefits && service.benefits.length > 0 && (
-          <div>
-            <h2 className="text-2xl font-serif font-bold text-primary mb-6">Benefícios</h2>
+          <div className="page-section p-8 md:p-10">
+            <h2 className="mb-6 font-['EB_Garamond'] text-[34px] font-medium tracking-[0.35px] text-[var(--ds-color-text-strong)]">Benefícios</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {service.benefits.map((benefit, i) => (
-                <div key={i} className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl border border-slate-200 transition-all hover:-translate-y-1 hover:shadow-lg group">
-                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                <div key={i} className="surface-card flex items-start gap-4 rounded-[18px] p-6 transition-all hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(72,98,132,0.1)] group">
+                  <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[rgba(72,98,132,0.1)] text-[var(--ds-color-brand-700)] transition-colors group-hover:bg-[var(--ds-color-brand-700)] group-hover:text-white">
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <p className="text-slate-700 font-light leading-relaxed">{benefit}</p>
+                  <p className="font-['Questrial'] leading-[28px] text-[var(--ds-color-text-body)]">{benefit}</p>
                 </div>
               ))}
             </div>

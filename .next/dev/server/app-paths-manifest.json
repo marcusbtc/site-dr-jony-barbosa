@@ -1,0 +1,11 @@
+{
+  "/contato/page": "app/contato/page.js",
+  "/especialidades/[slug]/page": "app/especialidades/[slug]/page.js",
+  "/especialidades/page": "app/especialidades/page.js",
+  "/exames/[slug]/page": "app/exames/[slug]/page.js",
+  "/localizacao/[slug]/page": "app/localizacao/[slug]/page.js",
+  "/localizacao/page": "app/localizacao/page.js",
+  "/page": "app/page.js",
+  "/servicos/[slug]/page": "app/servicos/[slug]/page.js",
+  "/sobre/page": "app/sobre/page.js"
+}

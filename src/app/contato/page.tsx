@@ -10,67 +10,89 @@ export default function ContatoPage() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col font-sans text-slate-600">
+    <div className="page-shell flex min-h-screen flex-col">
       <Header />
-      <main className="flex-grow pt-24">
-        <div className="container mx-auto px-6 py-4">
+      <main className="page-main flex-grow">
+        <div className="page-container page-breadcrumbs">
           <Breadcrumbs items={breadcrumbItems} />
         </div>
 
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6 max-w-5xl">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-12 text-center">Fale Conosco</h1>
-            
-            <div className="grid md:grid-cols-2 gap-16">
+        <section className="pb-20">
+          <div className="page-container max-w-5xl">
+            <div className="page-hero">
+              <p className="eyebrow-label mb-4">Contato</p>
+              <h1 className="page-title">Fale Conosco</h1>
+              <p className="page-intro mt-4">
+                Canais diretos para agendamento, dúvidas e orientações sobre consultas.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-10 md:grid-cols-2">
               <div className="space-y-10">
-                <div>
-                  <h2 className="text-2xl font-serif font-bold text-primary mb-6">Canais de Atendimento</h2>
+                <div className="page-section p-8">
+                  <h2 className="mb-6 font-['EB_Garamond'] text-[34px] font-medium text-[var(--ds-color-text-strong)]">
+                    Canais de Atendimento
+                  </h2>
                   <div className="space-y-4">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                      <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[rgba(173,189,210,0.22)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--ds-color-brand-700)]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                       </div>
                       <div>
-                        <h3 className="font-bold text-slate-800">Telefones</h3>
+                        <h3 className="font-['Poppins'] font-medium text-[var(--ds-color-brand-700)]">Telefones</h3>
                         <p className="text-lg">(62) 3070-5555</p>
                         <p className="text-lg">(62) 99613-6640 (WhatsApp)</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                      <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[rgba(173,189,210,0.22)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--ds-color-brand-700)]"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                       </div>
                       <div>
-                        <h3 className="font-bold text-slate-800">E-mail</h3>
+                        <h3 className="font-['Poppins'] font-medium text-[var(--ds-color-brand-700)]">E-mail</h3>
                         <p className="text-lg">contato@drjonybarbosa.com.br</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div>
-                  <h2 className="text-2xl font-serif font-bold text-primary mb-6">Horário de Funcionamento</h2>
-                  <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                <div className="page-section p-8">
+                  <h2 className="mb-6 font-['EB_Garamond'] text-[34px] font-medium text-[var(--ds-color-text-strong)]">
+                    Horário de Funcionamento
+                  </h2>
+                  <div className="surface-card rounded-[18px] p-6">
                     <ul className="space-y-3">
-                      <li className="flex justify-between border-b border-slate-200 pb-2"><span>Segunda a Sexta</span> <span className="font-bold">07:00 - 18:00</span></li>
-                      <li className="flex justify-between"><span>Sábado e Domingo</span> <span className="text-slate-400">Fechado</span></li>
+                      <li className="flex justify-between border-b border-[rgba(72,98,132,0.08)] pb-2">
+                        <span>Segunda a Sexta</span>
+                        <span className="font-medium text-[var(--ds-color-brand-700)]">07:00 - 18:00</span>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Sábado e Domingo</span>
+                        <span className="text-[var(--ds-color-brand-500)]">Fechado</span>
+                      </li>
                     </ul>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white p-8 rounded-3xl shadow-xl shadow-primary/5 border border-slate-100">
-                <h2 className="text-3xl font-serif font-bold text-primary mb-8">Agende sua Consulta</h2>
-                <p className="text-slate-600 mb-8 leading-relaxed">
-                  Para sua maior comodidade, todos os agendamentos são realizados via WhatsApp. Clique no botão abaixo para falar com nossa secretária agora mesmo.
+              <div className="page-section p-8">
+                <h2 className="font-['EB_Garamond'] text-[38px] font-medium text-[var(--ds-color-text-strong)]">
+                  Agende sua Consulta
+                </h2>
+                <p className="mb-8 mt-4 leading-[32px] text-[var(--ds-color-text-muted)]">
+                  Para sua maior comodidade, todos os agendamentos são realizados via
+                  WhatsApp. Clique no botão abaixo para falar com nossa secretária agora
+                  mesmo.
                 </p>
-                <a 
-                  href="https://wa.me/556299504788" 
-                  className="block w-full bg-accent text-white py-5 rounded-2xl text-center text-xl font-bold shadow-lg shadow-accent/20 hover:scale-[1.02] transition-transform"
+                <a
+                  href="https://wa.me/556299504788"
+                  className="inline-flex w-full items-center justify-center rounded-[26px] bg-[var(--ds-color-brand-700)] py-5 text-center font-['DM_Sans'] text-xl tracking-[0.4px] text-white shadow-[0_18px_34px_rgba(72,98,132,0.18)] hover:scale-[1.02]"
                 >
                   Falar no WhatsApp
                 </a>
-                <p className="text-center mt-6 text-sm text-slate-400">Resposta imediata em horário comercial</p>
+                <p className="mt-6 text-center text-sm text-[var(--ds-color-brand-500)]">
+                  Resposta imediata em horário comercial
+                </p>
               </div>
             </div>
           </div>

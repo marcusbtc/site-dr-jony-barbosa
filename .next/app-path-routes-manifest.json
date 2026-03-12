@@ -7,6 +7,7 @@
   "/exames/[slug]/page": "/exames/[slug]",
   "/exames/page": "/exames",
   "/localizacao/[slug]/page": "/localizacao/[slug]",
+  "/localizacao/page": "/localizacao",
   "/page": "/",
   "/servicos/[slug]/page": "/servicos/[slug]",
   "/servicos/page": "/servicos",

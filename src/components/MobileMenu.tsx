@@ -14,7 +14,7 @@ export default function MobileMenu({ links }: MobileMenuProps) {
     <>
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="lg:hidden text-primary"
+        className="text-[var(--ds-color-brand-700)] lg:hidden"
         aria-label="Toggle mobile menu"
         aria-expanded={isMenuOpen}
       >
@@ -22,13 +22,13 @@ export default function MobileMenu({ links }: MobileMenuProps) {
       </button>
 
       {isMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg py-4 px-6 flex flex-col gap-4 top-full left-0">
+        <div className="absolute left-0 top-full flex w-full flex-col gap-2 border-t border-[rgba(72,98,132,0.08)] bg-[rgba(239,242,246,0.98)] px-6 py-4 shadow-[0_18px_40px_rgba(72,98,132,0.12)] lg:hidden">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className="py-2 border-b border-slate-50"
+              className="rounded-[12px] border border-transparent px-3 py-3 font-['Questrial'] text-[16px] text-[var(--ds-color-text-body)] hover:border-[rgba(72,98,132,0.08)] hover:bg-white/70"
             >
               {link.label}
             </a>

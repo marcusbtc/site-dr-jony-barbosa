@@ -17,30 +17,32 @@ export default function LocationsPage() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col font-sans text-slate-600">
+    <div className="page-shell flex min-h-screen flex-col">
       <Header />
-      <main className="flex-grow pt-32 pb-20 bg-white">
-        <div className="container mx-auto px-6 max-w-7xl">
+      <main className="page-main flex-grow">
+        <div className="page-container max-w-7xl">
           <Breadcrumbs items={breadcrumbs} />
 
-          <div className="text-center mb-16 mt-8">
-            <h1 className="text-4xl lg:text-6xl font-serif font-bold text-primary mb-6">Regiões Atendidas em Goiânia</h1>
-            <p className="text-xl text-slate-500 max-w-3xl mx-auto font-light">
-              Escolha sua região para ver detalhes de acesso, clínica de atendimento e informações importantes para sua consulta.
+          <div className="page-hero mt-4 mb-12">
+            <p className="eyebrow-label mb-4">Localização</p>
+            <h1 className="page-title mb-6">Regiões Atendidas em Goiânia</h1>
+            <p className="page-intro max-w-3xl">
+              Escolha sua região para ver detalhes de acesso, clínica de atendimento e
+              informações importantes para sua consulta.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {nobleNeighborhoods.map((neighborhood) => (
               <a
                 key={neighborhood.slug}
                 href={`/localizacao/${neighborhood.slug}`}
-                className="rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md hover:border-primary/30 transition-all bg-white"
+                className="surface-card rounded-[18px] p-6 transition-all hover:-translate-y-1 hover:border-[rgba(72,98,132,0.16)] hover:shadow-[0_18px_40px_rgba(72,98,132,0.1)]"
               >
-                <h2 className="text-2xl font-serif font-bold text-primary mb-3">{neighborhood.name}</h2>
-                <p className="text-slate-600 mb-4 leading-relaxed">{neighborhood.description}</p>
-                <p className="text-sm font-semibold text-slate-800 mb-1">Clínica: {neighborhood.clinic.name}</p>
-                <p className="text-sm text-slate-500">{neighborhood.clinic.address}</p>
+                <h2 className="mb-3 font-['EB_Garamond'] text-[30px] font-medium text-[var(--ds-color-text-strong)]">{neighborhood.name}</h2>
+                <p className="mb-4 leading-[30px] text-[var(--ds-color-text-muted)]">{neighborhood.description}</p>
+                <p className="mb-1 text-sm font-medium text-[var(--ds-color-brand-700)]">Clínica: {neighborhood.clinic.name}</p>
+                <p className="text-sm text-[var(--ds-color-text-muted)]">{neighborhood.clinic.address}</p>
               </a>
             ))}
           </div>

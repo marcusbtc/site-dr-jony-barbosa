@@ -1,18 +1,19 @@
 @import "tailwindcss";
+@import "./design-system.css";
 
 @source "../components/**/*.{ts,tsx}";
 @source "../app/**/*.{ts,tsx}";
 
 @theme {
-  --font-serif: "Playfair Display", serif;
-  --font-sans: "Inter", sans-serif;
+  --font-serif: "EB Garamond", serif;
+  --font-sans: "Questrial", sans-serif;
 
-  --color-primary: #004aad;
-  --color-primary-hover: #003d8f;
-  --color-secondary: #e6f0ff;
-  --color-secondary-hover: #cce0ff;
-  --color-accent: #25D366;
-  --color-accent-hover: #1ebe55;
+  --color-primary: #486284;
+  --color-primary-hover: #3f5870;
+  --color-secondary: #8ca2c0;
+  --color-secondary-hover: #7d94b3;
+  --color-accent: #adbdd2;
+  --color-accent-hover: #9fb1c8;
 }
 
 /* Smooth scrolling for anchor links */
@@ -32,6 +33,130 @@ html {
 
 @layer base {
   body {
-    @apply antialiased text-slate-700 bg-white;
+    @apply antialiased;
+    background: var(--ds-color-neutral-100);
+    color: var(--ds-color-text-body);
+    font-family: var(--ds-font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--ds-color-text-strong);
+  }
+
+  a,
+  button {
+    transition:
+      color 180ms ease,
+      background-color 180ms ease,
+      border-color 180ms ease,
+      box-shadow 180ms ease,
+      transform 180ms ease;
+  }
+}
+
+.page-shell {
+  min-height: 100vh;
+  background: var(--ds-color-neutral-100);
+  color: var(--ds-color-text-body);
+}
+
+.page-main {
+  padding-top: 7.5rem;
+  padding-bottom: 5rem;
+}
+
+.page-container {
+  margin-inline: auto;
+  width: 100%;
+  max-width: var(--ds-content-max);
+  padding-inline: 1.5rem;
+}
+
+.page-breadcrumbs {
+  padding-block: 1rem;
+}
+
+.page-hero {
+  border: 1px solid rgba(72, 98, 132, 0.08);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.75), transparent 30%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.55), rgba(173, 189, 210, 0.18)),
+    var(--ds-color-neutral-150);
+  border-radius: 24px;
+  box-shadow: var(--ds-shadow-soft);
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.page-title {
+  color: var(--ds-color-text-strong);
+  font-family: var(--ds-font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 500;
+  letter-spacing: var(--ds-letter-wide);
+  line-height: 1.12;
+}
+
+.page-intro {
+  margin-inline: auto;
+  max-width: 48rem;
+  color: var(--ds-color-text-muted);
+  font-family: var(--ds-font-body);
+  font-size: 1.125rem;
+  line-height: 2rem;
+  letter-spacing: 0.3px;
+}
+
+.page-section {
+  border: 1px solid rgba(72, 98, 132, 0.07);
+  background: rgba(255, 255, 255, 0.62);
+  border-radius: 24px;
+  box-shadow: var(--ds-shadow-soft);
+}
+
+.surface-card {
+  border: 1px solid rgba(72, 98, 132, 0.08);
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: 18px;
+  box-shadow: var(--ds-shadow-card);
+}
+
+.eyebrow-label {
+  color: var(--ds-color-brand-700);
+  font-family: var(--ds-font-label);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.figma-home .home-marble {
+  background-image: var(--ds-gradient-marble);
+}
+
+.figma-home .home-paper-shadow {
+  box-shadow: var(--ds-shadow-soft);
+}
+
+.figma-home .home-photo-frame {
+  min-height: 630px;
+}
+
+.figma-home .home-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.figma-home .home-faq[open] summary > span:last-child {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 767px) {
+  .figma-home .home-photo-frame {
+    min-height: 420px;
   }
 }
