@@ -42,6 +42,24 @@ const testimonials = [
       "O atendimento é resumido como atencioso, cuidadoso e humano, com acompanhamento da gestação marcado por bom humor e profissionalismo.",
     label: "Cuidado humanizado",
   },
+  {
+    id: "google-review-ultrasound-quality",
+    quote:
+      "A experiência com o ultrassom é descrita como marcante, com imagens de alta qualidade e exame conduzido com atenção aos detalhes.",
+    label: "Ultrassom de alta qualidade",
+  },
+  {
+    id: "google-review-long-term-trust",
+    quote:
+      "O relato reforça confiança construída ao longo dos anos, respostas claras para dúvidas e um consultório percebido como agradável e acolhedor.",
+    label: "Confiança de longo prazo",
+  },
+  {
+    id: "google-review-availability",
+    quote:
+      "A paciente destaca disponibilidade para esclarecer dúvidas, acompanhamento em mais de uma gestação e exames elogiados pela qualidade.",
+    label: "Disponibilidade e continuidade",
+  },
 ];
 
 const homeFaqs = faqs.slice(0, 3);
@@ -208,6 +226,37 @@ function ProcedureSliderCard({
           href={`/servicos/${service.slug}`}
           label="Ver detalhes"
         />
+      </div>
+    </article>
+  );
+}
+
+function TestimonialCard({
+  testimonial,
+}: {
+  testimonial: (typeof testimonials)[number];
+}) {
+  return (
+    <article className="flex h-full min-h-[320px] flex-col rounded-[24px] border border-white/40 bg-[rgba(255,255,255,0.58)] p-7 text-left shadow-[0_12px_36px_rgba(72,98,132,0.08)] backdrop-blur-[8px]">
+      <div className="mb-5 flex items-center gap-1 text-[#d1a64b]">
+        {Array.from({ length: 5 }, (_, index) => (
+          <span key={index} aria-hidden="true" className="text-lg">
+            ★
+          </span>
+        ))}
+      </div>
+
+      <p className="flex-1 font-['Questrial'] text-[20px] leading-[34px] tracking-[0.5px] text-[#5d7391]">
+        {testimonial.quote}
+      </p>
+
+      <div className="mt-6 border-t border-[#486284]/10 pt-4">
+        <p className="font-['DM_Sans'] text-[16px] font-medium leading-[29px] text-[#486284]">
+          {testimonial.label}
+        </p>
+        <p className="font-['DM_Sans'] text-[14px] leading-[24px] text-[#486284]/80">
+          Google Meu Negócio · 5 estrelas
+        </p>
       </div>
     </article>
   );
@@ -665,7 +714,7 @@ export default function FigmaHomePage() {
         <section className="relative overflow-hidden bg-[#a6b5be] py-20 md:py-24">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(255,255,255,0.55),transparent_24%),radial-gradient(circle_at_84%_8%,rgba(255,255,255,0.28),transparent_24%),linear-gradient(180deg,rgba(239,242,246,0.58),rgba(160,177,188,0.42))]" />
 
-          <div className="relative mx-auto max-w-[1280px] px-6 text-center sm:px-8 lg:px-10">
+          <div className="relative mx-auto max-w-[1380px] px-6 text-center sm:px-8 lg:px-10">
             <p className="font-['EB_Garamond'] text-[34px] font-medium leading-[1.25] tracking-[0.5px] text-[#1f1f1f] md:text-[48px] md:leading-[70px]">
               Depoimentos
             </p>
@@ -674,30 +723,19 @@ export default function FigmaHomePage() {
               identificação das pacientes removida para preservar privacidade.
             </p>
 
-            <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
-              {testimonials.map((testimonial) => (
-                <article
-                  key={testimonial.id}
-                  className="rounded-[10px] border border-white/30 bg-white/45 p-7 text-left shadow-[0_12px_36px_rgba(72,98,132,0.08)] backdrop-blur-[6px]"
-                >
-                  <div className="mb-5 flex items-center gap-1 text-[#d1a64b]">
-                    {Array.from({ length: 5 }, (_, index) => (
-                      <span key={index} aria-hidden="true" className="text-lg">
-                        ★
-                      </span>
-                    ))}
-                  </div>
-                  <p className="font-['Questrial'] text-[20px] leading-[34px] tracking-[0.5px] text-[#8ca2c0]">
-                    {testimonial.quote}
-                  </p>
-                  <p className="mt-4 font-['DM_Sans'] text-[16px] font-medium leading-[29px] text-[#486284]">
-                    {testimonial.label}
-                  </p>
-                  <p className="font-['DM_Sans'] text-[14px] leading-[24px] text-[#486284]/80">
-                    Google Meu Negócio · 5 estrelas
-                  </p>
-                </article>
-              ))}
+            <div className="mt-12">
+              <Slider
+                id="home-testimonials-slider"
+                autoplay
+                autoplayInterval={4200}
+              >
+                {testimonials.map((testimonial) => (
+                  <TestimonialCard
+                    key={testimonial.id}
+                    testimonial={testimonial}
+                  />
+                ))}
+              </Slider>
             </div>
           </div>
         </section>
