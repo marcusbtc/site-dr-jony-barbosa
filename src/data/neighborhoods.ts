@@ -65,8 +65,8 @@ export const nobleNeighborhoods: NeighborhoodData[] = [
     shortName: "Marista",
     description: "Para pacientes do Setor Marista, o atendimento reúne ginecologia, obstetrícia e medicina fetal com acesso rápido à unidade do Setor Bueno e rotina de cuidado mais individualizada.",
     localContext: "O Setor Marista é sinônimo de sofisticação em Goiânia. Com a charmosa Alameda Ricardo Paranhos e o Parque Areião, o bairro é o endereço de quem não abre mão do luxo e do bom gosto. É uma região que concentra a alta gastronomia e empreendimentos de altíssimo padrão, refletindo um estilo de vida exigente e refinado.",
-    logisticDetails: "Vizinho imediato do Setor Bueno, o Marista oferece acesso rápido à clínica FetalCenter (Av. T-4). O trajeto é curto e descomplicado, permitindo que as pacientes desfrutem de um atendimento premium em medicina fetal e ginecologia com o máximo de conforto e agilidade.",
-    localCareTips: "Pacientes do Marista frequentemente buscam o que há de mais moderno em diagnósticos. Destacamos a importância de exames de ultrassonografia morfológica de alta precisão e o acompanhamento de pré-natal de alto risco, garantindo segurança e tranquilidade para a mãe e o bebê.",
+    logisticDetails: "Vizinho imediato do Setor Bueno, o Marista oferece acesso rápido ao local de atendimento da Av. T-4. O trajeto é curto e facilita consultas, exames e acompanhamentos conforme agendamento.",
+    localCareTips: "Pacientes do Marista costumam precisar de orientação sobre ultrassonografia morfológica e acompanhamento de pré-natal de alto risco quando houver indicação clínica.",
     landmarks: ["Shopping Bougainville", "Alameda Ricardo Paranhos", "Parque Areião"],
     clinic: clinicLocations.bueno
   },
@@ -75,8 +75,8 @@ export const nobleNeighborhoods: NeighborhoodData[] = [
     name: "Alphaville Flamboyant",
     shortName: "Alphaville",
     description: "Cuidado em ginecologia e obstetrícia para moradoras do Alphaville Flamboyant, com atendimento particular, exames direcionados e mais previsibilidade na organização da rotina.",
-    localContext: "O Alphaville Flamboyant representa o ápice do planejamento urbano e segurança em Goiânia. Entre lagos e áreas verdes, o condomínio abriga uma comunidade que valoriza a exclusividade e a tranquilidade. É um refúgio de alto padrão que exige serviços de saúde que acompanhem esse nível de excelência.",
-    logisticDetails: "Apesar de ser uma região mais reservada, o acesso ao consultório do Dr. Jony no Setor Bueno é facilitado pelas vias expressas. Entendemos que o tempo das pacientes do Alphaville é precioso, por isso priorizamos a pontualidade e a eficiência em diagnósticos avançados.",
+    localContext: "O Alphaville Flamboyant é uma região residencial conhecida por vias planejadas, áreas verdes e rotina mais reservada. O deslocamento para atendimento em Goiânia costuma depender de acesso organizado e previsão de tempo.",
+    logisticDetails: "Apesar de ser uma região mais reservada, o acesso ao local de atendimento no Setor Bueno é facilitado pelas vias expressas. O objetivo é orientar horários e endereço de forma clara para encaixar o atendimento na rotina.",
     localCareTips: "Para as gestantes e mulheres que vivem no Alphaville, oferecemos um suporte contínuo e personalizado. Recomendamos o uso de tecnologias de telemedicina para orientações rápidas e a realização de check-ups completos que otimizem as visitas ao consultório.",
     landmarks: ["Shopping Flamboyant", "Parque Flamboyant", "Centro Cultural Oscar Niemeyer"],
     clinic: clinicLocations.bueno
@@ -87,7 +87,7 @@ export const nobleNeighborhoods: NeighborhoodData[] = [
     shortName: "Jardim Goiás",
     description: "Ginecologista e obstetra perto do Jardim Goiás para consulta, pré-natal e exames com acesso prático à unidade do Setor Bueno e atendimento particular.",
     localContext: "O Jardim Goiás é um dos bairros que mais crescem e se valorizam em Goiânia. Emoldurado pelo Parque Flamboyant e pelo Shopping Flamboyant, o bairro oferece um estilo de vida cosmopolita com grandes edifícios residenciais e comerciais de luxo, atraindo um público jovem e moderno.",
-    logisticDetails: "Localizado estrategicamente, o Jardim Goiás permite um deslocamento rápido via Marginal Botafogo ou Avenida 136 até o Setor Bueno. O Dr. Jony oferece um atendimento que se encaixa na rotina dinâmica dos moradores deste setor, com foco em praticidade e alta tecnologia.",
+    logisticDetails: "Localizado estrategicamente, o Jardim Goiás permite um deslocamento rápido via Marginal Botafogo ou Avenida 136 até o Setor Bueno. O atendimento busca combinar praticidade, avaliação clínica e orientação objetiva para a rotina da região.",
     localCareTips: "A rotina intensa do Jardim Goiás pede cuidados preventivos práticos. Enfatizamos a importância de métodos contraceptivos modernos (como o DIU) e o rastreamento ginecológico anual como formas de manter a saúde em dia com conveniência.",
     landmarks: ["Estádio Serra Dourada", "Parque Flamboyant", "Paço Municipal"],
     clinic: clinicLocations.bueno 
@@ -108,9 +108,9 @@ export const nobleNeighborhoods: NeighborhoodData[] = [
     name: "Setor Oeste",
     shortName: "Oeste",
     description: "Atendimento no próprio Setor Oeste para consulta, pré-natal de alto risco, medicina fetal e exames, com estrutura local para quem busca cuidado mais próximo em Goiânia.",
-    localContext: "O Setor Oeste é o berço da medicina na capital goiana e um dos bairros mais tradicionais e prestigiados. Com o Bosque dos Buritis e o Lago das Rosas, o bairro oferece um ambiente sereno e uma estrutura completa de clínicas e hospitais, sendo referência em saúde para todo o estado.",
-    logisticDetails: "As moradoras do Setor Oeste têm a facilidade de encontrar o Dr. Jony na Policlínica São Luiz, um endereço tradicional e de fácil acesso. O atendimento local reforça o compromisso de estar perto das pacientes, oferecendo conforto e segurança em um ambiente já familiar.",
-    localCareTips: "No Setor Oeste, destacamos nossa expertise em Medicina Fetal e pré-natal de alto risco. A infraestrutura local permite a realização de exames complexos com a segurança de estar em um dos maiores polos médicos do Centro-Oeste.",
+    localContext: "O Setor Oeste é um bairro tradicional de Goiânia, com vias conhecidas e acesso simples para quem procura atendimento médico na região central da cidade.",
+    logisticDetails: "As moradoras do Setor Oeste contam com um local de atendimento na Policlínica São Luiz, com orientação prática de endereço, horário e preparo conforme a necessidade do atendimento.",
+    localCareTips: "No Setor Oeste, o acompanhamento pode incluir medicina fetal, pré-natal de alto risco e exames direcionados quando houver indicação clínica.",
     landmarks: ["Praça Tamandaré", "Bosque dos Buritis", "Zoológico de Goiânia"],
     clinic: clinicLocations.oeste
   }

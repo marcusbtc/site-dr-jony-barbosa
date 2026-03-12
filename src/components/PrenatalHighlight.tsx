@@ -27,22 +27,22 @@ const PrenatalHighlight: React.FC = () => {
           </div>
           <div className="md:w-1/2 space-y-8">
             <div className="inline-block px-4 py-1.5 rounded-full bg-secondary/10 text-secondary text-sm font-bold tracking-wide uppercase">
-              Excelência em Obstetrícia
+              Acompanhamento obstétrico
             </div>
             <h2 className="text-4xl lg:text-5xl font-serif text-primary font-bold leading-tight">
               Acompanhamento <span className="text-secondary italic">pré-natal</span> em Goiânia
             </h2>
             <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
               <p>
-                A saúde do seu bebê começa muito antes do nascimento. O Dr. Jony realiza um acompanhamento
-                pré-natal cuidadoso, unindo tecnologia de ponta e acolhimento humano.
+                O pré-natal começa com avaliação clínica e segue com acompanhamento
+                organizado conforme a fase da gestação e a necessidade de cada paciente.
               </p>
               <p>
-                Utilizamos <strong className="text-primary font-bold">ultrassonografia morfológica de alta resolução</strong> e monitoramento
-                constante para garantir que cada etapa da sua gestação seja segura e tranquila.
+                A rotina pode incluir <strong className="text-primary font-bold">ultrassonografia morfológica</strong>, revisão de exames
+                e orientação objetiva para acompanhar a evolução da gestação com critério clínico.
               </p>
               <ul className="space-y-4 pt-4">
-                {["Ultrassom 3D/4D de última geração", "Rastreamento de pré-eclâmpsia", "Medicina Fetal avançada"].map((item, i) => (
+                {["Ultrassom 3D/4D quando indicado", "Rastreamento de pré-eclâmpsia", "Suporte em medicina fetal"].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <div className="w-5 h-5 rounded-full bg-secondary flex items-center justify-center text-white">
                       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>

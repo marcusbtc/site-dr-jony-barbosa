@@ -17,12 +17,11 @@ const {
 
 const schemaData = {
   "@context": "https://schema.org",
-  "@type": ["MedicalBusiness", "Gynecologic", "Obstetric"],
-  "name": `Dr. Jony Barbosa - Ginecologista e Obstetra em Goiânia (${neighborhoodName})`,
+  "@type": "Physician",
+  "name": "Dr. Jony Barbosa",
   "image": image,
   "url": url,
   "telephone": clinic.phone,
-  "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": clinic.address.split(' - ')[0],
@@ -44,6 +43,16 @@ const schemaData = {
     {
       "@type": "Neighborhood",
       "name": neighborhoodName
+    }
+  ],
+  "availableService": [
+    {
+      "@type": "MedicalSpecialty",
+      "name": "Gynecology"
+    },
+    {
+      "@type": "MedicalSpecialty",
+      "name": "Obstetrics"
     }
   ],
   "medicalSpecialty": [

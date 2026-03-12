@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Exames em Goiânia | Ultrassonografia e Medicina Fetal com Dr. Jony Barbosa',
-  description: 'Confira os exames de ultrassonografia, medicina fetal e investigação ginecológica realizados por Dr. Jony Barbosa em Goiânia.',
+  description: 'Confira os exames de ultrassonografia, medicina fetal e investigação ginecológica realizados por Dr. Jony Barbosa em Goiânia com foco diagnóstico.',
 };
 
 export default function ExamsIndex() {

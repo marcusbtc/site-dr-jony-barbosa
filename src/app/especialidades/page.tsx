@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Especialidades em Goiânia | Ginecologista e Obstetra Dr. Jony Barbosa',
-  description: 'Conheça as especialidades em ginecologia, obstetrícia, medicina fetal e ultrassonografia com Dr. Jony Barbosa em Goiânia.',
+  description: 'Conheça as áreas de atendimento em ginecologia, obstetrícia, medicina fetal e ultrassonografia com Dr. Jony Barbosa em Goiânia.',
 };
 
 export default function SpecialtiesIndex() {

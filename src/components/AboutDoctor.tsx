@@ -33,7 +33,7 @@ const AboutDoctor: React.FC = () => {
             
             <div className="space-y-6 text-slate-600 text-lg leading-relaxed mb-10">
               <p>
-                Graduado em Medicina pela Universidade Federal de Goiás, o Dr. Jony Barbosa é especialista em Ginecologia e Obstetrícia, com foco em Medicina Fetal e Ultrassonografia.
+                Graduado em Medicina pela Universidade Federal de Goiás, o Dr. Jony Barbosa atua em Ginecologia e Obstetrícia, com foco em Medicina Fetal e Ultrassonografia.
               </p>
               <p>
                 Sua trajetória é marcada pelo compromisso com a atualização constante e pelo desenvolvimento de um atendimento que une rigor científico a uma escuta cuidadosa e empática.
@@ -42,9 +42,9 @@ const AboutDoctor: React.FC = () => {
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 text-sm font-bold text-slate-800">
                 {[
                   "CRM 7652 / GO",
-                  "RQE 3900 (Ginecologia)",
+                  "RQE 3900 (Ginecologia e Obstetrícia)",
                   "RQE 9229 (Ultrassonografia)",
-                  "Especialista em Medicina Fetal"
+                  "Atuação em Medicina Fetal"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-secondary"></div>
@@ -55,7 +55,7 @@ const AboutDoctor: React.FC = () => {
             </div>
             
             <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 mb-10">
-              <h4 className="text-xl font-bold text-primary mb-4">Experiência e Formação</h4>
+              <h4 className="text-xl font-bold text-primary mb-4">Formação e atuação</h4>
               <p className="text-slate-600 mb-6">
                 Membro titular da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e da Sociedade Brasileira de Ultrassonografia (SBUS).
               </p>

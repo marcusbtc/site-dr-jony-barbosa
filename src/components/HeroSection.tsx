@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
             </h1>
             
             <p className="text-lg text-slate-600 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Atendimento focado no acolhimento e na excelência médica, proporcionando saúde e bem-estar para a mulher moderna em Goiânia.
+              Atendimento focado em avaliação individualizada, orientação clara e acompanhamento médico nas diferentes fases da saúde da mulher em Goiânia.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">

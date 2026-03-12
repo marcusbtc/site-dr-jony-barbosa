@@ -11,59 +11,7 @@ const heroHighlights = [
   "Atendimento em Goiânia com estrutura confortável, tecnologia diagnóstica e orientação prática para pacientes Unimed e particular.",
 ];
 
-const testimonials = [
-  {
-    id: "google-review-prenatal-care",
-    quote:
-      "A avaliação destaca acompanhamento de pré-natal e parto com dedicação, responsabilidade e uma experiência descrita como segura do início ao fim.",
-    label: "Pré-natal e parto",
-  },
-  {
-    id: "google-review-gestation-empathy",
-    quote:
-      "O cuidado com a gestante e o bebê aparece junto de empatia, cordialidade e atenção também com a família durante consultas e ultrassons.",
-    label: "Gestação e ultrassom",
-  },
-  {
-    id: "google-review-clear-explanations",
-    quote:
-      "A paciente relata atendimento sem pressa, explicações detalhadas em cada etapa e uma postura transparente que transmite confiança e segurança.",
-    label: "Consulta detalhada",
-  },
-  {
-    id: "google-review-answered-questions",
-    quote:
-      "O depoimento reforça acolhimento em um momento de urgência, esclarecimento de medos e suporte antes e depois do parto.",
-    label: "Acolhimento e suporte",
-  },
-  {
-    id: "google-review-human-approach",
-    quote:
-      "O atendimento é resumido como atencioso, cuidadoso e humano, com acompanhamento da gestação marcado por bom humor e profissionalismo.",
-    label: "Cuidado humanizado",
-  },
-  {
-    id: "google-review-ultrasound-quality",
-    quote:
-      "A experiência com o ultrassom é descrita como marcante, com imagens de alta qualidade e exame conduzido com atenção aos detalhes.",
-    label: "Ultrassom de alta qualidade",
-  },
-  {
-    id: "google-review-long-term-trust",
-    quote:
-      "O relato reforça confiança construída ao longo dos anos, respostas claras para dúvidas e um consultório percebido como agradável e acolhedor.",
-    label: "Confiança de longo prazo",
-  },
-  {
-    id: "google-review-availability",
-    quote:
-      "A paciente destaca disponibilidade para esclarecer dúvidas, acompanhamento em mais de uma gestação e exames elogiados pela qualidade.",
-    label: "Disponibilidade e continuidade",
-  },
-];
-
 const homeFaqs = faqs.slice(0, 3);
-const testimonialsToShow = testimonials.slice(0, 3);
 const homeFaqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -234,37 +182,6 @@ function ProcedureSliderCard({
           href={`/servicos/${service.slug}`}
           label="Ver detalhes"
         />
-      </div>
-    </article>
-  );
-}
-
-function TestimonialCard({
-  testimonial,
-}: {
-  testimonial: (typeof testimonials)[number];
-}) {
-  return (
-    <article className="flex h-full min-h-[320px] flex-col rounded-[24px] border border-white/40 bg-[rgba(255,255,255,0.58)] p-7 text-left shadow-[0_12px_36px_rgba(72,98,132,0.08)] backdrop-blur-[8px]">
-      <div className="mb-5 flex items-center gap-1 text-[#d1a64b]">
-        {Array.from({ length: 5 }, (_, index) => (
-          <span key={index} aria-hidden="true" className="text-lg">
-            ★
-          </span>
-        ))}
-      </div>
-
-      <p className="flex-1 font-['Questrial'] text-[20px] leading-[34px] tracking-[0.5px] text-[#5d7391]">
-        {testimonial.quote}
-      </p>
-
-      <div className="mt-6 border-t border-[#486284]/10 pt-4">
-        <p className="font-['DM_Sans'] text-[16px] font-medium leading-[29px] text-[#486284]">
-          {testimonial.label}
-        </p>
-        <p className="font-['DM_Sans'] text-[14px] leading-[24px] text-[#486284]/80">
-          Google Meu Negócio · 5 estrelas
-        </p>
       </div>
     </article>
   );
@@ -765,30 +682,56 @@ export default function FigmaHomePage() {
         <section className="relative overflow-hidden bg-[#a6b5be] py-20 md:py-24">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(255,255,255,0.55),transparent_24%),radial-gradient(circle_at_84%_8%,rgba(255,255,255,0.28),transparent_24%),linear-gradient(180deg,rgba(239,242,246,0.58),rgba(160,177,188,0.42))]" />
 
-          <div className="relative mx-auto max-w-[1380px] px-6 text-center sm:px-8 lg:px-10">
-            <p className="font-['EB_Garamond'] text-[34px] font-medium leading-[1.25] tracking-[0.5px] text-[#1f1f1f] md:text-[48px] md:leading-[70px]">
-              Depoimentos
-            </p>
-            <p className="mx-auto mt-3 max-w-[640px] font-['Questrial'] text-[18px] leading-[32px] tracking-[0.5px] text-[#2f2f2f]">
-              Seleção de avaliações 5 estrelas publicadas no Google sobre o
-              atendimento ginecológico e obstétrico em Goiânia, com foco em
-              consulta particular, com
-              identificação das pacientes removida para preservar privacidade.
-            </p>
+          <div className="relative mx-auto max-w-[1380px] px-6 sm:px-8 lg:px-10">
+            <div className="mx-auto max-w-[760px] text-center">
+              <p className="font-['EB_Garamond'] text-[34px] font-medium leading-[1.25] tracking-[0.5px] text-[#1f1f1f] md:text-[48px] md:leading-[70px]">
+                Como o atendimento é organizado
+              </p>
+              <p className="mx-auto mt-3 max-w-[680px] font-['Questrial'] text-[18px] leading-[32px] tracking-[0.5px] text-[#2f2f2f]">
+                O site reúne informações práticas sobre consulta, acompanhamento
+                e canais de contato, com foco em orientar cada etapa do cuidado
+                ginecológico e obstétrico.
+              </p>
+            </div>
 
-            <div className="mt-12">
-              <Slider
-                id="home-testimonials-slider"
-                autoplay
-                autoplayInterval={4200}
-              >
-                {testimonialsToShow.map((testimonial) => (
-                  <TestimonialCard
-                    key={testimonial.id}
-                    testimonial={testimonial}
-                  />
-                ))}
-              </Slider>
+            <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+              {[
+                {
+                  title: "Consulta com tempo adequado",
+                  description:
+                    "A consulta é organizada para ouvir as queixas, revisar exames e definir os próximos passos com clareza.",
+                },
+                {
+                  title: "Atendimento presencial e online",
+                  description:
+                    "A equipe orienta quando o atendimento presencial é necessário e quando o suporte online pode ajudar entre consultas.",
+                },
+                {
+                  title: "Agendamento por WhatsApp",
+                  description:
+                    "Os canais de contato ficam disponíveis para orientar horários, local de atendimento e preparo quando houver exame.",
+                },
+                {
+                  title: "Continuidade do cuidado",
+                  description:
+                    "Se houver indicação clínica, o acompanhamento pode incluir retornos, pré-natal, ultrassonografia e exames complementares.",
+                },
+              ].map((item) => (
+                <article
+                  key={item.title}
+                  className="rounded-[24px] border border-white/40 bg-[rgba(255,255,255,0.58)] p-7 shadow-[0_12px_36px_rgba(72,98,132,0.08)] backdrop-blur-[8px]"
+                >
+                  <p className="font-['DM_Sans'] text-[12px] uppercase tracking-[0.16em] text-[#486284]/80">
+                    Informação prática
+                  </p>
+                  <h3 className="mt-4 font-['EB_Garamond'] text-[28px] font-medium leading-[1.1] text-[#1f1f1f]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-4 font-['Questrial'] text-[18px] leading-[31px] tracking-[0.35px] text-[#4c5253]">
+                    {item.description}
+                  </p>
+                </article>
+              ))}
             </div>
           </div>
         </section>

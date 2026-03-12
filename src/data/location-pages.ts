@@ -138,7 +138,7 @@ function getAppointmentSteps(neighborhood: NeighborhoodData): AppointmentStep[] 
       description: `Fale com a equipe pelo WhatsApp, informe se você mora no ${neighborhood.name} e descreva se precisa de consulta, pré-natal, exame ou retorno.`,
     },
     {
-      title: 'Definição da clínica',
+      title: 'Definição do local de atendimento',
       description: `A equipe confirma o melhor endereço para você: ${neighborhood.clinic.name}, com orientações de acesso e horário.`,
     },
     {
@@ -162,7 +162,7 @@ function getTrustSignals(
       description: `Pacientes do ${neighborhood.name} encontram no mesmo acompanhamento ginecologia, obstetrícia e medicina fetal.`,
     },
     {
-      title: 'Estrutura de referência',
+      title: 'Local de atendimento definido',
       description: `O atendimento acontece em ${neighborhood.clinic.name}, com endereço conhecido e acesso prático para a rotina da região.`,
     },
     {
@@ -287,7 +287,7 @@ export function getLocationPageContent(slug: string): LocationPageContent | null
 
   const medicalBusinessSchema = {
     '@context': 'https://schema.org',
-    '@type': ['MedicalBusiness', 'Gynecologic', 'Obstetric'],
+    '@type': 'Physician',
     name: `Dr. Jony Barbosa - Ginecologista no ${neighborhood.name} em Goiânia`,
     url: canonicalUrl,
     telephone: neighborhood.clinic.phone,

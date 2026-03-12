@@ -34,8 +34,8 @@ export default function SobrePage() {
               </div>
               <div className="space-y-6 font-['Questrial'] text-[18px] leading-[32px] text-[var(--ds-color-text-body)]">
                 <p>
-                  Sou médico Ginecologista e Obstetra, especialista em Medicina Fetal,
-                  focado em oferecer um atendimento que une a precisão tecnológica ao
+                  Sou médico Ginecologista e Obstetra, com atuação em Medicina Fetal,
+                  focado em oferecer um atendimento que une recursos diagnósticos atualizados ao
                   acolhimento humano.
                 </p>
                 <p>
@@ -45,12 +45,12 @@ export default function SobrePage() {
                 </p>
                 <div className="surface-card rounded-[18px] p-6">
                   <h3 className="mb-2 font-['Poppins'] text-lg font-medium text-[var(--ds-color-brand-700)]">
-                    Formação de Excelência
+                    Formação e atuação
                   </h3>
                   <ul className="list-disc list-inside space-y-1 text-sm text-[var(--ds-color-text-muted)]">
-                    <li>Especialista em Ginecologia e Obstetrícia</li>
-                    <li>Especialista em Medicina Fetal</li>
-                    <li>Referência em Diagnóstico por Imagem em Goiânia</li>
+                    <li>RQE 3900 em Ginecologia e Obstetrícia</li>
+                    <li>Atuação em Medicina Fetal</li>
+                    <li>RQE 9229 em Ultrassonografia</li>
                   </ul>
                 </div>
               </div>

@@ -18,7 +18,7 @@ export const serviceCategories: ServiceCategory[] = [
   {
     name: 'Exames',
     slug: 'exames',
-    description: 'Exames especializados de medicina fetal e ultrassonografia realizados pelo Dr. Jony Barbosa em Goiânia com tecnologia de ponta e atendimento humanizado.',
+    description: 'Exames de medicina fetal e ultrassonografia realizados pelo Dr. Jony Barbosa em Goiânia com foco em apoio diagnóstico e acompanhamento clínico.',
     metaTitle: 'Exames de Medicina Fetal e Ultrassonografia em Goiânia | Dr. Jony Barbosa',
     metaDescription: 'Exames completos: NIPT, Amniocentese, Cordocentese, FISH, Ultrassom Morfológico e muito mais com Dr. Jony Barbosa em Goiânia. Agende: (62) 9950-4788',
     services: [

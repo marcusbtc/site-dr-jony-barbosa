@@ -61,9 +61,9 @@ export const servicesExtended: ExtendedServiceItem[] = [
     benefits: [
       'Detecção precoce de complicações contribui para reduzir riscos maternos e fetais',
       'Acompanhamento personalizado com Dr. Jony disponível para dúvidas via WhatsApp',
-      'Acesso a exames de medicina fetal de última geração',
-      'Planejamento de parto seguro em maternidades de referência em Goiânia',
-      'Tranquilidade através de monitoramento constante e comunicação transparente',
+      'Acesso a exames de medicina fetal conforme indicação clínica',
+      'Planejamento do parto em maternidades com estrutura obstétrica adequada em Goiânia',
+      'Acompanhamento com monitoramento clínico e comunicação transparente',
       'Fluxo de atendimento particular com orientação para pacientes Unimed'
     ],
 
@@ -199,10 +199,10 @@ export const servicesExtended: ExtendedServiceItem[] = [
     category: 'especialidade',
 
     metaTitle: 'Medicina Fetal em Goiânia | Dr. Jony Barbosa - Diagnóstico Fetal',
-    metaDescription: 'Especialista em Medicina Fetal em Goiânia: ultrassom morfológico, ecocardiografia fetal, diagnóstico pré-natal. Dr. Jony Barbosa. Agende: (62) 9950-4788',
+    metaDescription: 'Atendimento em medicina fetal em Goiânia com ultrassom morfológico, ecocardiografia fetal e diagnóstico pré-natal com Dr. Jony Barbosa.',
     keywords: [
       'medicina fetal goiânia',
-      'especialista fetal goiás',
+      'medicina fetal goiás',
       'diagnóstico fetal goiânia',
       'malformação fetal goiânia',
       'ecocardiografia fetal goiânia'
@@ -211,7 +211,7 @@ export const servicesExtended: ExtendedServiceItem[] = [
 
     longDescription: 'A medicina fetal é uma subespecialidade que se dedica ao diagnóstico, tratamento e acompanhamento de condições que afetam o feto durante a gestação.',
 
-    whatIsIt: 'A Medicina Fetal combina ultrassonografia de alta resolução, procedimentos invasivos diagnósticos (amniocentese, cordocentese) e acompanhamento multidisciplinar para identificar e manejar malformações, doenças genéticas, restrição de crescimento, gemelaridade complicada e outras condições fetais. O Dr. Jony Barbosa utiliza equipamentos de última geração para diagnóstico preciso e oferece aconselhamento detalhado às famílias sobre prognóstico e opções terapêuticas.',
+    whatIsIt: 'A Medicina Fetal combina ultrassonografia de alta resolução, procedimentos invasivos diagnósticos (amniocentese, cordocentese) e acompanhamento multidisciplinar para identificar e manejar malformações, doenças genéticas, restrição de crescimento, gemelaridade complicada e outras condições fetais. O Dr. Jony Barbosa utiliza recursos diagnósticos atualizados e oferece aconselhamento detalhado às famílias sobre prognóstico e opções terapêuticas.',
 
     whoNeedsIt: [
       'Suspeita de malformação fetal em ultrassom de rotina',
@@ -240,9 +240,9 @@ export const servicesExtended: ExtendedServiceItem[] = [
       'Diagnóstico precoce permite planejamento adequado do parto e tratamento pós-natal',
       'Reduz ansiedade através de informação clara e baseada em evidências',
       'Acesso a terapias intrauterinas quando disponíveis',
-      'Coordenação com centros de referência para cirurgia fetal se necessário',
-      'Acompanhamento humanizado com suporte emocional para a família',
-      'Segunda opinião especializada em casos complexos'
+      'Coordenação com serviços de apoio para cirurgia fetal quando necessário',
+      'Acompanhamento com orientação clara para a família',
+      'Avaliação complementar em casos complexos'
     ],
 
     relatedServices: [
@@ -254,12 +254,12 @@ export const servicesExtended: ExtendedServiceItem[] = [
 
     faq: [
       {
-        question: 'Quando devo procurar um especialista em medicina fetal em Goiânia?',
-        answer: 'Sempre que houver suspeita de malformação ou alteração fetal em ultrassom de rotina, alterações em exames de triagem (translucência nucal aumentada, NIPT positivo), ou histórico familiar de doenças genéticas. Muitas vezes o próprio obstetra encaminha para avaliação especializada.'
+        question: 'Quando devo procurar atendimento em medicina fetal em Goiânia?',
+        answer: 'Sempre que houver suspeita de malformação ou alteração fetal em ultrassom de rotina, alterações em exames de triagem (translucência nucal aumentada, NIPT positivo), ou histórico familiar de doenças genéticas. Muitas vezes o próprio obstetra encaminha para avaliação direcionada.'
       },
       {
         question: 'O ultrassom morfológico é o mesmo que ultrassom comum?',
-        answer: 'Não. O ultrassom morfológico é muito mais detalhado, realizado por especialista em medicina fetal, com equipamento de alta resolução. Avalia minuciosamente anatomia fetal, crescimento, placenta, líquido amniótico e marcadores de anomalias cromossômicas.'
+        answer: 'Não. O ultrassom morfológico é mais detalhado, realizado com foco em avaliação fetal e com equipamento de alta resolução. Avalia minuciosamente anatomia fetal, crescimento, placenta, líquido amniótico e marcadores de anomalias cromossômicas.'
       },
       {
         question: 'Se for diagnosticada uma malformação, o que acontece?',
@@ -302,7 +302,7 @@ export const servicesExtended: ExtendedServiceItem[] = [
     planCoverageText: 'Atendimento particular com orientação para pacientes Unimed',
     longDescription: 'A obstetrícia é a especialidade que cuida da mulher durante a gestação, parto e puerpério, garantindo saúde para mãe e bebê.',
 
-    whatIsIt: 'A Obstetrícia abrange todo o acompanhamento da gestação desde a confirmação até o pós-parto. No consultório do Dr. Jony Barbosa em Goiânia, o pré-natal inclui consultas mensais (quinzenais no final), exames de rotina, ultrassonografias, orientações nutricionais e de exercícios, vacinação, preparação para o parto e suporte no puerpério. O Dr. Jony é defensor do parto adequado: seja normal ou cesárea, sempre respeitando a fisiologia, preferências da família e priorizando segurança.',
+    whatIsIt: 'A Obstetrícia abrange todo o acompanhamento da gestação desde a confirmação até o pós-parto. No consultório do Dr. Jony Barbosa em Goiânia, o pré-natal inclui consultas mensais (quinzenais no final), exames de rotina, ultrassonografias, orientações nutricionais e de exercícios, vacinação, preparação para o parto e suporte no puerpério. A via de parto é definida conforme avaliação clínica, preferências informadas da paciente e condições maternas e fetais.',
 
     whoNeedsIt: [
       'Toda mulher grávida desde a confirmação da gestação',
@@ -395,7 +395,7 @@ export const servicesExtended: ExtendedServiceItem[] = [
     planCoverageText: 'Atendimento particular com orientação para pacientes Unimed',
     longDescription: 'A ultrassonografia é método diagnóstico não invasivo que utiliza ondas sonoras para visualizar estruturas internas do corpo.',
 
-    whatIsIt: 'A Ultrassonografia é exame de imagem essencial na ginecologia e obstetrícia. No consultório do Dr. Jony Barbosa em Goiânia, são realizados ultrassom transvaginal (ginecológico), ultrassom obstétrico de rotina, morfológico de primeiro, segundo e terceiro trimestres, Doppler obstétrico, ultrassom de mamas e ultrassom para monitoração de ovulação. Os equipamentos de última geração permitem imagens 4D/5D para visualização detalhada do bebê.',
+    whatIsIt: 'A Ultrassonografia é exame de imagem essencial na ginecologia e obstetrícia. No consultório do Dr. Jony Barbosa em Goiânia, são realizados ultrassom transvaginal (ginecológico), ultrassom obstétrico de rotina, morfológico de primeiro, segundo e terceiro trimestres, Doppler obstétrico, ultrassom de mamas e ultrassom para monitoração de ovulação. Os equipamentos disponíveis permitem imagens 4D/5D quando esse recurso ajuda na avaliação proposta.',
 
     whoNeedsIt: [
       'Gestantes em todas as fases da gravidez',
@@ -421,7 +421,7 @@ export const servicesExtended: ExtendedServiceItem[] = [
       'Exame não invasivo, seguro e sem radiação',
       'Diagnóstico preciso de condições ginecológicas e obstétricas',
       'Imagens 4D/5D permitem visualização realista do bebê',
-      'Realizado por especialista em medicina fetal',
+      'Realizado com foco em avaliação fetal e obstétrica',
       'Laudo imediato sem necessidade de retorno apenas para resultado',
       'Esclarecimento de dúvidas durante o próprio exame'
     ],
@@ -553,7 +553,7 @@ export const servicesExtended: ExtendedServiceItem[] = [
     category: 'exame',
 
     metaTitle: 'Biópsia de Vilo Corial em Goiânia | Dr. Jony Barbosa',
-    metaDescription: 'Biópsia de vilo corial em Goiânia: diagnóstico genético no 1º trimestre. Dr. Jony Barbosa, especialista em medicina fetal. Agende: (62) 9950-4788',
+    metaDescription: 'Biópsia de vilo corial em Goiânia para diagnóstico genético no 1º trimestre com Dr. Jony Barbosa.',
     keywords: [
       'biópsia vilo corial goiânia',
       'BVC goiás',
@@ -796,11 +796,11 @@ export const servicesExtended: ExtendedServiceItem[] = [
     description: 'Avaliação anatômica completa do feto entre 20-24 semanas.',
     category: 'exame',
     metaTitle: 'Ultrassom Morfológico 2º Trimestre Goiânia | Dr. Jony Barbosa',
-    metaDescription: 'Morfológico de segundo trimestre em Goiânia. Avaliação anatômica completa do bebê. Dr. Jony Barbosa especialista. Agende: (62) 9950-4788',
+    metaDescription: 'Morfológico de segundo trimestre em Goiânia com avaliação anatômica completa do bebê por Dr. Jony Barbosa.',
     keywords: ['morfológico segundo trimestre goiânia', 'ultrassom 20 semanas goiás', 'morfológico detalhado goiânia'],
     canonicalUrl: 'https://drjonybarbosa.com.br/exames/ultrassom-morfologico-segundo-trimestre-goiania',
     longDescription: 'Exame mais importante da gestação, avalia detalhadamente todos os órgãos e sistemas fetais.',
-    whatIsIt: 'Ultrassom especializado entre 20-24 semanas que avalia minuciosamente cérebro, face, coração, pulmões, abdome, coluna, membros e genitália. Detecta 80-85% das malformações. Realizado por especialista em medicina fetal com equipamento de alta resolução.',
+    whatIsIt: 'Ultrassom especializado entre 20-24 semanas que avalia minuciosamente cérebro, face, coração, pulmões, abdome, coluna, membros e genitália. Detecta 80-85% das malformações. Realizado com foco em avaliação fetal e equipamento de alta resolução.',
     whoNeedsIt: ['Todas gestantes entre 20-24 semanas (obrigatório)', 'Rastreamento de malformações fetais', 'Avaliação de placenta e líquido amniótico', 'Investigação de suspeitas em exames anteriores'],
     howItWorks: ['Ultrassom transabdominal detalhado', 'Avaliação sistemática de todos órgãos', 'Biometria fetal completa', 'Avaliação de placenta, cordão e líquido', 'Doppler de artérias uterinas', 'Sexagem fetal', 'Laudo descritivo completo'],
     benefits: ['Detecta maioria das malformações', 'Permite planejamento do parto em maternidade adequada', 'Identifica gestações de risco', 'Tranquiliza quando normal', 'Imagens 4D do bebê'],
