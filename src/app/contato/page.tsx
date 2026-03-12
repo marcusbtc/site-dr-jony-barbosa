@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Breadcrumbs from '../components/seo/Breadcrumbs';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import Breadcrumbs from '../../components/seo/Breadcrumbs';
 
 export default function ContatoPage() {
   const breadcrumbItems = [
