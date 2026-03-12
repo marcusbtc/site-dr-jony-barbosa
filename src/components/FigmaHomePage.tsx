@@ -1,5 +1,6 @@
 import Footer from "./Footer";
 import Header from "./Header";
+import Slider from "./ui/Slider";
 import { faqs } from "../data/site-data";
 import { servicesExtended } from "../data/services-extended";
 import type { ExtendedServiceItem } from "../types";
@@ -46,24 +47,11 @@ const testimonials = [
 const homeFaqs = faqs.slice(0, 3);
 
 const examItems = servicesExtended.filter(
-  (service) => service.category === "exame",
+  (service) => service.category === "exame" && service.slug !== "nipt-goiania",
 );
 
-const highlightedServiceSlugs = [
-  "consulta-medica-goiania",
-  "avaliacao-fetal-goiania",
-];
-
-const highlightedServiceItems = servicesExtended.filter(
-  (service) =>
-    service.category === "servico" &&
-    highlightedServiceSlugs.includes(service.slug),
-);
-
-const procedureItems = servicesExtended.filter(
-  (service) =>
-    service.category === "servico" &&
-    !highlightedServiceSlugs.includes(service.slug),
+const serviceItems = servicesExtended.filter(
+  (service) => service.category === "servico",
 );
 
 const primaryButtonClass =
@@ -178,83 +166,7 @@ function StickyExamCard({
   );
 }
 
-function HighlightServiceCard({
-  service,
-  accent,
-}: {
-  service: ExtendedServiceItem;
-  accent: "dark" | "light";
-}) {
-  const isDark = accent === "dark";
-
-  return (
-    <article
-      className={`relative overflow-hidden rounded-[30px] p-8 md:p-10 ${
-        isDark
-          ? "bg-[#486284] text-white"
-          : "border border-[rgba(72,98,132,0.1)] bg-white text-[#1f1f1f]"
-      }`}
-    >
-      <div
-        className={`absolute inset-0 ${
-          isDark
-            ? "bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.18),transparent_34%)]"
-            : "bg-[radial-gradient(circle_at_top_left,rgba(140,162,192,0.18),transparent_32%)]"
-        }`}
-      />
-      <div className="relative">
-        <p
-          className={`font-['DM_Sans'] text-[13px] uppercase tracking-[0.18em] ${
-            isDark ? "text-white/72" : "text-[#486284]/70"
-          }`}
-        >
-          {service.schemaType === "MedicalTherapy"
-            ? "Atendimento"
-            : "Acompanhamento"}
-        </p>
-        <h3 className="mt-4 font-['EB_Garamond'] text-[34px] font-medium leading-[1.05] tracking-[0.3px] md:text-[40px]">
-          {service.title}
-        </h3>
-        <p
-          className={`mt-4 font-['Questrial'] text-[18px] leading-[31px] tracking-[0.35px] ${
-            isDark ? "text-white/88" : "text-[#4c5253]"
-          }`}
-        >
-          {service.description}
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <span
-            className={`rounded-full px-4 py-2 font-['DM_Sans'] text-[12px] uppercase tracking-[0.14em] ${
-              isDark
-                ? "bg-white/12 text-white"
-                : "bg-[#edf4f6] text-[#486284]"
-            }`}
-          >
-            {service.estimatedDuration ?? "Tempo sob avaliação"}
-          </span>
-          <span
-            className={`rounded-full px-4 py-2 font-['DM_Sans'] text-[12px] uppercase tracking-[0.14em] ${
-              isDark
-                ? "bg-white/10 text-white/84"
-                : "bg-[#d7e3e8] text-[#486284]/82"
-            }`}
-          >
-            {service.performedAt}
-          </span>
-        </div>
-        <div className="mt-8">
-          <ServiceCardLink
-            href={`/servicos/${service.slug}`}
-            label="Conhecer atendimento"
-            light={isDark}
-          />
-        </div>
-      </div>
-    </article>
-  );
-}
-
-function ProcedureGridCard({
+function ProcedureSliderCard({
   service,
   index,
 }: {
@@ -271,12 +183,14 @@ function ProcedureGridCard({
 
   return (
     <article
-      className={`rounded-[26px] border border-[rgba(72,98,132,0.09)] p-7 shadow-[0_18px_40px_rgba(72,98,132,0.05)] ${
+      className={`mx-4 flex min-w-[300px] flex-shrink-0 snap-center flex-col rounded-[26px] border border-[rgba(72,98,132,0.09)] p-7 shadow-[0_18px_40px_rgba(72,98,132,0.05)] md:mx-0 md:min-w-[340px] xl:min-w-[360px] ${
         tones[index % tones.length]
       }`}
     >
       <p className="font-['DM_Sans'] text-[13px] uppercase tracking-[0.18em] text-[#486284]/70">
-        Procedimento
+        {service.schemaType === "MedicalTherapy"
+          ? "Atendimento"
+          : "Procedimento"}
       </p>
       <h3 className="mt-4 font-['EB_Garamond'] text-[29px] font-medium leading-[1.08] tracking-[0.3px] text-[#1f1f1f]">
         {service.title}
@@ -519,54 +433,31 @@ export default function FigmaHomePage() {
                 </p>
                 <p>
                   Assim a home mostra tudo com mais clareza: exames em pilha no
-                  scroll e procedimentos em uma composição fixa, fácil de
-                  comparar.
+                  scroll e procedimentos em um slider lateral que passa sozinho.
                 </p>
               </div>
             </div>
 
-            <div className="mt-12 grid gap-6 xl:grid-cols-[minmax(0,1.1fr)_420px]">
-              <div className="grid gap-6 md:grid-cols-2">
-                {procedureItems.map((service, index) => (
-                  <ProcedureGridCard
+            <div className="mt-12">
+              <Slider
+                id="home-procedures-slider"
+                autoplay
+                autoplayInterval={3200}
+              >
+                {serviceItems.map((service, index) => (
+                  <ProcedureSliderCard
                     key={service.slug}
                     service={service}
                     index={index}
                   />
                 ))}
-              </div>
+              </Slider>
+            </div>
 
-              <div className="flex flex-col gap-6">
-                {highlightedServiceItems.map((service, index) => (
-                  <HighlightServiceCard
-                    key={service.slug}
-                    service={service}
-                    accent={index === 0 ? "dark" : "light"}
-                  />
-                ))}
-
-                <div className="rounded-[30px] border border-[rgba(72,98,132,0.1)] bg-white p-8">
-                  <p className="font-['DM_Sans'] text-[13px] uppercase tracking-[0.18em] text-[#486284]/70">
-                    Navegação rápida
-                  </p>
-                  <p className="mt-4 font-['EB_Garamond'] text-[32px] font-medium leading-[1.1] tracking-[0.3px] text-[#1f1f1f]">
-                    Veja todos os procedimentos
-                  </p>
-                  <p className="mt-4 font-['Questrial'] text-[18px] leading-[31px] tracking-[0.35px] text-[#4c5253]">
-                    A seção completa continua disponível na página dedicada,
-                    junto com detalhes sobre preparo, indicação e benefícios de
-                    cada atendimento.
-                  </p>
-                  <div className="mt-7">
-                    <a
-                      className={primaryButtonClass}
-                      href="/servicos"
-                    >
-                      Ver página de procedimentos
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div className="mt-10 flex justify-center">
+              <a className={primaryButtonClass} href="/servicos">
+                Ver página de procedimentos
+              </a>
             </div>
           </div>
         </section>
