@@ -45,7 +45,7 @@ const IntroSection: React.FC = () => {
 
           <div className="bg-primary/5 p-8 rounded-3xl border border-primary/10 inline-flex items-center gap-6 text-left max-w-2xl">
             <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-white shadow-md">
-              <img src="/dr-jony-thumb.jpg" alt="Dr. Jony Barbosa" className="w-full h-full object-cover" />
+              <img src="/dr-jony-profile.webp" alt="Dr. Jony Barbosa" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="italic text-slate-700 leading-relaxed text-sm mb-2">

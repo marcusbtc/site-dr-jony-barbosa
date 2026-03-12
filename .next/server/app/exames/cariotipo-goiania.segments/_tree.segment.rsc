@@ -1,3 +1,0 @@
-:HL["/_next/static/chunks/c62b28ccc24e8625.css","style"]
-:HL["https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap","style"]
-0:{"buildId":"ZgukBgXreFBbEkbFTzIqW","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"exames","paramType":null,"paramKey":"exames","hasRuntimePrefetch":false,"slots":{"children":{"name":"slug","paramType":"d","paramKey":"cariotipo-goiania","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

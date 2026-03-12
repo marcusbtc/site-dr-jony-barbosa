@@ -1,13 +1,18 @@
 @import "tailwindcss";
 
+@source "../components/**/*.{ts,tsx}";
+@source "../app/**/*.{ts,tsx}";
+
 @theme {
   --font-serif: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
 
-  --color-primary: #1e4d7b; /* Azul Profundo */
-  --color-secondary: #4fb3bf; /* Azul Ciano/Claro */
-  --color-accent: #f59e0b; /* Laranja Original */
-  --color-bgLight: #f0f4f8; /* Azul Claro/Gelo */
+  --color-primary: #004aad;
+  --color-primary-hover: #003d8f;
+  --color-secondary: #e6f0ff;
+  --color-secondary-hover: #cce0ff;
+  --color-accent: #25D366;
+  --color-accent-hover: #1ebe55;
 }
 
 /* Smooth scrolling for anchor links */
@@ -23,4 +28,10 @@ html {
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-slate-700 bg-white;
+  }
 }
