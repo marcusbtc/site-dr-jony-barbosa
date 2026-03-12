@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const { canonicalUrl, neighborhood } = locationPageContent;
   const title = `Ginecologista no ${neighborhood.name} em Goiânia | Dr. Jony Barbosa`;
-  const description = `${neighborhood.description} Consulte o endereço, os serviços mais procurados na região e como agendar sua consulta.`;
+  const description = `${neighborhood.description} Veja a unidade indicada, como funciona o atendimento particular e onde a Unimed entra no agendamento.`;
 
   return {
     title,
@@ -41,6 +41,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: canonicalUrl,
       type: 'website',
+      locale: 'pt_BR',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
     },
   };
 }
@@ -96,7 +102,7 @@ export default async function LocationPage({ params }: Props) {
 
         <section className="pb-10">
           <div className="page-container max-w-7xl">
-            <div className="page-hero mx-auto max-w-5xl text-left md:px-10 md:py-12">
+            <div className="page-hero mx-auto max-w-5xl p-8 text-left md:p-10">
               <p className="eyebrow-label mb-4">Atendimento para {neighborhood.name}</p>
               <h1 className="page-title mb-6 text-left">
                 Ginecologista no {neighborhood.name} em Goiânia
@@ -127,7 +133,7 @@ export default async function LocationPage({ params }: Props) {
                     Agendamento
                   </p>
                   <p className="font-['Poppins'] text-[18px] text-[var(--ds-color-text-strong)]">
-                    Particular e por WhatsApp
+                    Particular, com orientação para Unimed
                   </p>
                 </div>
               </div>
@@ -156,8 +162,8 @@ export default async function LocationPage({ params }: Props) {
                   <p className="mb-6">{neighborhood.localContext}</p>
                   <p>
                     Se você busca ginecologista no {neighborhood.name}, o objetivo aqui é unir
-                    consulta sem pressa, avaliação individualizada e acesso a exames ou
-                    acompanhamentos mais complexos quando houver necessidade.
+                    consulta sem pressa, avaliação individualizada e um fluxo mais simples
+                    para consulta particular, exames e acompanhamentos mais complexos quando houver necessidade.
                   </p>
                 </div>
               </div>
@@ -400,7 +406,7 @@ export default async function LocationPage({ params }: Props) {
               </h2>
               <p className="page-intro mb-8">
                 Agende sua consulta pelo WhatsApp para receber orientação sobre endereço,
-                disponibilidade e qual atendimento faz mais sentido para o seu caso.
+                disponibilidade, atendimento particular e dúvidas frequentes de pacientes Unimed.
               </p>
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <Button href="https://wa.me/556299504788" className="!px-10 !py-4">
@@ -414,7 +420,7 @@ export default async function LocationPage({ params }: Props) {
           </div>
         </section>
       </main>
-      <Footer clinic={clinic} />
+      <Footer />
     </div>
   );
 }

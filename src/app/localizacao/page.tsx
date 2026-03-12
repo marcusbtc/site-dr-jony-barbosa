@@ -6,8 +6,8 @@ import Breadcrumbs from '../../components/seo/Breadcrumbs';
 import { nobleNeighborhoods } from '../../data/neighborhoods';
 
 export const metadata: Metadata = {
-  title: 'Localização das Clínicas - Dr. Jony Barbosa | Goiânia',
-  description: 'Veja as regiões de Goiânia atendidas pelo Dr. Jony Barbosa e encontre a clínica mais conveniente para o seu atendimento.',
+  title: 'Regiões Atendidas em Goiânia | Dr. Jony Barbosa',
+  description: 'Veja as regiões de Goiânia atendidas por Dr. Jony Barbosa e escolha a unidade mais conveniente para consulta com ginecologista e obstetra.',
 };
 
 export default function LocationsPage() {
@@ -25,10 +25,9 @@ export default function LocationsPage() {
 
           <div className="page-hero mt-4 mb-12">
             <p className="eyebrow-label mb-4">Localização</p>
-            <h1 className="page-title mb-6">Regiões Atendidas em Goiânia</h1>
+            <h1 className="page-title mb-6">Onde atender com ginecologista e obstetra em Goiânia</h1>
             <p className="page-intro max-w-3xl">
-              Escolha sua região para ver detalhes de acesso, clínica de atendimento e
-              informações importantes para sua consulta.
+              Escolha a região mais próxima para entender qual clínica atende melhor sua rotina, como funciona o agendamento particular e onde a Unimed entra no processo.
             </p>
           </div>
 

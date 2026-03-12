@@ -16,7 +16,7 @@ const CtaSection: React.FC = () => {
           Comece a sua jornada de <span className="text-accent underline decoration-secondary">saúde e bem-estar</span>
         </h2>
         <p className="text-xl text-blue-100/90 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-          Consulta ginecológica particular com atendimento personalizado e possibilidade de reembolso pelo seu plano de saúde.
+          Consulta com ginecologista e obstetra em Goiânia, com foco em atendimento particular e orientação para pacientes Unimed.
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-6">
           <Button variant="accent" className="bg-[#25D366] text-white hover:bg-[#1ebe55] border-none shadow-2xl shadow-[#25D366]/20 px-10 py-5" href="https://wa.me/556299504788">

@@ -7,12 +7,12 @@ export const servicesExtended: ExtendedServiceItem[] = [
   {
     title: 'Gestação de Alto Risco',
     slug: 'gestacao-alto-risco-goiania',
-    description: 'Acompanhamento especializado para gestações complexas em Goiânia com Dr. Jony Barbosa.',
+    description: 'Acompanhamento obstétrico para gestações que exigem vigilância mais próxima, exames direcionados e plano de cuidado individualizado em Goiânia.',
     category: 'especialidade',
 
     // SEO
-    metaTitle: 'Gestação de Alto Risco em Goiânia | Dr. Jony Barbosa - Obstetra',
-    metaDescription: 'Pré-natal de alto risco em Goiânia com Dr. Jony Barbosa. Gestação gemelar, diabetes gestacional, hipertensão. Agende: (62) 9950-4788',
+    metaTitle: 'Gestação de Alto Risco em Goiânia | Dr. Jony Barbosa',
+    metaDescription: 'Pré-natal de alto risco em Goiânia com acompanhamento próximo, exames específicos e atendimento particular com Dr. Jony Barbosa.',
     keywords: [
       'gestação alto risco goiânia',
       'pré-natal alto risco goiás',
@@ -24,6 +24,13 @@ export const servicesExtended: ExtendedServiceItem[] = [
     canonicalUrl: 'https://drjonybarbosa.com.br/especialidades/gestacao-alto-risco-goiania',
 
     // Conteúdo
+    primaryKeyword: 'pré-natal de alto risco em Goiânia',
+    heroIntro: 'Quando a gestação pede um acompanhamento mais próximo, o foco é controlar riscos, organizar exames no tempo certo e conduzir as decisões com mais segurança para mãe e bebê.',
+    intentLabel: 'Obstetrícia de alta complexidade',
+    ctaTitle: 'Agende sua avaliação obstétrica',
+    ctaDescription: 'Fale com a equipe para entender o fluxo do pré-natal de alto risco, exames indicados e como funciona o atendimento particular com orientação sobre Unimed.',
+    ctaLabel: 'Agendar avaliação',
+    planCoverageText: 'Atendimento particular com orientação sobre Unimed',
     longDescription: 'A gestação de alto risco requer cuidados especializados e acompanhamento médico intensivo para promover a saúde da mãe e do bebê.',
 
     whatIsIt: 'A gestação de alto risco é caracterizada por condições que aumentam a probabilidade de complicações durante a gravidez, parto ou pós-parto. Em Goiânia, o Dr. Jony Barbosa oferece acompanhamento diferenciado com consultas mais frequentes, exames especializados como ultrassom morfológico, Doppler e NIPT, e monitoramento intensivo. O objetivo é identificar precocemente qualquer alteração e agir preventivamente para reduzir riscos ao longo da gestação.',
@@ -57,7 +64,7 @@ export const servicesExtended: ExtendedServiceItem[] = [
       'Acesso a exames de medicina fetal de última geração',
       'Planejamento de parto seguro em maternidades de referência em Goiânia',
       'Tranquilidade através de monitoramento constante e comunicação transparente',
-      'Documentação completa para reembolso por convênios médicos'
+      'Fluxo de atendimento particular com orientação para pacientes Unimed'
     ],
 
     relatedServices: [
@@ -74,7 +81,7 @@ export const servicesExtended: ExtendedServiceItem[] = [
       },
       {
         question: 'O pré-natal de alto risco é mais caro que o convencional?',
-        answer: 'O investimento é maior devido à frequência de consultas e exames especializados (ultrassom com Doppler, NIPT, ecocardiografia fetal). Oferecemos documentação completa para reembolso por convênios como Unimed, Bradesco e Sulamérica. O importante é que o acompanhamento adequado previne complicações graves e internações prolongadas.'
+        answer: 'O acompanhamento costuma envolver mais consultas e exames especializados do que um pré-natal habitual. A equipe explica com transparência como funciona o atendimento particular e orienta pacientes Unimed sobre a documentação necessária.'
       },
       {
         question: 'Posso ter parto normal mesmo com gestação de alto risco?',
@@ -98,11 +105,11 @@ export const servicesExtended: ExtendedServiceItem[] = [
   {
     title: 'Ginecologia',
     slug: 'ginecologia-goiania',
-    description: 'Cuidado integral da saúde da mulher em todas as fases da vida com Dr. Jony Barbosa em Goiânia.',
+    description: 'Atendimento ginecológico em Goiânia para rotina, sintomas, prevenção e decisões importantes da saúde da mulher.',
     category: 'especialidade',
 
-    metaTitle: 'Ginecologista em Goiânia | Dr. Jony Barbosa - Consulta e Exames',
-    metaDescription: 'Consulta ginecológica completa em Goiânia: prevenção, tratamento e cuidado feminino. Dr. Jony Barbosa atende com humanização. Agende: (62) 9950-4788',
+    metaTitle: 'Ginecologista em Goiânia | Dr. Jony Barbosa',
+    metaDescription: 'Consulta com ginecologista em Goiânia para rotina, prevenção, sintomas ginecológicos e acompanhamento individualizado com Dr. Jony Barbosa.',
     keywords: [
       'ginecologista goiânia',
       'consulta ginecológica goiás',
@@ -112,6 +119,13 @@ export const servicesExtended: ExtendedServiceItem[] = [
     ],
     canonicalUrl: 'https://drjonybarbosa.com.br/especialidades/ginecologia-goiania',
 
+    primaryKeyword: 'ginecologista em Goiânia',
+    heroIntro: 'Esta é a principal página para quem procura ginecologista em Goiânia com consulta detalhada, investigação clínica sem pressa e acompanhamento próximo em diferentes fases da vida.',
+    intentLabel: 'Saúde da mulher em todas as fases',
+    ctaTitle: 'Agende sua consulta com ginecologista',
+    ctaDescription: 'A equipe orienta horários, unidade de atendimento e como funciona o agendamento particular, com suporte para pacientes Unimed.',
+    ctaLabel: 'Agendar consulta ginecológica',
+    planCoverageText: 'Atendimento particular com orientação para pacientes Unimed',
     longDescription: 'A ginecologia é a especialidade médica que cuida da saúde do sistema reprodutor feminino em todas as fases da vida.',
 
     whatIsIt: 'A ginecologia abrange prevenção, diagnóstico e tratamento de condições que afetam o sistema reprodutor feminino. No consultório do Dr. Jony Barbosa em Goiânia, as consultas ginecológicas incluem exame físico completo, coleta de preventivo (Papanicolau), solicitação de exames complementares, orientação contraceptiva, investigação de queixas como corrimentos, dores pélvicas ou irregularidades menstruais, e acompanhamento de condições como SOP, endometriose e miomas.',
@@ -144,7 +158,7 @@ export const servicesExtended: ExtendedServiceItem[] = [
       'Planejamento contraceptivo personalizado conforme seu estilo de vida',
       'Acolhimento humanizado em ambiente confortável e discreto',
       'Esclarecimento de dúvidas sobre sexualidade e saúde íntima',
-      'Documentação para reembolso por convênios médicos'
+      'Atendimento particular com orientação simples para pacientes Unimed'
     ],
 
     relatedServices: [
@@ -265,11 +279,11 @@ export const servicesExtended: ExtendedServiceItem[] = [
   {
     title: 'Obstetrícia',
     slug: 'obstetricia-goiania',
-    description: 'Acompanhamento pré-natal completo e parto humanizado em Goiânia com Dr. Jony Barbosa.',
+    description: 'Acompanhamento obstétrico em Goiânia desde a descoberta da gravidez até o pós-parto, com foco em segurança, clareza e continuidade.',
     category: 'especialidade',
 
-    metaTitle: 'Obstetra em Goiânia | Dr. Jony Barbosa - Pré-natal e Parto',
-    metaDescription: 'Obstetra em Goiânia: pré-natal humanizado, parto normal e cesárea. Dr. Jony Barbosa acompanha sua gestação com cuidado. Agende: (62) 9950-4788',
+    metaTitle: 'Obstetra em Goiânia | Dr. Jony Barbosa',
+    metaDescription: 'Obstetra em Goiânia para pré-natal, parto e acompanhamento da gestação com atendimento particular e cuidado individualizado.',
     keywords: [
       'obstetra goiânia',
       'pré-natal goiânia',
@@ -279,6 +293,13 @@ export const servicesExtended: ExtendedServiceItem[] = [
     ],
     canonicalUrl: 'https://drjonybarbosa.com.br/especialidades/obstetricia-goiania',
 
+    primaryKeyword: 'obstetra em Goiânia',
+    heroIntro: 'Se você busca obstetra em Goiânia, esta página concentra o acompanhamento da gestação com consultas organizadas, exames no momento certo e suporte médico contínuo.',
+    intentLabel: 'Acompanhamento da gestação',
+    ctaTitle: 'Agende seu acompanhamento com obstetra',
+    ctaDescription: 'Fale com a equipe para iniciar o pré-natal, entender o atendimento particular e receber orientação prática caso você use Unimed.',
+    ctaLabel: 'Agendar pré-natal',
+    planCoverageText: 'Atendimento particular com orientação para pacientes Unimed',
     longDescription: 'A obstetrícia é a especialidade que cuida da mulher durante a gestação, parto e puerpério, garantindo saúde para mãe e bebê.',
 
     whatIsIt: 'A Obstetrícia abrange todo o acompanhamento da gestação desde a confirmação até o pós-parto. No consultório do Dr. Jony Barbosa em Goiânia, o pré-natal inclui consultas mensais (quinzenais no final), exames de rotina, ultrassonografias, orientações nutricionais e de exercícios, vacinação, preparação para o parto e suporte no puerpério. O Dr. Jony é defensor do parto adequado: seja normal ou cesárea, sempre respeitando a fisiologia, preferências da família e priorizando segurança.',
@@ -351,11 +372,11 @@ export const servicesExtended: ExtendedServiceItem[] = [
   {
     title: 'Ultrassonografia',
     slug: 'ultrassonografia-goiania',
-    description: 'Exames de ultrassom obstétrico e ginecológico com tecnologia de ponta em Goiânia.',
+    description: 'Ultrassonografia ginecológica e obstétrica em Goiânia para apoiar diagnóstico, acompanhamento da gestação e tomada de decisão clínica.',
     category: 'especialidade',
 
-    metaTitle: 'Ultrassonografia em Goiânia | Dr. Jony Barbosa - Ultrassom 4D/5D',
-    metaDescription: 'Ultrassom obstétrico, morfológico e ginecológico em Goiânia. Tecnologia 4D/5D. Dr. Jony Barbosa especialista. Agende: (62) 9950-4788',
+    metaTitle: 'Ultrassonografia em Goiânia | Dr. Jony Barbosa',
+    metaDescription: 'Ultrassonografia em Goiânia para exames ginecológicos, obstétricos e medicina fetal com avaliação cuidadosa e foco diagnóstico.',
     keywords: [
       'ultrassom goiânia',
       'ultrassonografia obstétrica goiás',
@@ -365,6 +386,13 @@ export const servicesExtended: ExtendedServiceItem[] = [
     ],
     canonicalUrl: 'https://drjonybarbosa.com.br/especialidades/ultrassonografia-goiania',
 
+    primaryKeyword: 'ultrassonografia em Goiânia',
+    heroIntro: 'A ultrassonografia funciona aqui como apoio ao diagnóstico e ao acompanhamento clínico, conectando exames ginecológicos, obstétricos e medicina fetal em um mesmo cuidado.',
+    intentLabel: 'Diagnóstico por imagem',
+    ctaTitle: 'Agende sua avaliação ou exame',
+    ctaDescription: 'A equipe orienta qual exame faz sentido para o seu caso, a melhor unidade e como funciona o atendimento particular com orientação sobre Unimed.',
+    ctaLabel: 'Agendar exame',
+    planCoverageText: 'Atendimento particular com orientação para pacientes Unimed',
     longDescription: 'A ultrassonografia é método diagnóstico não invasivo que utiliza ondas sonoras para visualizar estruturas internas do corpo.',
 
     whatIsIt: 'A Ultrassonografia é exame de imagem essencial na ginecologia e obstetrícia. No consultório do Dr. Jony Barbosa em Goiânia, são realizados ultrassom transvaginal (ginecológico), ultrassom obstétrico de rotina, morfológico de primeiro, segundo e terceiro trimestres, Doppler obstétrico, ultrassom de mamas e ultrassom para monitoração de ovulação. Os equipamentos de última geração permitem imagens 4D/5D para visualização detalhada do bebê.',
@@ -873,19 +901,30 @@ export const servicesExtended: ExtendedServiceItem[] = [
   {
     title: 'Consulta Médica',
     slug: 'consulta-medica-goiania',
-    description: 'Consulta ginecológica ou obstétrica completa com Dr. Jony Barbosa.',
+    description: 'Consulta ginecológica ou obstétrica em Goiânia com tempo adequado, investigação clínica e definição clara da próxima conduta.',
     category: 'servico',
-    metaTitle: 'Consulta Médica em Goiânia | Dr. Jony Barbosa - Ginecologista e Obstetra',
-    metaDescription: 'Consulta ginecológica e obstétrica em Goiânia. Atendimento humanizado com Dr. Jony Barbosa. Agende: (62) 9950-4788',
-    keywords: ['consulta ginecológica goiânia', 'consulta obstetra goiás', 'médico ginecologista goiânia'],
+    metaTitle: 'Consulta com Ginecologista e Obstetra em Goiânia | Dr. Jony Barbosa',
+    metaDescription: 'Consulta com ginecologista e obstetra em Goiânia com foco em atendimento particular, escuta sem pressa e plano de cuidado individualizado.',
+    keywords: ['consulta ginecológica goiânia', 'consulta obstetra goiás', 'ginecologista e obstetra em goiânia', 'consulta particular goiânia'],
     canonicalUrl: 'https://drjonybarbosa.com.br/servicos/consulta-medica-goiania',
+    primaryKeyword: 'consulta com ginecologista e obstetra em Goiânia',
+    heroIntro: 'Esta é a página mais indicada para quem quer agendar consulta particular em Goiânia com ginecologista e obstetra, seja para rotina, sintomas, pré-natal, planejamento reprodutivo ou revisão de exames.',
+    intentLabel: 'Consulta particular em Goiânia',
+    ctaTitle: 'Agende sua consulta particular',
+    ctaDescription: 'Entre em contato para reservar horário, escolher a unidade mais prática e receber orientação sobre o fluxo de atendimento para pacientes Unimed e particular.',
+    ctaLabel: 'Agendar consulta particular',
+    planCoverageText: 'Foco em atendimento particular com orientação para pacientes Unimed',
     longDescription: 'Consulta completa de ginecologia ou obstetrícia com tempo estendido e atendimento humanizado.',
-    whatIsIt: 'Consulta médica com tempo adequado para ouvir suas queixas, realizar exame físico completo, solicitar exames complementares e discutir plano terapêutico. Inclui ultrassom quando necessário. Dr. Jony prioriza consultas sem pressa para esclarecer todas dúvidas.',
+    whatIsIt: 'A consulta médica é o ponto de entrada para investigar sintomas, organizar exames, revisar histórico e definir a próxima conduta com clareza. O atendimento é feito com tempo adequado para escuta real, exame físico quando indicado e orientação objetiva sobre tratamento, acompanhamento ou necessidade de procedimentos.',
     whoNeedsIt: ['Primeira consulta ginecológica', 'Pré-natal de rotina ou alto risco', 'Queixas ginecológicas (dor, corrimento, irregularidade)', 'Planejamento contraceptivo', 'Menopausa e reposição hormonal'],
-    howItWorks: ['Anamnese detalhada', 'Exame físico ginecológico quando indicado', 'Ultrassom transvaginal ou obstétrico conforme necessidade', 'Solicitação de exames complementares', 'Discussão de plano terapêutico', 'Orientações e prescrições'],
-    benefits: ['Consultas sem pressa com tempo adequado', 'Atendimento humanizado e acolhedor', 'Ultrassom incluído quando necessário', 'Disponibilidade via WhatsApp para dúvidas', 'Documentação para reembolso'],
+    howItWorks: ['Agendamento direto com a equipe pelo WhatsApp', 'Anamnese detalhada com foco no motivo da consulta', 'Exame físico ginecológico ou obstétrico quando indicado', 'Ultrassom transvaginal ou obstétrico conforme necessidade clínica', 'Solicitação e interpretação de exames complementares', 'Definição de plano terapêutico, seguimento e orientações práticas'],
+    benefits: ['Consulta com tempo adequado para investigação clínica', 'Atendimento particular com comunicação mais direta', 'Conduta individualizada para rotina, sintomas ou gestação', 'Ultrassom quando houver indicação clínica', 'Orientação simples para pacientes Unimed'],
     relatedServices: ['ginecologia-goiania', 'obstetricia-goiania', 'ultrassonografia-goiania'],
-    faq: [{question: 'Quanto tempo dura a consulta?', answer: 'Primeira consulta: 40-60 minutos. Retornos: 30-40 minutos. Dr. Jony não marca consultas em intervalos curtos para garantir tempo adequado.'}],
+    faq: [
+      {question: 'Quanto tempo dura a consulta?', answer: 'A primeira consulta costuma ter mais tempo para ouvir o histórico, avaliar sintomas, examinar quando necessário e definir próximos passos. O objetivo é evitar atendimento corrido e deixar a conduta clara ao final.'},
+      {question: 'O atendimento é Unimed ou particular?', answer: 'O foco é atendimento particular. Se você utiliza Unimed, a equipe explica como funciona o fluxo e quais orientações são importantes no momento do agendamento.'},
+      {question: 'Em quais situações essa consulta é indicada?', answer: 'A consulta pode ser o primeiro passo para rotina ginecológica, queixas como dor ou sangramento, início do pré-natal, revisão de exames, planejamento reprodutivo e definição de procedimentos.'}
+    ],
     schemaType: 'MedicalTherapy',
     performedAt: 'Goiânia, Goiás',
     estimatedDuration: '30-60 minutos'

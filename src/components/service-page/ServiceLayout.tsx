@@ -27,12 +27,32 @@ const ServiceLayout: React.FC<Props> = ({ service, category, children }) => {
     { label: categoryNames[category] || category, href: `/${category}` },
     { label: service.title, href: `/${category}/${service.slug}` }
   ];
+  const faqSchema = service.faq?.length
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: service.faq.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer,
+          },
+        })),
+      }
+    : null;
 
   return (
     <div className="page-shell flex min-h-screen flex-col">
       <Header />
 
       <main className="page-main min-h-screen">
+        {faqSchema ? (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          />
+        ) : null}
         <div className="page-container page-breadcrumbs max-w-[1280px] pt-2 pb-4">
           <Breadcrumbs items={breadcrumbItems} />
         </div>

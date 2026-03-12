@@ -87,8 +87,8 @@ export const faqs: FaqItem[] = [
     answer: "O agendamento pode ser feito via WhatsApp ou telefone. Priorizamos horários flexíveis para atender sua rotina."
   },
   {
-    question: "Dr. Jony atende Unimed ou outros convênios?",
-    answer: "Atendemos na modalidade particular e oferecemos toda a documentação necessária para que você solicite o reembolso junto ao seu plano de saúde (Unimed, Bradesco, Sulamérica, etc)."
+    question: "Dr. Jony atende Unimed ou particular?",
+    answer: "O atendimento tem foco em particular. Se você usa Unimed, a equipe orienta como funciona a documentação necessária e esclarece o fluxo no momento do agendamento."
   },
   {
     question: "O Dr. Jony faz parto normal e humanizado?",

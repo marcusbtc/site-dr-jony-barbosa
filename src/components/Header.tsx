@@ -23,6 +23,7 @@ const mobileLinks = [
   { label: "📍 Setor Sul", href: "/localizacao/ginecologista-setor-sul-goiania" },
   { label: "📍 Setor Oeste", href: "/localizacao/ginecologista-setor-oeste-goiania" },
   { label: "📍 Alphaville Flamboyant", href: "/localizacao/ginecologista-alphaville-flamboyant-goiania" },
+  { label: "📍 Jardim Goiás", href: "/localizacao/ginecologista-jardim-goias-goiania" },
 ];
 
 const Header: React.FC = () => {
@@ -54,6 +55,7 @@ const Header: React.FC = () => {
                   { label: "Setor Sul", href: "/localizacao/ginecologista-setor-sul-goiania" },
                   { label: "Setor Oeste", href: "/localizacao/ginecologista-setor-oeste-goiania" },
                   { label: "Alphaville Flamboyant", href: "/localizacao/ginecologista-alphaville-flamboyant-goiania" },
+                  { label: "Jardim Goiás", href: "/localizacao/ginecologista-jardim-goias-goiania" },
                 ].map((loc) => (
                   <a key={loc.href} href={loc.href} className="flex items-center gap-2 px-5 py-3 text-sm text-[var(--ds-color-text-muted)] transition-colors hover:bg-[rgba(72,98,132,0.05)] hover:text-[var(--ds-color-brand-700)]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-[var(--ds-color-brand-500)]" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>

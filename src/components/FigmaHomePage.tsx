@@ -6,9 +6,9 @@ import { servicesExtended } from "../data/services-extended";
 import type { ExtendedServiceItem } from "../types";
 
 const heroHighlights = [
-  "Atendimento ginecológico e obstétrico com foco na sua história, suas necessidades e seus objetivos.",
-  "Abordagem cuidadosa, com escuta ativa e explicações claras a cada etapa.",
-  "Consultório em Goiânia com estrutura confortável e equipamentos de alta tecnologia para te oferecer segurança e bem-estar.",
+  "Consulta com ginecologista e obstetra em Goiânia, com foco em atendimento particular e tempo adequado para entender seu caso.",
+  "Pré-natal, rotina ginecológica, contracepção, menopausa e revisão de exames com plano de cuidado individualizado.",
+  "Atendimento em Goiânia com estrutura confortável, tecnologia diagnóstica e orientação prática para pacientes Unimed e particular.",
 ];
 
 const testimonials = [
@@ -63,10 +63,21 @@ const testimonials = [
 ];
 
 const homeFaqs = faqs.slice(0, 3);
+const testimonialsToShow = testimonials.slice(0, 3);
+const homeFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: homeFaqs.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
 
-const examItems = servicesExtended.filter(
-  (service) => service.category === "exame" && service.slug !== "nipt-goiania",
-);
+const examItems = servicesExtended.filter((service) => service.category === "exame");
 
 const serviceItems = servicesExtended.filter(
   (service) => service.category === "servico",
@@ -150,9 +161,6 @@ function StickyExamCard({
       <div className="absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#486284,#8ca2c0,#d8e4ea)]" />
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <p className="font-['DM_Sans'] text-[13px] uppercase tracking-[0.18em] text-[#486284]/70">
-            Exame {String(index + 1).padStart(2, "0")}
-          </p>
           <h3 className="mt-3 max-w-[32rem] font-['EB_Garamond'] text-[30px] font-medium leading-[1.05] tracking-[0.3px] text-[#1f1f1f] md:text-[34px]">
             {exam.title}
           </h3>
@@ -268,13 +276,17 @@ export default function FigmaHomePage() {
       <Header />
 
       <main className="page-main figma-home flex-grow overflow-x-clip bg-[#edf4f6] text-[#2f2f2f]">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }}
+        />
         <section className="relative overflow-hidden bg-[#d7e3e8]">
           <img
             src="/figma-home/hero-background.svg"
             alt=""
-            className="absolute inset-0 h-full w-full object-cover object-center"
+            className="absolute inset-0 h-full w-full object-contain object-center lg:object-cover"
           />
-          <div className="absolute inset-0 bg-[#7f9aa8]/20 mix-blend-color-burn" />
+          <div className="pointer-events-none absolute inset-0 bg-[#7f9aa8]/20 mix-blend-color-burn" />
           <div className="absolute inset-y-0 right-[-8%] hidden w-[44%] max-w-[780px] bg-[linear-gradient(112deg,rgba(185,201,208,0.95)_8%,rgba(185,201,208,0.45)_46%,rgba(185,201,208,0)_82%)] lg:block" />
           <div className="absolute inset-y-0 left-0 hidden w-[28%] min-w-[260px] max-w-[480px] overflow-hidden opacity-80 lg:block">
             <div className="absolute inset-0 rounded-r-[220px] bg-[#d7e3e8]/65" />
@@ -291,7 +303,7 @@ export default function FigmaHomePage() {
               className="h-full w-full object-cover object-left"
             />
           </div>
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(237,244,246,0.94)_0%,rgba(237,244,246,0.88)_24%,rgba(237,244,246,0.58)_42%,rgba(237,244,246,0.18)_63%,rgba(237,244,246,0.04)_100%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(237,244,246,0.94)_0%,rgba(237,244,246,0.88)_24%,rgba(237,244,246,0.58)_42%,rgba(237,244,246,0.18)_63%,rgba(237,244,246,0.04)_100%)]" />
           <div className="pointer-events-none absolute bottom-0 right-[7%] hidden h-[618px] w-[504px] lg:block">
             <img
               src="/figma-home/hero-doctor.png"
@@ -300,8 +312,8 @@ export default function FigmaHomePage() {
             />
           </div>
 
-          <div className="relative mx-auto flex min-h-[677px] max-w-[1280px] items-center px-6 pb-24 pt-16 sm:px-8 lg:px-10">
-            <div className="max-w-[660px] lg:ml-[42px] lg:mt-[-8px]">
+          <div className="relative z-20 mx-auto flex min-h-[677px] max-w-[1280px] items-center px-6 pb-24 pt-16 sm:px-8 lg:px-10">
+            <div className="max-w-[660px] lg:mt-[-8px]">
               <h1 className="max-w-[596px] font-['EB_Garamond'] text-[40px] font-medium leading-[1.12] tracking-[0.5px] text-[#1f1f1f] sm:text-[48px] lg:text-[56px] lg:leading-[64px]">
                 Você está procurando por{" "}
                 <span className="font-semibold text-[#486a84]">
@@ -314,14 +326,14 @@ export default function FigmaHomePage() {
                 ?
               </h1>
 
-              <ul className="mt-5 max-w-[560px] space-y-3 pl-6 font-['Questrial'] text-[18px] leading-[1.75] tracking-[0.35px] text-[#2f2f2f] marker:text-[#486284] lg:text-[20px] lg:leading-[31px]">
+              <ul className="mt-5 max-w-[560px] space-y-2.5 pl-5 font-['Questrial'] text-[15px] leading-[1.55] tracking-[0.2px] text-[#2f2f2f] marker:text-[#486284] lg:text-[16px] lg:leading-[1.65]">
                 {heroHighlights.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
 
               <a
-                className={`${primaryButtonClass} mt-7`}
+                className={`${primaryButtonClass} relative z-30 mt-7`}
                 href="https://wa.me/556299504788"
                 target="_blank"
                 rel="noreferrer"
@@ -346,21 +358,33 @@ export default function FigmaHomePage() {
               </h2>
               <div className="mt-4 max-w-[700px] space-y-4 font-['Questrial'] text-[18px] leading-[32px] tracking-[0.5px] text-[#2f2f2f]">
                 <p>
-                  Cuidar da saúde feminina exige atenção, sensibilidade e
-                  conhecimento.
+                  Cuidar da saúde feminina exige escuta, critério técnico e
+                  acompanhamento contínuo.
                 </p>
                 <p>
-                  O atendimento com o Dr. Jony vai muito além da consulta médica
-                  tradicional e é pensado para criar vínculo, acolher suas
-                  necessidades e oferecer acompanhamento completo tanto na
-                  ginecologia quanto na obstetrícia.
+                  No atendimento com o Dr. Jony, a consulta é pensada para
+                  investigar sintomas, revisar exames e definir condutas com
+                  clareza, sem a sensação de atendimento corrido.
                 </p>
                 <p>
-                  Se você precisa de um ginecologista para gestante, deseja
-                  iniciar o pré-natal ou simplesmente realizar seus exames de
-                  rotina, aqui você encontra atenção verdadeira. Desde o
-                  planejamento gestacional até o parto, o Dr. Jony caminha ao
-                  seu lado com responsabilidade e empatia.
+                  Se você busca ginecologista e obstetra em Goiânia para
+                  pré-natal, exames de rotina, planejamento reprodutivo ou
+                  tratamento ginecológico, aqui você encontra cuidado
+                  personalizado do início ao fim. Você pode conhecer mais sobre{" "}
+                  <a
+                    href="/especialidades/obstetricia-goiania"
+                    className="font-medium text-[#486284] underline decoration-[#486284]/30 underline-offset-4 hover:text-[#2f465d]"
+                  >
+                    obstetrícia
+                  </a>{" "}
+                  e{" "}
+                  <a
+                    href="/especialidades/ginecologia-goiania"
+                    className="font-medium text-[#486284] underline decoration-[#486284]/30 underline-offset-4 hover:text-[#2f465d]"
+                  >
+                    ginecologia
+                  </a>
+                  .
                 </p>
               </div>
               <a
@@ -378,6 +402,8 @@ export default function FigmaHomePage() {
               <img
                 src="/figma-home/help-doctor.png"
                 alt="Dr. Jony em ambiente clínico"
+                loading="lazy"
+                decoding="async"
                 className="relative z-10 w-full rounded-[36px] object-cover shadow-[0_24px_70px_rgba(72,98,132,0.14)]"
               />
 
@@ -399,10 +425,65 @@ export default function FigmaHomePage() {
                     key={badge}
                     src={badge}
                     alt=""
+                    loading="lazy"
+                    decoding="async"
                     className={`absolute hidden size-[90px] md:block lg:size-[120px] ${positions[index]}`}
                   />
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#edf1ef] py-20 md:py-24">
+          <div className="mx-auto grid max-w-[1280px] items-center gap-12 px-6 sm:px-8 lg:grid-cols-[minmax(0,1fr)_520px] lg:px-10">
+            <div>
+              <h2 className="max-w-[612px] font-['EB_Garamond'] text-[38px] font-medium leading-[1.2] tracking-[0.5px] text-[#1f1f1f] md:text-[48px] md:leading-[70px]">
+                Pré-natal com obstetra em Goiânia
+              </h2>
+              <div className="mt-4 max-w-[700px] space-y-4 font-['Questrial'] text-[18px] leading-[32px] tracking-[0.5px] text-[#2f2f2f]">
+                <p>
+                  O pré-natal começa com uma avaliação completa da gestante e
+                  segue com monitoramento clínico contínuo para proteger mãe e
+                  bebê em cada fase da gravidez.
+                </p>
+                <p>
+                  O acompanhamento obstétrico combina consultas regulares,
+                  ultrassonografia de alta precisão e orientação objetiva para
+                  cada decisão da gestação, inclusive em casos de{" "}
+                  <a
+                    href="/especialidades/gestacao-alto-risco-goiania"
+                    className="font-medium text-[#486284] underline decoration-[#486284]/30 underline-offset-4 hover:text-[#2f465d]"
+                  >
+                    pré-natal de alto risco
+                  </a>
+                  .
+                </p>
+                <p>
+                  Esse cuidado organiza o plano de parto, ajuda a acompanhar os
+                  exames no tempo certo e traz mais segurança para você e sua
+                  família. O foco é atendimento particular com acompanhamento
+                  próximo desde as primeiras semanas.
+                </p>
+              </div>
+              <a
+                className={`${primaryButtonClass} mt-6`}
+                href="https://wa.me/556299504788"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Agendar consulta
+              </a>
+            </div>
+
+            <div className="home-paper-shadow overflow-hidden rounded-[18px] bg-transparent">
+              <img
+                src="/figma-home/prenatal-main.png"
+                alt="Exame de ultrassonografia"
+                loading="lazy"
+                decoding="async"
+                className="h-full min-h-[420px] w-full object-cover object-center"
+              />
             </div>
           </div>
         </section>
@@ -413,28 +494,26 @@ export default function FigmaHomePage() {
           <div className="relative mx-auto grid max-w-[1380px] gap-12 px-6 sm:px-8 lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)] lg:items-start lg:px-10">
             <div className="lg:sticky lg:top-32">
               <h2 className="max-w-[612px] font-['EB_Garamond'] text-[38px] font-medium leading-[1.2] tracking-[0.5px] text-[#1f1f1f] md:text-[48px] md:leading-[62px]">
-                Exames que acompanham cada fase do cuidado
+                Exames ginecológicos e obstétricos em Goiânia
               </h2>
               <div className="mt-4 max-w-[390px] space-y-4 font-['Questrial'] text-[18px] leading-[32px] tracking-[0.5px] text-[#2f2f2f]">
                 <p>
-                  Agora os exames aparecem todos na home e vão se empilhando
-                  durante o scroll, para mostrar a amplitude do atendimento sem
-                  esconder opções em carrossel.
+                  Exames bem indicados ajudam a diagnosticar cedo, acompanhar
+                  a evolução clínica e tomar decisões com mais segurança.
                 </p>
                 <p>
-                  O bloco reúne exames de rotina, medicina fetal e diagnósticos
-                  complementares realizados em Goiânia com tecnologia moderna e
-                  leitura cuidadosa.
+                  O atendimento reúne exames de rotina, medicina fetal e
+                  diagnósticos complementares realizados em Goiânia com
+                  tecnologia moderna e leitura cuidadosa. Para ver a lista
+                  completa, acesse a página de{" "}
+                  <a
+                    href="/exames"
+                    className="font-medium text-[#486284] underline decoration-[#486284]/30 underline-offset-4 hover:text-[#2f465d]"
+                  >
+                    exames ginecológicos e obstétricos
+                  </a>
+                  .
                 </p>
-              </div>
-
-              <div className="mt-7 flex flex-wrap gap-3">
-                <span className="rounded-full bg-white px-4 py-2 font-['DM_Sans'] text-[13px] uppercase tracking-[0.14em] text-[#486284]">
-                  {examItems.length} exames visíveis
-                </span>
-                <span className="rounded-full bg-[#d7e3e8] px-4 py-2 font-['DM_Sans'] text-[13px] uppercase tracking-[0.14em] text-[#486284]">
-                  Scroll com efeito de pilha
-                </span>
               </div>
 
               <div className="mt-7 flex flex-wrap gap-4">
@@ -472,17 +551,31 @@ export default function FigmaHomePage() {
           <div className="mx-auto max-w-[1380px] px-6 sm:px-8 lg:px-10">
             <div className="max-w-[760px]">
               <h2 className="font-['EB_Garamond'] text-[38px] font-medium leading-[1.2] tracking-[0.5px] text-[#1f1f1f] md:text-[48px] md:leading-[62px]">
-                Procedimentos e atendimentos em uma seção própria
+                Procedimentos ginecológicos e atendimentos especializados
               </h2>
               <div className="mt-4 space-y-4 font-['Questrial'] text-[18px] leading-[32px] tracking-[0.5px] text-[#2f2f2f]">
                 <p>
-                  Os procedimentos saem do bloco de exames e entram em um layout
-                  diferente, mais editorial, para separar cirurgia,
-                  acompanhamento fetal e consulta médica.
+                  Além das consultas, você encontra procedimentos
+                  ginecológicos, planejamento reprodutivo e atendimentos
+                  direcionados para diferentes fases da vida da mulher, como{" "}
+                  <a
+                    href="/servicos/insercao-diu-goiania"
+                    className="font-medium text-[#486284] underline decoration-[#486284]/30 underline-offset-4 hover:text-[#2f465d]"
+                  >
+                    inserção de DIU
+                  </a>{" "}
+                  e{" "}
+                  <a
+                    href="/servicos/histerectomia-goiania"
+                    className="font-medium text-[#486284] underline decoration-[#486284]/30 underline-offset-4 hover:text-[#2f465d]"
+                  >
+                    histerectomia
+                  </a>
+                  .
                 </p>
                 <p>
-                  Assim a home mostra tudo com mais clareza: exames em pilha no
-                  scroll e procedimentos em um slider lateral que passa sozinho.
+                  Cada indicação é feita com avaliação individual, explicação
+                  de riscos e benefícios e acompanhamento após a conduta.
                 </p>
               </div>
             </div>
@@ -512,12 +605,60 @@ export default function FigmaHomePage() {
         </section>
 
         <section className="bg-[#ebedee] py-20 md:py-24">
+          <div className="mx-auto grid max-w-[1280px] items-center gap-12 px-6 sm:px-8 lg:grid-cols-[minmax(0,1fr)_520px] lg:px-10">
+            <div>
+              <h2 className="max-w-[612px] font-['EB_Garamond'] text-[38px] font-medium leading-[1.2] tracking-[0.5px] text-[#1f1f1f] md:text-[48px] md:leading-[70px]">
+                Consulta online e presencial com ginecologista e obstetra
+              </h2>
+              <div className="mt-4 max-w-[700px] space-y-4 font-['Questrial'] text-[18px] leading-[32px] tracking-[0.5px] text-[#2f2f2f]">
+                <p>
+                  O atendimento online é indicado para orientações iniciais,
+                  revisão de exames e continuidade de casos já acompanhados.
+                </p>
+                <p>
+                  Esse formato traz praticidade para quem mora fora de Goiânia
+                  ou precisa de suporte médico antes da próxima consulta
+                  presencial.
+                </p>
+                <p>
+                  As consultas presenciais em Goiânia são essenciais para exame
+                  físico ginecológico, início de pré-natal e procedimentos.
+                  Seja online ou presencial, o foco permanece em cuidado
+                  individual, organização do acompanhamento e acesso mais direto
+                  à equipe.
+                </p>
+              </div>
+              <a
+                className={`${primaryButtonClass} mt-6`}
+                href="https://wa.me/556299504788"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Agendar consulta
+              </a>
+            </div>
+
+            <div className="home-paper-shadow overflow-hidden rounded-[18px] bg-transparent">
+              <img
+                src="/figma-home/online-presential.png"
+                alt="Dr. Jony em atendimento"
+                loading="lazy"
+                decoding="async"
+                className="h-full min-h-[440px] w-full object-cover object-center"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#ebedee] py-20 md:py-24">
           <div className="mx-auto grid max-w-[1280px] items-center gap-12 px-6 sm:px-8 lg:grid-cols-[517px_minmax(0,1fr)] lg:px-10">
-            <div className="home-photo-frame home-paper-shadow overflow-hidden rounded-tl-[16px] rounded-br-[16px] bg-white">
+            <div className="home-photo-frame home-paper-shadow overflow-hidden rounded-tl-[16px] rounded-br-[16px] bg-transparent">
               <img
                 src="/figma-home/about-doctor-desk.png"
                 alt="Dr. Jony em consulta"
-                className="h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover object-center"
               />
             </div>
 
@@ -527,15 +668,15 @@ export default function FigmaHomePage() {
               </h2>
               <div className="mt-4 max-w-[700px] space-y-4 font-['Questrial'] text-[18px] leading-[32px] tracking-[0.5px] text-[#2f2f2f]">
                 <p>
-                  O Dr. Jony é ginecologista e obstetra formado pela
-                  Universidade Federal de Goiás, com especialização no Hospital
-                  das Clínicas de Goiânia e aperfeiçoamento em medicina fetal e
+                  O Dr. Jony é ginecologista e obstetra em Goiânia, formado
+                  pela Universidade Federal de Goiás, com especialização no
+                  Hospital das Clínicas e aperfeiçoamento em medicina fetal e
                   ultrassonografia no Instituto Fernandes Figueira (RJ).
                 </p>
                 <p>
-                  Sua atuação se destaca pela combinação entre conhecimento
-                  técnico atualizado e uma abordagem humana, que respeita as
-                  particularidades de cada paciente.
+                  Sua atuação combina atualização técnica, experiência em casos
+                  de diferentes complexidades e uma abordagem humana, respeitando
+                  as particularidades de cada paciente.
                 </p>
                 <p>
                   Ele é reconhecido por proporcionar uma experiência de cuidado
@@ -556,51 +697,6 @@ export default function FigmaHomePage() {
           </div>
         </section>
 
-        <section className="bg-[#edf1ef] py-20 md:py-24">
-          <div className="mx-auto grid max-w-[1280px] items-center gap-12 px-6 sm:px-8 lg:grid-cols-[minmax(0,1fr)_520px] lg:px-10">
-            <div>
-              <h2 className="max-w-[612px] font-['EB_Garamond'] text-[38px] font-medium leading-[1.2] tracking-[0.5px] text-[#1f1f1f] md:text-[48px] md:leading-[70px]">
-                Acompanhamento pré-natal
-              </h2>
-              <div className="mt-4 max-w-[700px] space-y-4 font-['Questrial'] text-[18px] leading-[32px] tracking-[0.5px] text-[#2f2f2f]">
-                <p>
-                  A saúde do bebê começa na gestação. Por isso, o Dr. Jony
-                  realiza um acompanhamento pré-natal cuidadoso e completo,
-                  focado na saúde da mãe e do bebê desde as primeiras semanas.
-                </p>
-                <p>
-                  O acompanhamento neonatal tem início com exames de
-                  ultrassonografia de alta precisão e monitoramento regular da
-                  evolução da gestação.
-                </p>
-                <p>
-                  Esse olhar atento desde o início é essencial para promover um
-                  parto mais seguro e um início de vida mais saudável para o
-                  recém-nascido. Se você está grávida ou tentando engravidar, o
-                  pré-natal com o Dr. Jony garante uma jornada mais tranquila,
-                  com acolhimento e responsabilidade.
-                </p>
-              </div>
-              <a
-                className={`${primaryButtonClass} mt-6`}
-                href="https://wa.me/556299504788"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Agendar consulta
-              </a>
-            </div>
-
-            <div className="home-paper-shadow overflow-hidden rounded-[18px] bg-white">
-              <img
-                src="/figma-home/prenatal-main.png"
-                alt="Exame de ultrassonografia"
-                className="h-full min-h-[420px] w-full object-cover"
-              />
-            </div>
-          </div>
-        </section>
-
         <section className="bg-[#eaf0ee] py-20 md:py-24">
           <div className="mx-auto grid max-w-[1280px] items-center gap-12 px-6 sm:px-8 lg:grid-cols-[minmax(0,1fr)_520px] lg:px-10">
             <div>
@@ -609,21 +705,19 @@ export default function FigmaHomePage() {
               </h2>
               <div className="mt-4 max-w-[700px] space-y-4 font-['Questrial'] text-[18px] leading-[32px] tracking-[0.5px] text-[#2f2f2f]">
                 <p>
-                  Quando se trata da sua saúde, escolher um ginecologista e
-                  obstetra vai além do currículo. É sobre se sentir ouvida,
-                  respeitada e segura.
+                  Escolher ginecologista e obstetra em Goiânia vai além do
+                  currículo: envolve confiança, comunicação clara e
+                  continuidade no cuidado.
                 </p>
                 <p>
-                  O Dr. Jony oferece um atendimento particular que valoriza o
-                  tempo de cada paciente, com escuta verdadeira, clareza nas
-                  informações e um cuidado centrado em você.
+                  O Dr. Jony trabalha com foco em atendimento particular, o que
+                  permite valorizar o tempo de cada paciente, manter escuta
+                  verdadeira e definir condutas com mais clareza.
                 </p>
                 <p>
                   As consultas não são apressadas. Você terá espaço para tirar
                   dúvidas, falar sobre suas inseguranças e tomar decisões com
-                  apoio profissional de verdade. Ao escolher o Dr. Jony, você
-                  terá um parceiro presente em todos os momentos da sua saúde
-                  íntima e reprodutiva.
+                  apoio profissional de verdade.
                 </p>
               </div>
               <a
@@ -636,11 +730,13 @@ export default function FigmaHomePage() {
               </a>
             </div>
 
-            <div className="overflow-hidden rounded-[18px] bg-transparent">
+            <div className="home-paper-shadow overflow-hidden rounded-[18px] bg-transparent">
               <img
                 src="/figma-home/why-choose.png"
                 alt="Dr. Jony em consultório"
-                className="h-full min-h-[420px] w-full object-cover"
+                loading="lazy"
+                decoding="async"
+                className="h-full min-h-[420px] w-full object-cover object-center"
               />
             </div>
           </div>
@@ -666,51 +762,6 @@ export default function FigmaHomePage() {
           </div>
         </section>
 
-        <section className="bg-[#ebedee] py-20 md:py-24">
-          <div className="mx-auto grid max-w-[1280px] items-center gap-12 px-6 sm:px-8 lg:grid-cols-[minmax(0,1fr)_520px] lg:px-10">
-            <div>
-              <h2 className="max-w-[612px] font-['EB_Garamond'] text-[38px] font-medium leading-[1.2] tracking-[0.5px] text-[#1f1f1f] md:text-[48px] md:leading-[70px]">
-                Atendimentos online e presencial
-              </h2>
-              <div className="mt-4 max-w-[700px] space-y-4 font-['Questrial'] text-[18px] leading-[32px] tracking-[0.5px] text-[#2f2f2f]">
-                <p>
-                  O Dr. Jony oferece também atendimento online para quem precisa
-                  de praticidade, mora em outra cidade ou deseja orientações
-                  iniciais antes da consulta presencial.
-                </p>
-                <p>
-                  Esse formato é ideal para tirar dúvidas, revisar exames ou dar
-                  continuidade a acompanhamentos simples com conforto e
-                  segurança.
-                </p>
-                <p>
-                  Já as consultas presenciais são realizadas em Goiânia, em um
-                  espaço moderno e acolhedor, ideal para exames ginecológicos,
-                  início de pré-natal e acompanhamento de gestações. Seja online
-                  ou presencial, o cuidado é sempre pessoal, atencioso e feito
-                  com responsabilidade.
-                </p>
-              </div>
-              <a
-                className={`${primaryButtonClass} mt-6`}
-                href="https://wa.me/556299504788"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Agendar consulta
-              </a>
-            </div>
-
-            <div className="overflow-hidden rounded-[18px] bg-transparent">
-              <img
-                src="/figma-home/online-presential.png"
-                alt="Dr. Jony em atendimento"
-                className="h-full min-h-[440px] w-full object-cover object-top"
-              />
-            </div>
-          </div>
-        </section>
-
         <section className="relative overflow-hidden bg-[#a6b5be] py-20 md:py-24">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(255,255,255,0.55),transparent_24%),radial-gradient(circle_at_84%_8%,rgba(255,255,255,0.28),transparent_24%),linear-gradient(180deg,rgba(239,242,246,0.58),rgba(160,177,188,0.42))]" />
 
@@ -719,7 +770,9 @@ export default function FigmaHomePage() {
               Depoimentos
             </p>
             <p className="mx-auto mt-3 max-w-[640px] font-['Questrial'] text-[18px] leading-[32px] tracking-[0.5px] text-[#2f2f2f]">
-              Seleção de avaliações 5 estrelas publicadas no Google, com a
+              Seleção de avaliações 5 estrelas publicadas no Google sobre o
+              atendimento ginecológico e obstétrico em Goiânia, com foco em
+              consulta particular, com
               identificação das pacientes removida para preservar privacidade.
             </p>
 
@@ -729,7 +782,7 @@ export default function FigmaHomePage() {
                 autoplay
                 autoplayInterval={4200}
               >
-                {testimonials.map((testimonial) => (
+                {testimonialsToShow.map((testimonial) => (
                   <TestimonialCard
                     key={testimonial.id}
                     testimonial={testimonial}
@@ -772,6 +825,8 @@ export default function FigmaHomePage() {
             <img
               src="/figma-home/cta-background.png"
               alt=""
+              loading="lazy"
+              decoding="async"
               className="h-full w-full object-cover opacity-30"
             />
           </div>
@@ -779,8 +834,8 @@ export default function FigmaHomePage() {
 
           <div className="relative mx-auto max-w-[1049px] px-6 sm:px-8">
             <h2 className="font-['EB_Garamond'] text-[34px] font-medium leading-[1.35] text-white md:text-[40px] md:leading-[58px]">
-              Comece a sua jornada de saúde e bem-estar, com o cuidado que você
-              e sua família merecem.
+              Agende seu atendimento com ginecologista e obstetra em Goiânia,
+              com foco em cuidado particular e acompanhamento individual.
             </h2>
 
             <div className="mt-10 flex flex-col items-center justify-center gap-5 md:flex-row md:gap-8">

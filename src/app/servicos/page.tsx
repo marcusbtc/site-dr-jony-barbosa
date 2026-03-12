@@ -7,8 +7,8 @@ import { servicesExtended } from '../../data/services-extended';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Serviços e Procedimentos - Dr. Jony Barbosa',
-  description: 'Conheça os serviços e procedimentos cirúrgicos ginecológicos realizados pelo Dr. Jony Barbosa em Goiânia.',
+  title: 'Serviços em Goiânia | Consultas e Procedimentos com Dr. Jony Barbosa',
+  description: 'Veja consultas, procedimentos e atendimentos em ginecologia e obstetrícia com Dr. Jony Barbosa em Goiânia, com foco em atendimento particular.',
 };
 
 export default function ServicesIndex() {
@@ -27,10 +27,9 @@ export default function ServicesIndex() {
 
           <div className="page-hero mt-4 mb-12">
             <p className="eyebrow-label mb-4">Serviços</p>
-            <h1 className="page-title mb-6">Nossos Serviços</h1>
+            <h1 className="page-title mb-6">Consultas e procedimentos em ginecologia e obstetrícia</h1>
             <p className="page-intro">
-              Procedimentos cirúrgicos avançados e cuidados ginecológicos personalizados
-              para sua saúde e bem-estar.
+              Aqui você encontra os serviços mais procurados por quem busca ginecologista e obstetra em Goiânia, com consulta particular, investigação clínica e definição de conduta de forma individualizada.
             </p>
           </div>
 

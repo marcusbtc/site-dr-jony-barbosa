@@ -1,21 +1,16 @@
 import React from 'react';
 import { contactInfo, businessHours, socialLinks } from '../data/site-data';
-import type { ClinicLocation } from '../data/neighborhoods';
 
-interface Props {
-  clinic?: ClinicLocation;
-}
+const defaultMapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.0269040169446!2d-49.26921852485097!3d-16.675537084095318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef3c3787ab911%3A0x861f2a60dd5f0deb!2sDr.%20Jony%20Rodrigues%20Barbosa%20Ginecologista%20e%20Obstetra%20Goi%C3%A2nia!5e0!3m2!1spt-BR!2sbr!4v1773170528459!5m2!1spt-BR!2sbr";
 
-const Footer: React.FC<Props> = ({ clinic }) => {
-  const clinicName = clinic ? clinic.name : "Dr. Jony Rodrigues Barbosa Ginecologista e Obstetra em Goiânia";
-  const mapUrlToDisplay = clinic ? clinic.mapEmbedUrl : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.0269040169446!2d-49.26921852485097!3d-16.675537084095318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef3c3787ab911%3A0x861f2a60dd5f0deb!2sDr.%20Jony%20Rodrigues%20Barbosa%20Ginecologista%20e%20Obstetra%20Goi%C3%A2nia!5e0!3m2!1spt-BR!2sbr!4v1773170528459!5m2!1spt-BR!2sbr";
+const Footer: React.FC = () => {
   const navItemClass = "transition-colors hover:text-[var(--ds-color-brand-700)]";
 
   return (
     <footer id="contato" className="border-t border-[rgba(72,98,132,0.08)] bg-[var(--ds-color-neutral-100)] pt-20 pb-10">
       <div className="mx-auto max-w-[1280px] px-6">
         <div className="mb-12 text-center">
-          <h2 className="font-['EB_Garamond'] text-[40px] font-medium tracking-[0.5px] text-[var(--ds-color-text-strong)]">{clinicName}</h2>
+          <h2 className="font-['EB_Garamond'] text-[40px] font-medium tracking-[0.5px] text-[var(--ds-color-text-strong)]">Dr. Jony Rodrigues Barbosa Ginecologista e Obstetra em Goiânia</h2>
         </div>
 
         <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-4">
@@ -38,52 +33,49 @@ const Footer: React.FC<Props> = ({ clinic }) => {
               <li><a href="/localizacao/ginecologista-setor-sul-goiania" className={navItemClass}>Setor Sul</a></li>
               <li><a href="/localizacao/ginecologista-setor-oeste-goiania" className={navItemClass}>Setor Oeste</a></li>
               <li><a href="/localizacao/ginecologista-alphaville-flamboyant-goiania" className={navItemClass}>Alphaville Flamboyant</a></li>
+              <li><a href="/localizacao/ginecologista-jardim-goias-goiania" className={navItemClass}>Jardim Goiás</a></li>
             </ul>
           </div>
 
-          {clinic ? (
-            <div className="surface-card md:col-span-2 flex h-fit flex-col justify-start rounded-[18px] p-8">
-              <h3 className="mb-4 flex items-center gap-2 font-['Poppins'] text-xl font-medium text-[var(--ds-color-brand-700)]">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                 </svg>
-                 {clinic.phone}
+          <div className="md:col-span-2 flex flex-col gap-4">
+            <div>
+              <h3 className="mb-3 font-['Poppins'] text-xl font-medium text-[var(--ds-color-brand-700)]">
+                Locais de atendimento do Dr. Jony
               </h3>
-              <p className="mb-2 font-['Questrial'] text-[var(--ds-color-text-body)]">{contactInfo.email}</p>
-              <p className="font-['Questrial'] text-sm leading-relaxed tracking-[0.2px] text-[var(--ds-color-text-muted)]">{clinic.address}</p>
+              <p className="text-sm leading-relaxed tracking-[0.2px] text-[var(--ds-color-text-muted)]">
+                Endereços das duas unidades utilizadas para consultas, exames e acompanhamento.
+              </p>
             </div>
-          ) : (
-            <div className="md:col-span-2 flex flex-col gap-4">
-              <div className="surface-card rounded-[18px] p-6">
-                <h4 className="mb-2 font-['Poppins'] text-lg font-medium text-[var(--ds-color-brand-700)]">FetalCenter Medicina Fetal e Ultrassonografia Goiânia</h4>
-                <div className="mb-2 flex items-center gap-2 font-medium text-[var(--ds-color-brand-700)]">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-[var(--ds-color-brand-500)]" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                  </svg>
-                  <div className="flex flex-col">
-                    <span>(62) 3224-5276</span>
-                    <a href="https://api.whatsapp.com/send?phone=556296136640" target="_blank" rel="noopener noreferrer" className="flex items-center justify-start gap-1 underline decoration-[rgba(72,98,132,0.2)] underline-offset-2 transition-colors hover:text-[var(--ds-color-brand-500)]">
-                      (62) 99613-6640 (WhatsApp)
-                    </a>
-                  </div>
-                </div>
-                <p className="mb-1 text-sm leading-relaxed tracking-[0.2px] text-[var(--ds-color-text-muted)]">contato@fetalcenter.com.br</p>
-                <p className="text-sm leading-relaxed tracking-[0.2px] text-[var(--ds-color-text-muted)]">Rua 3A, Policlínica São Luiz, 211 - St. Aeroporto, Goiânia - GO, 74075-090</p>
-              </div>
 
-              <div className="surface-card rounded-[18px] p-6">
-                <h4 className="mb-2 font-['Poppins'] text-lg font-medium text-[var(--ds-color-brand-700)]">Fetalcenter Centro Médico Goiânia</h4>
-                <div className="mb-2 flex items-center gap-2 font-medium text-[var(--ds-color-brand-700)]">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-[var(--ds-color-brand-500)]" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                  </svg>
-                  (62) 3070-5555
+            <div className="surface-card rounded-[18px] p-6">
+              <h4 className="mb-2 font-['Poppins'] text-lg font-medium text-[var(--ds-color-brand-700)]">Dr. Jony Barbosa | Setor Aeroporto</h4>
+              <div className="mb-2 flex items-center gap-2 font-medium text-[var(--ds-color-brand-700)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-[var(--ds-color-brand-500)]" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                <div className="flex flex-col">
+                  <span>(62) 3224-5276</span>
+                  <a href="https://api.whatsapp.com/send?phone=556296136640" target="_blank" rel="noopener noreferrer" className="flex items-center justify-start gap-1 underline decoration-[rgba(72,98,132,0.2)] underline-offset-2 transition-colors hover:text-[var(--ds-color-brand-500)]">
+                    (62) 99613-6640 (WhatsApp)
+                  </a>
                 </div>
-                <p className="mb-1 text-sm leading-relaxed tracking-[0.2px] text-[var(--ds-color-text-muted)]">contato@fetalcentercentromedico.com.br</p>
-                <p className="text-sm leading-relaxed tracking-[0.2px] text-[var(--ds-color-text-muted)]">Edificio Absolut Business Style - 2 Andar - Av. T-4, 1478 - St. Bueno, Goiânia - GO, 74230-030</p>
               </div>
+              <p className="mb-1 text-sm leading-relaxed tracking-[0.2px] text-[var(--ds-color-text-muted)]">contato@fetalcenter.com.br</p>
+              <p className="text-sm leading-relaxed tracking-[0.2px] text-[var(--ds-color-text-muted)]">Rua 3A, Policlínica São Luiz, 211 - St. Aeroporto, Goiânia - GO, 74075-090</p>
             </div>
-          )}
+
+            <div className="surface-card rounded-[18px] p-6">
+              <h4 className="mb-2 font-['Poppins'] text-lg font-medium text-[var(--ds-color-brand-700)]">Dr. Jony Barbosa | Setor Bueno</h4>
+              <div className="mb-2 flex items-center gap-2 font-medium text-[var(--ds-color-brand-700)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-[var(--ds-color-brand-500)]" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                (62) 3070-5555
+              </div>
+              <p className="mb-1 text-sm leading-relaxed tracking-[0.2px] text-[var(--ds-color-text-muted)]">contato@fetalcentercentromedico.com.br</p>
+              <p className="text-sm leading-relaxed tracking-[0.2px] text-[var(--ds-color-text-muted)]">Edificio Absolut Business Style - 2 Andar - Av. T-4, 1478 - St. Bueno, Goiânia - GO, 74230-030</p>
+            </div>
+          </div>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8 mt-12">
@@ -107,7 +99,7 @@ const Footer: React.FC<Props> = ({ clinic }) => {
 
           <div className="surface-card relative h-64 overflow-hidden rounded-[18px] lg:w-2/3">
             <iframe 
-              src={mapUrlToDisplay} 
+              src={defaultMapEmbedUrl} 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

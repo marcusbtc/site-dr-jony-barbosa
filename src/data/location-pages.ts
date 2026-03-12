@@ -135,7 +135,7 @@ function getAppointmentSteps(neighborhood: NeighborhoodData): AppointmentStep[] 
   return [
     {
       title: 'Agendamento inicial',
-      description: `Fale com a equipe pelo WhatsApp, informe se você mora no ${neighborhood.name} e descreva o motivo da consulta ou do exame.`,
+      description: `Fale com a equipe pelo WhatsApp, informe se você mora no ${neighborhood.name} e descreva se precisa de consulta, pré-natal, exame ou retorno.`,
     },
     {
       title: 'Definição da clínica',
@@ -143,11 +143,11 @@ function getAppointmentSteps(neighborhood: NeighborhoodData): AppointmentStep[] 
     },
     {
       title: 'Consulta com tempo adequado',
-      description: 'O atendimento é particular, sem agenda corrida, com espaço para avaliação clínica, exame físico e esclarecimento de dúvidas.',
+      description: 'O foco é atendimento particular, com agenda menos corrida, tempo para avaliação clínica real e orientação clara sobre as próximas etapas.',
     },
     {
       title: 'Continuidade do cuidado',
-      description: 'Se necessário, o acompanhamento segue com retornos, ultrassonografia, pré-natal, exames complementares ou planejamento cirúrgico.',
+      description: 'Se necessário, o cuidado continua com retornos, ultrassonografia, pré-natal, exames complementares ou planejamento cirúrgico na unidade mais adequada.',
     },
   ];
 }
@@ -168,7 +168,7 @@ function getTrustSignals(
     {
       title: 'Atendimento particular',
       description:
-        'A consulta é feita com tempo para investigação clínica real, orientação individualizada e documentação para pedido de reembolso.',
+        'A consulta é organizada com foco em atendimento particular, escuta sem pressa e orientação individualizada para cada fase do cuidado.',
     },
     {
       title: 'Serviços alinhados à demanda local',
@@ -200,7 +200,7 @@ function getLocationFaqs(
     },
     {
       question: `Como funciona o agendamento para pacientes do ${neighborhood.name}?`,
-      answer: 'O agendamento é feito de forma particular pelo WhatsApp. Depois do primeiro contato, a equipe orienta sobre horários, documentos, preparo quando houver exame e qual clínica faz mais sentido para o seu caso.',
+      answer: 'O agendamento é feito pelo WhatsApp. A equipe orienta horários, documentos, preparo quando houver exame, a unidade mais conveniente e como funciona o fluxo para atendimento particular ou pacientes Unimed.',
     },
     {
       question: `Quem mora no ${neighborhood.name} pode fazer acompanhamento completo com o Dr. Jony?`,

@@ -10,6 +10,7 @@ export interface ExtendedServiceItem extends ServiceItem {
   metaDescription: string;
   keywords: string[];
   canonicalUrl: string;
+  primaryKeyword?: string;
 
   // Content
   longDescription: string;
@@ -17,6 +18,12 @@ export interface ExtendedServiceItem extends ServiceItem {
   whoNeedsIt: string[];
   howItWorks: string[];
   benefits: string[];
+  heroIntro?: string;
+  intentLabel?: string;
+  ctaTitle?: string;
+  ctaDescription?: string;
+  ctaLabel?: string;
+  planCoverageText?: string;
 
   // PSEO Linking
   relatedServices: string[]; // array of slugs
