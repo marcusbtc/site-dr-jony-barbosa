@@ -34,10 +34,17 @@ const HeroSection: React.FC = () => {
               </Button>
             </div>
 
-            <div className="mt-12 inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white px-5 py-3 shadow-sm">
-              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
-              </span>
+            <div className="mt-12 flex items-center gap-6 justify-center lg:justify-start">
+              <div className="flex -space-x-3" aria-hidden="true">
+                {[1, 2, 3].map((item) => (
+                  <span
+                    key={item}
+                    className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-primary to-primary-hover text-white text-xs font-bold flex items-center justify-center shadow-sm"
+                  >
+                    DJ
+                  </span>
+                ))}
+              </div>
               <p className="text-sm text-slate-500 font-medium">
                 <span className="text-primary font-bold">+5.000</span> pacientes atendidas
               </p>
@@ -55,7 +62,7 @@ const HeroSection: React.FC = () => {
             </div>
             
             {/* Quick Stats Card */}
-            <div className="absolute -bottom-6 -left-6 lg:-left-12 bg-white p-6 rounded-2xl shadow-xl z-20 border border-slate-100 animate-bounce-slow">
+            <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 lg:-left-12 bg-white p-6 rounded-2xl shadow-xl z-20 border border-slate-100 animate-bounce-slow">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center text-secondary">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
