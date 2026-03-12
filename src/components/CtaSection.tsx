@@ -6,8 +6,8 @@ const CtaSection: React.FC = () => {
     <section className="py-24 lg:py-32 relative overflow-hidden bg-primary">
       <div className="absolute inset-0">
         <img 
-          src="/dr-jony-profile.webp"
-          alt="Dr. Jony Barbosa"
+          src="/generated/cta-clinica-feminina.webp"
+          alt="Ambiente da clínica"
           className="w-full h-full object-cover opacity-10 mix-blend-overlay" 
         />
       </div>
