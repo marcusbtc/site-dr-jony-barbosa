@@ -49,8 +49,8 @@ export default function SobrePage() {
               <h2 className="text-3xl font-serif font-bold text-primary">Nossa Filosofia</h2>
               <p>
                 Acreditamos que cada gestação é única e que cada mulher merece um plano de cuidado personalizado. 
-                Em nossos consultórios, priorizamos o tempo de escuta, a clareza nas informações e o uso das 
-                melhores tecnologias disponíveis para garantir a segurança da mãe e do bebê.
+                Em nossos consultórios, priorizamos o tempo de escuta, a clareza nas informações e o uso de 
+                tecnologias atualizadas para apoiar a segurança da mãe e do bebê.
               </p>
               <p>
                 Seja para uma consulta de rotina, inserção de DIU ou acompanhamento de uma gestação de alta complexidade, 

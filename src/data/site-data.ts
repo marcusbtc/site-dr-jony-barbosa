@@ -96,7 +96,7 @@ export const faqs: FaqItem[] = [
   },
   {
     question: "Onde são realizados os partos?",
-    answer: "Os partos são realizados nas melhores maternidades de Goiânia, como Fetal Center, Hospital Premium, e outras de sua preferência."
+    answer: "Os partos são realizados em maternidades de Goiânia, com definição durante o pré-natal conforme perfil clínico e convênio. Locais frequentes: Hospital Premium e Hospital e Maternidade Materno Infantil."
   },
   {
     question: "Qual o valor da inserção do DIU em Goiânia?",

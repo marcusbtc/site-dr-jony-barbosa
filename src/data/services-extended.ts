@@ -24,9 +24,9 @@ export const servicesExtended: ExtendedServiceItem[] = [
     canonicalUrl: 'https://drjonybarbosa.com.br/especialidades/gestacao-alto-risco-goiania',
 
     // Conteúdo
-    longDescription: 'A gestação de alto risco requer cuidados especializados e acompanhamento médico intensivo para garantir a saúde da mãe e do bebê.',
+    longDescription: 'A gestação de alto risco requer cuidados especializados e acompanhamento médico intensivo para promover a saúde da mãe e do bebê.',
 
-    whatIsIt: 'A gestação de alto risco é caracterizada por condições que aumentam a probabilidade de complicações durante a gravidez, parto ou pós-parto. Em Goiânia, o Dr. Jony Barbosa oferece acompanhamento diferenciado com consultas mais frequentes, exames especializados como ultrassom morfológico, Doppler e NIPT, e monitoramento intensivo. O objetivo é identificar precocemente qualquer alteração e agir preventivamente para garantir um desfecho positivo.',
+    whatIsIt: 'A gestação de alto risco é caracterizada por condições que aumentam a probabilidade de complicações durante a gravidez, parto ou pós-parto. Em Goiânia, o Dr. Jony Barbosa oferece acompanhamento diferenciado com consultas mais frequentes, exames especializados como ultrassom morfológico, Doppler e NIPT, e monitoramento intensivo. O objetivo é identificar precocemente qualquer alteração e agir preventivamente para reduzir riscos ao longo da gestação.',
 
     whoNeedsIt: [
       'Gestantes com diabetes gestacional ou diabetes tipo 1/2 pré-existente',
@@ -52,7 +52,7 @@ export const servicesExtended: ExtendedServiceItem[] = [
     ],
 
     benefits: [
-      'Detecção precoce de complicações reduz drasticamente riscos maternos e fetais',
+      'Detecção precoce de complicações contribui para reduzir riscos maternos e fetais',
       'Acompanhamento personalizado com Dr. Jony disponível para dúvidas via WhatsApp',
       'Acesso a exames de medicina fetal de última geração',
       'Planejamento de parto seguro em maternidades de referência em Goiânia',
@@ -86,7 +86,7 @@ export const servicesExtended: ExtendedServiceItem[] = [
       },
       {
         question: 'Onde Dr. Jony realiza os partos de alto risco em Goiânia?',
-        answer: 'Os partos são realizados em maternidades de referência em Goiânia equipadas com UTI neonatal e materna, como Hospital Premium, Materno Infantil e outras conforme sua preferência e convênio.'
+        answer: 'Os partos são realizados em maternidades de Goiânia com estrutura obstétrica e UTI neonatal/materna. Entre os locais frequentes estão Hospital Premium e Hospital e Maternidade Materno Infantil, com definição final conforme perfil clínico e convênio.'
       }
     ],
 
@@ -335,7 +335,7 @@ export const servicesExtended: ExtendedServiceItem[] = [
       },
       {
         question: 'Onde Dr. Jony realiza os partos em Goiânia?',
-        answer: 'Os partos são realizados nas principais maternidades de Goiânia como Hospital Premium, Materno Infantil, e outras conforme sua preferência e convênio médico.'
+        answer: 'Os partos são realizados em maternidades de Goiânia. Entre os locais frequentes estão Hospital Premium e Hospital e Maternidade Materno Infantil, com definição no pré-natal conforme perfil clínico e convênio médico.'
       },
       {
         question: 'O pré-natal inclui ultrassom?',
@@ -475,7 +475,7 @@ export const servicesExtended: ExtendedServiceItem[] = [
     ],
 
     benefits: [
-      'Diagnóstico definitivo de alterações cromossômicas com 99% de precisão',
+      'Diagnóstico conclusivo de alterações cromossômicas com alta acurácia laboratorial',
       'Permite decisões informadas sobre continuidade ou manejo da gestação',
       'Pode detectar doenças genéticas raras não identificadas por NIPT',
       'Possibilita aconselhamento genético adequado',
@@ -560,7 +560,7 @@ export const servicesExtended: ExtendedServiceItem[] = [
     benefits: [
       'Diagnóstico genético no primeiro trimestre (mais precoce que amniocentese)',
       'Resultado mais rápido que amniocentese (7-10 dias vs 10-15 dias)',
-      'Mesma precisão diagnóstica da amniocentese (>99%)',
+      'Acurácia diagnóstica comparável à amniocentese',
       'Permite decisões mais precoces sobre manejo da gestação',
       'Realizado por especialista com treinamento específico'
     ],
@@ -651,7 +651,7 @@ export const servicesExtended: ExtendedServiceItem[] = [
     whatIsIt: 'FISH usa sondas fluorescentes para detectar cromossomos 13, 18, 21, X e Y. Fornece resultado preliminar em 48-72 horas enquanto aguarda cariótipo completo.',
     whoNeedsIt: ['Complemento da amniocentese para resultado rápido', 'Ansiedade aguardando cariótipo', 'Gestação avançada com decisões urgentes'],
     howItWorks: ['Material coletado por amniocentese ou BVC', 'Aplicação de sondas fluorescentes', 'Análise microscópica', 'Resultado em 48-72 horas'],
-    benefits: ['Resultado em 48-72h vs 10-15 dias', 'Detecta alterações mais comuns (85%)', 'Reduz ansiedade', '>99% de precisão'],
+    benefits: ['Resultado em 48-72h vs 10-15 dias', 'Detecta alterações mais comuns (85%)', 'Reduz ansiedade', 'Alta acurácia para os cromossomos avaliados'],
     relatedServices: ['cariotipo-goiania', 'amniocentese-goiania', 'nipt-goiania'],
     faq: [{question: 'FISH substitui o cariótipo?', answer: 'Não. FISH analisa apenas 5 cromossomos. Cariótipo analisa todos os 23 pares. FISH é complementar, não substitutivo.'}],
     schemaType: 'MedicalTest',
@@ -685,14 +685,14 @@ export const servicesExtended: ExtendedServiceItem[] = [
     description: 'Triagem pré-natal não invasiva de alta confiabilidade para síndromes cromossômicas.',
     category: 'exame',
     metaTitle: 'NIPT em Goiânia | Dr. Jony Barbosa - Teste Pré-natal Não Invasivo',
-    metaDescription: 'NIPT em Goiânia. Triagem de síndrome de Down sem risco ao bebê. Dr. Jony Barbosa. Agende: (62) 9950-4788',
+    metaDescription: 'NIPT em Goiânia. Triagem de síndrome de Down sem procedimento invasivo. Dr. Jony Barbosa. Agende: (62) 9950-4788',
     keywords: ['nipt goiânia', 'teste pré-natal não invasivo goiás', 'síndrome de down exame sangue goiânia'],
     canonicalUrl: 'https://drjonybarbosa.com.br/exames/nipt-goiania',
-    longDescription: 'O NIPT analisa DNA fetal livre no sangue materno para triagem de alterações cromossômicas sem risco.',
+    longDescription: 'O NIPT analisa DNA fetal livre no sangue materno para triagem de alterações cromossômicas sem procedimento invasivo.',
     whatIsIt: 'Exame de triagem a partir de 10 semanas através de coleta de sangue materno. Analisa DNA fetal para rastrear trissomias 13, 18, 21 e alterações de cromossomos sexuais. Sensibilidade >99%.',
     whoNeedsIt: ['Todas gestantes que desejam triagem precisa', 'Idade materna ≥35 anos', 'Histórico familiar de alterações cromossômicas', 'Ansiedade sobre saúde fetal'],
     howItWorks: ['Coleta de sangue materno a partir de 10 semanas', 'Sequenciamento do DNA fetal livre', 'Análise bioinformática', 'Resultado em 7-10 dias'],
-    benefits: ['Zero risco de aborto', 'Sensibilidade >99% para trissomia 21', 'Pode ser feito precocemente', 'Reduz amniocenteses desnecessárias'],
+    benefits: ['Sem punção uterina', 'Alta sensibilidade para trissomia 21', 'Pode ser feito precocemente', 'Reduz amniocenteses desnecessárias'],
     relatedServices: ['amniocentese-goiania', 'medicina-fetal-goiania', 'gestacao-alto-risco-goiania'],
     faq: [{question: 'NIPT substitui amniocentese?', answer: 'Não. NIPT é triagem. Resultado de alto risco deve ser confirmado com amniocentese antes de decisões importantes.'}],
     schemaType: 'MedicalTest',
@@ -817,7 +817,7 @@ export const servicesExtended: ExtendedServiceItem[] = [
     whatIsIt: 'Ultrassom especializado que mede velocidade do fluxo sanguíneo em vasos maternos e fetais. Detecta precocemente insuficiência placentária, restrição de crescimento e prediz pré-eclâmpsia. Essencial em gestações de alto risco.',
     whoNeedsIt: ['Restrição de crescimento fetal', 'Hipertensão materna ou pré-eclâmpsia', 'Diabetes gestacional', 'Gestação gemelar', 'Oligoâmnio', 'Doppler de artérias uterinas alterado no 2º trimestre'],
     howItWorks: ['Ultrassom convencional + Doppler colorido', 'Avaliação de artérias uterinas (maternas)', 'Artéria umbilical (placenta-feto)', 'Artéria cerebral média fetal', 'Ducto venoso em casos específicos', 'Cálculo de índices de resistência'],
-    benefits: ['Detecta insuficiência placentária precocemente', 'Prevê risco de pré-eclâmpsia', 'Orienta momento do parto em CIUR', 'Evita mortalidade fetal por hipóxia', 'Não invasivo e sem risco'],
+    benefits: ['Detecta insuficiência placentária precocemente', 'Prevê risco de pré-eclâmpsia', 'Orienta momento do parto em CIUR', 'Apoia a tomada de decisão clínica em casos de hipóxia fetal', 'Não invasivo e sem procedimento cirúrgico'],
     relatedServices: ['gestacao-alto-risco-goiania', 'medicina-fetal-goiania', 'ultrassom-morfologico-terceiro-trimestre-goiania'],
     faq: [{question: 'Doppler alterado significa que o bebê está em risco?', answer: 'Não necessariamente. Alteração leve requer acompanhamento mais frequente. Alterações graves (diástole zero ou reversa) podem indicar necessidade de parto antecipado.'}],
     schemaType: 'MedicalTest',

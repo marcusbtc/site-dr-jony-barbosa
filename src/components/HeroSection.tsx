@@ -41,12 +41,12 @@ const HeroSection: React.FC = () => {
                     key={item}
                     className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-primary to-primary-hover text-white text-xs font-bold flex items-center justify-center shadow-sm"
                   >
-                    DJ
+                    ★
                   </span>
                 ))}
               </div>
               <p className="text-sm text-slate-500 font-medium">
-                <span className="text-primary font-bold">+5.000</span> pacientes atendidas
+                <span className="text-primary font-bold">+13 anos</span> de experiência
               </p>
             </div>
           </div>

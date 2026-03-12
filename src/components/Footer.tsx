@@ -121,7 +121,8 @@ const Footer: React.FC<Props> = ({ clinic }) => {
         <div className="border-t border-slate-300 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
           <div>
             <p className="font-bold text-primary text-lg mb-1">Dr. Jony Rodrigues Barbosa</p>
-            <p>CRM: 7652| RQE Nº 3900| RQE Nº 9229</p>
+            <p>MÉDICO | CRM-GO 7652 | RQE 3900 (Ginecologia e Obstetrícia) | RQE 9229 (Ultrassonografia)</p>
+            <p className="mt-1 text-xs">Responsável técnico pelo conteúdo médico deste site: Dr. Jony Rodrigues Barbosa (CRM-GO 7652).</p>
           </div>
           <div className="mt-4 md:mt-0">
             <p>Copyright © 2025 Dr. Jony Rodrigues Barbosa</p>
