@@ -59,7 +59,7 @@ const AboutDoctor: React.FC = () => {
               <p className="text-slate-600 mb-6">
                 Membro titular da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e da Sociedade Brasileira de Ultrassonografia (SBUS).
               </p>
-              <Button variant="outline" className="text-sm">
+              <Button variant="outline" className="text-sm" href="/sobre">
                 Ver Currículo Completo
               </Button>
             </div>

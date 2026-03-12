@@ -21,7 +21,7 @@ const ExamsSection: React.FC = () => {
         </Slider>
 
         <div className="text-center mt-12">
-          <Button variant="accent">
+          <Button variant="accent" href="/exames">
             Ver Todos os Exames
           </Button>
         </div>

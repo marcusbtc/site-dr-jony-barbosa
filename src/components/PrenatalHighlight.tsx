@@ -53,7 +53,7 @@ const PrenatalHighlight: React.FC = () => {
               </ul>
             </div>
             <div className="pt-6">
-              <Button variant="accent" className="px-10 py-5 shadow-xl shadow-secondary/20">
+              <Button variant="accent" className="px-10 py-5 shadow-xl shadow-secondary/20" href="/especialidades/obstetricia-goiania">
                 Saiba mais sobre Pré-natal
               </Button>
             </div>

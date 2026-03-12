@@ -63,7 +63,7 @@ const Header: React.FC = () => {
               </div>
             </div>
           </div>
-          <Button variant="primary" className="ml-4 !py-2.5 !px-6 text-sm font-bold shadow-md">
+          <Button variant="primary" className="ml-4 !py-2.5 !px-6 text-sm font-bold shadow-md" href="https://wa.me/556299504788">
             Agendar Consulta
           </Button>
         </nav>

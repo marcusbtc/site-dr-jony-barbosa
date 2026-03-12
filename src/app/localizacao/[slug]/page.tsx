@@ -21,7 +21,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
   const breadcrumbItems = [
     { label: 'Início', href: '/' },
-    { label: 'Localização', href: '#' },
+    { label: 'Localização', href: '/localizacao' },
     { label: neighborhood.name, href: `/localizacao/${neighborhood.slug}` },
   ];
 

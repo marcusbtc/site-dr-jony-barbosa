@@ -11,7 +11,7 @@ interface Props {
 
 const Breadcrumbs: React.FC<Props> = ({ items }) => {
   return (
-    <nav className="flex py-4 overflow-x-auto no-scrollbar" aria-label="Breadcrumb">
+    <nav className="flex py-4 overflow-x-auto scrollbar-hide" aria-label="Breadcrumb">
       <ol className="flex items-center space-x-2 text-sm text-slate-500 whitespace-nowrap">
         {items.map((item, index) => (
           <li key={index} className="flex items-center space-x-2">

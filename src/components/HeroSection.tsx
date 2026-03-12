@@ -26,10 +26,10 @@ const HeroSection: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-              <Button variant="primary" className="shadow-xl shadow-primary/20">
+              <Button variant="primary" className="shadow-xl shadow-primary/20" href="https://wa.me/556299504788">
                 Agendar Consulta
               </Button>
-              <Button variant="outline">
+              <Button variant="outline" href="/especialidades">
                 Conhecer Especialidades
               </Button>
             </div>
@@ -38,7 +38,7 @@ const HeroSection: React.FC = () => {
               <div className="flex -space-x-3">
                 {[1, 2, 3, 4].map((i) => (
                   <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
-                    <img src={`https://i.pravatar.cc/100?u=${i+10}`} alt="Paciente" className="w-full h-full object-cover" />
+                    <img src="/dr-jony-profile.webp" alt="Dr. Jony Barbosa" className="w-full h-full object-cover" />
                   </div>
                 ))}
               </div>

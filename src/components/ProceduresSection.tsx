@@ -29,7 +29,7 @@ const ProceduresSection: React.FC = () => {
         </Slider>
 
         <div className="text-center mt-12">
-          <Button variant="primary">
+          <Button variant="primary" href="/servicos">
             Ver Todos os Procedimentos
           </Button>
         </div>

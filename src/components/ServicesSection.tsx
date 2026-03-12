@@ -18,13 +18,13 @@ const ServicesSection: React.FC<Props> = ({ title, subtitle }) => {
       title: "Medicina Fetal",
       desc: "Acompanhamento detalhado da saúde do seu bebê.",
       price: "Sob Consulta",
-      img: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=400"
+      img: "/dr-jony-profile.webp"
     },
     {
       title: "Cirurgia Ginecológica",
       desc: "Procedimentos avançados minimamente invasivos.",
       price: "Sob Consulta",
-      img: "https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&q=80&w=400"
+      img: "/dr-jony-profile.webp"
     }
   ];
 
@@ -71,7 +71,7 @@ const ServicesSection: React.FC<Props> = ({ title, subtitle }) => {
         </div>
 
         <div className="mt-16 text-center">
-          <Button variant="outline">
+          <Button variant="outline" href="/servicos">
             Ver Todos os Serviços
           </Button>
         </div>
