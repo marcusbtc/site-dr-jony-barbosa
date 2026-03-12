@@ -1,0 +1,40 @@
+import React from 'react';
+import type { ExtendedServiceItem } from '../../types';
+import { getRelatedServices } from '../../data/services-extended';
+import Card from '../ui/Card';
+
+interface Props {
+  service: ExtendedServiceItem;
+  category: string;
+}
+
+const RelatedServices: React.FC<Props> = ({ service, category }) => {
+  const relatedServices = getRelatedServices(service, 3);
+
+  if (relatedServices.length === 0) return null;
+
+  return (
+    <section className="py-20 md:py-28 bg-white border-t border-slate-100">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary text-center mb-4">Serviços Relacionados</h2>
+        <p className="text-lg text-slate-600 text-center font-light mb-12">
+          Conheça outros serviços que podem complementar seu tratamento
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {relatedServices.map((relatedService, i) => (
+            <Card
+              key={i}
+              title={relatedService.title}
+              description={relatedService.description}
+              href={`/${category}/${relatedService.slug}`}
+              linkText="Saiba Mais"
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default RelatedServices;
