@@ -1,0 +1,675 @@
+import type { CalculatorItem, ExtendedServiceItem } from '../types';
+import { getServiceBySlug } from './services-extended';
+
+const siteUrl = 'https://drjonybarbosa.com.br';
+
+export const calculators: CalculatorItem[] = [
+  {
+    title: 'Calculadora de Data Provável do Parto',
+    slug: 'calculadora-data-provavel-parto',
+    description:
+      'Estime a data provável do parto, a idade gestacional atual e marcos importantes da gravidez a partir da DUM.',
+    metaTitle:
+      'Calculadora de Data Provável do Parto em Goiânia | Dr. Jony Barbosa',
+    metaDescription:
+      'Calcule a data provável do parto, a idade gestacional e os principais marcos da gravidez. Ferramenta educativa com orientação obstétrica em Goiânia.',
+    keywords: [
+      'calculadora data provável do parto',
+      'calculadora idade gestacional',
+      'dpp gravidez',
+      'gestacao semanas calculadora',
+      'obstetra em goiânia',
+    ],
+    canonicalUrl: `${siteUrl}/calculadoras/calculadora-data-provavel-parto`,
+    primaryKeyword: 'calculadora de data provável do parto',
+    heroIntro:
+      'Use a DUM para estimar a data provável do parto, entender com quantas semanas você está hoje e visualizar os próximos marcos do pré-natal.',
+    intentLabel: 'Gestação e acompanhamento obstétrico',
+    calculatorType: 'due-date',
+    inputs: [
+      {
+        id: 'lmpDate',
+        label: 'Data da última menstruação (DUM)',
+        type: 'date',
+        hint: 'Use o primeiro dia da última menstruação.',
+      },
+      {
+        id: 'cycleLength',
+        label: 'Duração média do ciclo',
+        type: 'number',
+        min: 21,
+        max: 40,
+        step: 1,
+        suffix: 'dias',
+        hint: 'Se não souber, use 28 dias.',
+      },
+    ],
+    faq: [
+      {
+        question: 'Essa calculadora substitui o ultrassom para datar a gestação?',
+        answer:
+          'Não. A ferramenta ajuda a organizar uma estimativa inicial, mas a confirmação da idade gestacional pode mudar conforme a avaliação médica e o ultrassom feito no período adequado.',
+      },
+      {
+        question: 'Posso usar a calculadora se meu ciclo for irregular?',
+        answer:
+          'Pode usar como referência inicial, mas ciclos irregulares reduzem a precisão. Nesses casos, a consulta obstétrica e o ultrassom têm ainda mais importância.',
+      },
+      {
+        question: 'A data provável do parto é a data exata em que o bebê vai nascer?',
+        answer:
+          'Não. Ela é uma estimativa clínica para organizar o pré-natal, os exames e o acompanhamento do fim da gravidez.',
+      },
+    ],
+    relatedCalculators: [
+      'calculadora-cronograma-pre-natal',
+      'calculadora-ganho-peso-gestacional',
+      'calculadora-risco-pre-eclampsia',
+      'calculadora-cronometro-contracoes',
+    ],
+    relatedServices: [
+      'obstetricia-goiania',
+      'gestacao-alto-risco-goiania',
+      'ultrassom-morfologico-primeiro-trimestre-goiania',
+    ],
+    medicalReviewNote:
+      'Conteúdo educativo revisado para orientar organização do pré-natal, sem substituir consulta e ultrassonografia.',
+    disclaimer:
+      'Esta calculadora oferece uma estimativa inicial e não substitui avaliação médica, ultrassom obstétrico ou definição de conduta pelo seu obstetra.',
+    whatItShows:
+      'A calculadora estima a data provável do parto, mostra a idade gestacional no dia de hoje e destaca janelas importantes do acompanhamento obstétrico.',
+    howToUse: [
+      'Informe a data da última menstruação.',
+      'Ajuste a duração média do ciclo se ela for diferente de 28 dias.',
+      'Confira a data provável do parto, a idade gestacional atual e os marcos sugeridos.',
+    ],
+    resultNotes: [
+      'A referência mais usada é a DUM, com ajuste pelo comprimento do ciclo quando necessário.',
+      'O ultrassom do primeiro trimestre pode refinar a idade gestacional conforme o contexto clínico.',
+      'A data provável do parto organiza o acompanhamento, mas não prevê o dia exato do nascimento.',
+    ],
+    whenToTalkToDoctor: [
+      'Se você não sabe a DUM ou tem ciclos muito irregulares.',
+      'Se há dor, sangramento ou dúvida sobre a evolução da gravidez.',
+      'Se precisa programar exames e retornos do pré-natal com mais segurança.',
+    ],
+    ctaTitle: 'Quer confirmar a idade gestacional com orientação médica?',
+    ctaDescription:
+      'A equipe do Dr. Jony pode orientar consulta, ultrassom e o melhor momento para seguir o pré-natal em Goiânia.',
+    ctaLabel: 'Agendar avaliação obstétrica',
+  },
+  {
+    title: 'Calculadora de Cronograma Pré-natal',
+    slug: 'calculadora-cronograma-pre-natal',
+    description:
+      'Organize as principais janelas de exames e retornos do pré-natal a partir da DPP ou da DUM.',
+    metaTitle:
+      'Calculadora de Cronograma Pré-natal em Goiânia | Dr. Jony Barbosa',
+    metaDescription:
+      'Veja uma linha do tempo do pré-natal com janelas para NIPT, ultrassom, morfológicos, Doppler e outros exames importantes da gestação.',
+    keywords: [
+      'cronograma pré natal',
+      'calculadora exames gravidez',
+      'quando fazer nipt',
+      'quando fazer morfológico',
+      'pré natal goiânia',
+    ],
+    canonicalUrl: `${siteUrl}/calculadoras/calculadora-cronograma-pre-natal`,
+    primaryKeyword: 'calculadora de cronograma pré-natal',
+    heroIntro:
+      'Monte uma linha do tempo prática do pré-natal para visualizar quando exames e retornos costumam ser planejados ao longo da gestação.',
+    intentLabel: 'Planejamento do pré-natal',
+    calculatorType: 'prenatal-schedule',
+    inputs: [
+      {
+        id: 'referenceType',
+        label: 'Quero calcular a partir de',
+        type: 'select',
+        options: [
+          { value: 'lmp', label: 'Data da última menstruação (DUM)' },
+          { value: 'dueDate', label: 'Data provável do parto (DPP)' },
+        ],
+      },
+      {
+        id: 'referenceDate',
+        label: 'Data de referência',
+        type: 'date',
+        hint: 'Use a DUM ou a DPP conforme a opção escolhida.',
+      },
+    ],
+    faq: [
+      {
+        question: 'Esse cronograma vale para toda gestação?',
+        answer:
+          'Ele funciona como uma organização geral. O calendário real pode mudar conforme histórico clínico, sintomas, resultado de exames e se a gravidez é de alto risco.',
+      },
+      {
+        question: 'O NIPT e o Doppler são obrigatórios?',
+        answer:
+          'Não necessariamente. A indicação depende da avaliação do obstetra, da idade gestacional e da pergunta clínica de cada caso.',
+      },
+      {
+        question: 'Posso usar a DPP se já fiz ultrassom?',
+        answer:
+          'Sim. Se você já tem uma DPP definida pelo acompanhamento médico, essa costuma ser a melhor referência para organizar o cronograma.',
+      },
+    ],
+    relatedCalculators: [
+      'calculadora-data-provavel-parto',
+      'calculadora-risco-pre-eclampsia',
+      'calculadora-ganho-peso-gestacional',
+      'calculadora-cronometro-contracoes',
+    ],
+    relatedServices: [
+      'nipt-goiania',
+      'ultrassom-morfologico-primeiro-trimestre-goiania',
+      'ultrassom-obstetrico-doppler-goiania',
+    ],
+    medicalReviewNote:
+      'Cronograma educativo para ajudar a paciente a entender janelas habituais de exames, com necessidade de adaptação clínica individual.',
+    disclaimer:
+      'As datas exibidas são orientativas. O pré-natal pode exigir mudanças conforme o tipo de gestação, os sintomas e os achados dos exames.',
+    whatItShows:
+      'A ferramenta organiza uma linha do tempo com janelas frequentes de exames e retornos, facilitando a visualização do pré-natal.',
+    howToUse: [
+      'Escolha se você vai usar a DUM ou a DPP como referência.',
+      'Informe a data correspondente.',
+      'Confira o cronograma com as janelas sugeridas para exames e retornos.',
+    ],
+    resultNotes: [
+      'As janelas são educativas e podem variar conforme a estratégia do seu obstetra.',
+      'Gestação de alto risco costuma exigir exames e retornos adicionais.',
+      'O calendário ideal depende da evolução materna e fetal ao longo da gravidez.',
+    ],
+    whenToTalkToDoctor: [
+      'Se você perdeu alguma janela de exame e precisa reorganizar o pré-natal.',
+      'Se recebeu resultado alterado e precisa redefinir os próximos passos.',
+      'Se a gestação exige acompanhamento de alto risco ou medicina fetal.',
+    ],
+    ctaTitle: 'Precisa organizar seu pré-natal com mais clareza?',
+    ctaDescription:
+      'O Dr. Jony acompanha pré-natal habitual e de alto risco com definição individualizada de exames, retornos e momento do parto.',
+    ctaLabel: 'Agendar pré-natal',
+    timelineHighlights: [
+      {
+        label: 'NIPT',
+        timing: 'A partir de 10 semanas',
+        details:
+          'Pode ser discutido a partir do primeiro trimestre conforme idade materna, histórico e objetivo do rastreio.',
+      },
+      {
+        label: 'Ultrassom morfológico de 1º trimestre',
+        timing: '11 a 13 semanas e 6 dias',
+        details:
+          'Avalia marcadores iniciais, translucência nucal e ajuda na organização do risco gestacional.',
+      },
+      {
+        label: 'Ultrassom morfológico de 2º trimestre',
+        timing: '20 a 24 semanas',
+        details:
+          'Janela importante para estudo anatômico detalhado do bebê.',
+      },
+      {
+        label: 'Rastreamento para diabetes gestacional',
+        timing: '24 a 28 semanas',
+        details:
+          'O teste e a estratégia variam conforme risco clínico e protocolo assistencial.',
+      },
+      {
+        label: 'Doppler obstétrico',
+        timing: 'Conforme indicação clínica',
+        details:
+          'Costuma ganhar mais relevância quando há suspeita de restrição de crescimento, hipertensão ou outras intercorrências.',
+      },
+    ],
+  },
+  {
+    title: 'Calculadora de Período Fértil e Ovulação',
+    slug: 'calculadora-periodo-fertil-ovulacao',
+    description:
+      'Estime a janela fértil e o provável dia da ovulação com base na data da última menstruação e no ciclo médio.',
+    metaTitle:
+      'Calculadora de Período Fértil e Ovulação | Dr. Jony Barbosa',
+    metaDescription:
+      'Descubra a estimativa do período fértil e da ovulação com base no ciclo menstrual. Ferramenta educativa para tentantes e orientação ginecológica.',
+    keywords: [
+      'calculadora período fértil',
+      'calculadora ovulação',
+      'janela fértil',
+      'monitoração da ovulação',
+      'ginecologista goiânia',
+    ],
+    canonicalUrl: `${siteUrl}/calculadoras/calculadora-periodo-fertil-ovulacao`,
+    primaryKeyword: 'calculadora de período fértil',
+    heroIntro:
+      'Use esta calculadora para ter uma estimativa da ovulação e da janela fértil quando os ciclos são relativamente regulares.',
+    intentLabel: 'Ciclo menstrual e fertilidade',
+    calculatorType: 'fertile-window',
+    inputs: [
+      {
+        id: 'lmpDate',
+        label: 'Primeiro dia da última menstruação',
+        type: 'date',
+      },
+      {
+        id: 'cycleLength',
+        label: 'Duração média do ciclo',
+        type: 'number',
+        min: 21,
+        max: 40,
+        step: 1,
+        suffix: 'dias',
+        hint: 'Funciona melhor para ciclos regulares.',
+      },
+    ],
+    faq: [
+      {
+        question: 'Essa calculadora serve para quem tem ciclo irregular?',
+        answer:
+          'Ela pode servir como referência muito inicial, mas a estimativa fica menos confiável. Quando há irregularidade, é melhor discutir investigação e monitoração com o ginecologista.',
+      },
+      {
+        question: 'Período fértil é o mesmo que o dia da ovulação?',
+        answer:
+          'Não. O período fértil costuma incluir alguns dias antes e logo após a ovulação, porque os espermatozoides podem sobreviver por alguns dias no trato reprodutivo.',
+      },
+      {
+        question: 'Posso usar essa calculadora como método contraceptivo?',
+        answer:
+          'Não é o ideal. A janela fértil calculada aqui é apenas estimativa e não deve ser usada como método contraceptivo sem orientação adequada.',
+      },
+    ],
+    relatedCalculators: [
+      'calculadora-data-provavel-parto',
+      'calculadora-cronograma-pre-natal',
+      'calculadora-ganho-peso-gestacional',
+    ],
+    relatedServices: [
+      'monitoracao-ovulacao-goiania',
+      'ginecologia-goiania',
+      'consulta-medica-goiania',
+    ],
+    medicalReviewNote:
+      'Ferramenta educativa para planejamento reprodutivo e conversa clínica sobre fertilidade, sem equivaler a confirmação de ovulação.',
+    disclaimer:
+      'A estimativa do período fértil não confirma ovulação nem substitui avaliação ginecológica, ultrassom ou monitoração hormonal quando indicados.',
+    whatItShows:
+      'A calculadora estima o provável dia da ovulação, os dias de maior chance de gravidez e a previsão aproximada da próxima menstruação.',
+    howToUse: [
+      'Informe o primeiro dia da última menstruação.',
+      'Preencha a duração média do ciclo.',
+      'Confira a ovulação estimada, a janela fértil e a próxima menstruação prevista.',
+    ],
+    resultNotes: [
+      'A precisão é melhor em ciclos previsíveis.',
+      'Estresse, doenças, viagem, variações hormonais e SOP podem alterar a ovulação.',
+      'Para tentantes, a monitoração seriada pode ser mais útil do que depender apenas de calendário.',
+    ],
+    whenToTalkToDoctor: [
+      'Se os ciclos forem muito curtos, longos ou irregulares.',
+      'Se você estiver tentando engravidar há meses sem sucesso.',
+      'Se houver cólicas intensas, sangramento anormal ou suspeita de disfunção hormonal.',
+    ],
+    ctaTitle: 'Quer investigar ovulação e fertilidade com mais precisão?',
+    ctaDescription:
+      'O acompanhamento ginecológico e a monitoração da ovulação ajudam a entender melhor o ciclo e definir a melhor estratégia para cada fase reprodutiva.',
+    ctaLabel: 'Agendar consulta ginecológica',
+  },
+  {
+    title: 'Calculadora de Ganho de Peso Gestacional',
+    slug: 'calculadora-ganho-peso-gestacional',
+    description:
+      'Compare o ganho de peso atual com faixas de referência da gestação a partir do IMC pré-gestacional.',
+    metaTitle:
+      'Calculadora de Ganho de Peso Gestacional | Dr. Jony Barbosa',
+    metaDescription:
+      'Veja uma referência de ganho de peso na gravidez conforme IMC pré-gestacional e idade gestacional. Ferramenta educativa para o pré-natal.',
+    keywords: [
+      'ganho de peso gestacional',
+      'calculadora peso gravidez',
+      'imc gravidez',
+      'pré natal goiânia',
+      'gestação alto risco',
+    ],
+    canonicalUrl: `${siteUrl}/calculadoras/calculadora-ganho-peso-gestacional`,
+    primaryKeyword: 'calculadora de ganho de peso gestacional',
+    heroIntro:
+      'Entenda se o ganho de peso da gravidez está abaixo, dentro ou acima da faixa esperada para o seu IMC pré-gestacional.',
+    intentLabel: 'Nutrição e evolução da gestação',
+    calculatorType: 'weight-gain',
+    inputs: [
+      {
+        id: 'prePregnancyWeight',
+        label: 'Peso antes da gravidez',
+        type: 'number',
+        min: 30,
+        max: 250,
+        step: 0.1,
+        suffix: 'kg',
+      },
+      {
+        id: 'height',
+        label: 'Altura',
+        type: 'number',
+        min: 120,
+        max: 220,
+        step: 0.1,
+        suffix: 'cm',
+      },
+      {
+        id: 'currentWeight',
+        label: 'Peso atual',
+        type: 'number',
+        min: 30,
+        max: 250,
+        step: 0.1,
+        suffix: 'kg',
+      },
+      {
+        id: 'gestationalWeek',
+        label: 'Semana gestacional atual',
+        type: 'number',
+        min: 1,
+        max: 42,
+        step: 1,
+        suffix: 'semanas',
+      },
+    ],
+    faq: [
+      {
+        question: 'Estar fora da faixa significa que há um problema?',
+        answer:
+          'Não automaticamente. O resultado ajuda a orientar a conversa com o obstetra, mas não substitui a avaliação do contexto clínico, alimentação, retenção de líquido e crescimento fetal.',
+      },
+      {
+        question: 'Essa calculadora vale para gravidez gemelar?',
+        answer:
+          'Não como referência principal. Gestações múltiplas costumam exigir metas diferentes e acompanhamento mais individualizado.',
+      },
+      {
+        question: 'A balança sozinha mostra se o bebê está crescendo bem?',
+        answer:
+          'Não. O crescimento fetal depende de avaliação obstétrica, medidas clínicas e ultrassonografia quando indicada.',
+      },
+    ],
+    relatedCalculators: [
+      'calculadora-data-provavel-parto',
+      'calculadora-cronograma-pre-natal',
+      'calculadora-risco-pre-eclampsia',
+      'calculadora-cronometro-contracoes',
+    ],
+    relatedServices: [
+      'gestacao-alto-risco-goiania',
+      'obstetricia-goiania',
+      'ultrassom-obstetrico-doppler-goiania',
+    ],
+    medicalReviewNote:
+      'Faixas baseadas em IMC pré-gestacional para apoiar o diálogo do pré-natal, sem equivaler a diagnóstico nutricional.',
+    disclaimer:
+      'O resultado é uma referência educativa. Inchaço, gemelaridade, diabetes, hipertensão e outras condições mudam a interpretação clínica do ganho de peso.',
+    whatItShows:
+      'A ferramenta calcula o IMC pré-gestacional, estima a faixa total de ganho de peso esperada e compara o ganho atual com a idade gestacional informada.',
+    howToUse: [
+      'Informe o peso antes da gravidez e a altura.',
+      'Adicione o peso atual e a semana gestacional.',
+      'Compare o ganho até agora com a faixa de referência mostrada no resultado.',
+    ],
+    resultNotes: [
+      'As faixas são referências gerais e não substituem avaliação nutricional ou obstétrica.',
+      'No primeiro trimestre, o ganho costuma ser menor do que nos trimestres seguintes.',
+      'O crescimento do bebê e o volume de líquido não podem ser avaliados apenas pelo peso materno.',
+    ],
+    whenToTalkToDoctor: [
+      'Se o ganho de peso estiver muito acima ou muito abaixo do esperado.',
+      'Se houver edema importante, pressão alta, alteração glicêmica ou suspeita de restrição de crescimento.',
+      'Se você estiver em pré-natal de alto risco ou gestação gemelar.',
+    ],
+    ctaTitle: 'Quer avaliar o ganho de peso dentro do seu contexto gestacional?',
+    ctaDescription:
+      'No pré-natal, o peso precisa ser interpretado junto com pressão, exames, sintomas e crescimento fetal.',
+    ctaLabel: 'Agendar acompanhamento',
+  },
+  {
+    title: 'Calculadora de Risco para Pré-eclâmpsia',
+    slug: 'calculadora-risco-pre-eclampsia',
+    description:
+      'Faça um rastreio educativo de fatores de risco associados à pré-eclâmpsia e entenda quando vale conversar cedo com o obstetra.',
+    metaTitle:
+      'Calculadora de Risco para Pré-eclâmpsia | Dr. Jony Barbosa',
+    metaDescription:
+      'Ferramenta educativa para identificar fatores de risco de pré-eclâmpsia e entender quando discutir prevenção e acompanhamento obstétrico.',
+    keywords: [
+      'risco pre eclampsia',
+      'calculadora pre eclampsia',
+      'pressão alta gravidez',
+      'gestação alto risco goiânia',
+      'obstetra alto risco',
+    ],
+    canonicalUrl: `${siteUrl}/calculadoras/calculadora-risco-pre-eclampsia`,
+    primaryKeyword: 'calculadora de risco para pré-eclâmpsia',
+    heroIntro:
+      'Marque fatores de risco maternos para entender se vale uma conversa precoce sobre prevenção e vigilância mais próxima na gestação.',
+    intentLabel: 'Rastreamento obstétrico educativo',
+    calculatorType: 'preeclampsia-risk',
+    inputs: [
+      {
+        id: 'highRiskFactors',
+        label: 'Fatores de maior peso clínico',
+        type: 'checkbox-group',
+        options: [
+          { value: 'history-preeclampsia', label: 'História de pré-eclâmpsia em gestação anterior' },
+          { value: 'multifetal', label: 'Gestação gemelar ou múltipla' },
+          { value: 'chronic-hypertension', label: 'Hipertensão crônica' },
+          { value: 'diabetes', label: 'Diabetes prévio ou diagnosticado antes da gestação' },
+          { value: 'kidney-disease', label: 'Doença renal crônica' },
+          { value: 'autoimmune', label: 'Doença autoimune, como lúpus ou SAF' },
+        ],
+      },
+      {
+        id: 'moderateRiskFactors',
+        label: 'Outros fatores que também aumentam atenção',
+        type: 'checkbox-group',
+        options: [
+          { value: 'first-pregnancy', label: 'Primeira gestação' },
+          { value: 'age-35-plus', label: 'Idade materna de 35 anos ou mais' },
+          { value: 'bmi-30-plus', label: 'IMC pré-gestacional acima de 30' },
+          { value: 'family-history', label: 'História familiar de pré-eclâmpsia' },
+          { value: 'long-interval', label: 'Intervalo grande desde a última gestação' },
+          { value: 'ivf', label: 'Gestação após fertilização in vitro' },
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Essa calculadora diagnostica pré-eclâmpsia?',
+        answer:
+          'Não. Ela apenas identifica fatores de risco associados. O diagnóstico depende de consulta, pressão arterial, exames e avaliação obstétrica.',
+      },
+      {
+        question: 'Se o resultado sugerir maior risco, isso quer dizer que eu vou ter pré-eclâmpsia?',
+        answer:
+          'Não. O resultado indica necessidade de vigilância e conversa clínica, não uma certeza de que a condição acontecerá.',
+      },
+      {
+        question: 'A calculadora já diz se eu devo tomar aspirina?',
+        answer:
+          'Não. Ela pode indicar que vale discutir prevenção com o obstetra, mas a decisão depende da sua avaliação médica e do momento da gestação.',
+      },
+    ],
+    relatedCalculators: [
+      'calculadora-ganho-peso-gestacional',
+      'calculadora-data-provavel-parto',
+      'calculadora-cronograma-pre-natal',
+      'calculadora-cronometro-contracoes',
+    ],
+    relatedServices: [
+      'gestacao-alto-risco-goiania',
+      'obstetricia-goiania',
+      'ultrassom-obstetrico-doppler-goiania',
+    ],
+    medicalReviewNote:
+      'Rastreio baseado em fatores de risco para apoiar conversa precoce no pré-natal, sem orientar medicação automática.',
+    disclaimer:
+      'O resultado não diagnostica pré-eclâmpsia e não substitui medida de pressão, exames laboratoriais nem decisão médica individualizada.',
+    whatItShows:
+      'A ferramenta indica se o conjunto de fatores informados sugere uma gestação que pode merecer vigilância mais próxima e conversa precoce sobre prevenção.',
+    howToUse: [
+      'Marque os fatores de risco que fazem parte da sua história clínica.',
+      'Confira o resumo do rastreio exibido pela ferramenta.',
+      'Use o resultado apenas como apoio para conversar com o obstetra.',
+    ],
+    resultNotes: [
+      'Um fator de maior peso clínico já costuma justificar mais atenção obstétrica.',
+      'A soma de múltiplos fatores moderados também pode mudar a estratégia do pré-natal.',
+      'A interpretação real depende da idade gestacional, da pressão e da evolução clínica.',
+    ],
+    whenToTalkToDoctor: [
+      'Se você marcou qualquer fator de maior risco.',
+      'Se tem pressão alta, inchaço importante, dor de cabeça forte ou alteração visual.',
+      'Se a gestação já foi classificada como de alto risco.',
+    ],
+    ctaTitle: 'Quer avaliar risco gestacional de forma individualizada?',
+    ctaDescription:
+      'No pré-natal de alto risco, fatores clínicos, pressão, exames e ultrassom precisam ser analisados em conjunto para definir a melhor conduta.',
+    ctaLabel: 'Falar com a equipe',
+  },
+  {
+    title: 'Cronômetro de Contrações',
+    slug: 'calculadora-cronometro-contracoes',
+    description:
+      'Marque início e fim das contrações para acompanhar duração, intervalo e padrão ao longo do tempo.',
+    metaTitle: 'Cronômetro de Contrações | Dr. Jony Barbosa',
+    metaDescription:
+      'Registre contrações e acompanhe duração e intervalos em uma ferramenta educativa para o fim da gestação.',
+    keywords: [
+      'cronômetro de contrações',
+      'contador de contrações',
+      'trabalho de parto calculadora',
+      'obstetra goiânia parto',
+      'contrações gravidez',
+    ],
+    canonicalUrl: `${siteUrl}/calculadoras/calculadora-cronometro-contracoes`,
+    primaryKeyword: 'cronômetro de contrações',
+    heroIntro:
+      'Use o cronômetro para registrar contrações e observar se o padrão está ficando mais frequente, mais duradouro e mais regular.',
+    intentLabel: 'Fim da gestação e trabalho de parto',
+    calculatorType: 'contraction-timer',
+    inputs: [],
+    faq: [
+      {
+        question: 'Esse cronômetro diz se eu estou em trabalho de parto?',
+        answer:
+          'Não. Ele ajuda a observar um padrão, mas não substitui orientação obstétrica nem avaliação presencial quando houver sinais de alerta.',
+      },
+      {
+        question: 'Quando devo procurar atendimento mesmo sem esperar o intervalo ficar curto?',
+        answer:
+          'Procure atendimento se houver perda de líquido, sangramento, redução dos movimentos do bebê, dor intensa persistente ou qualquer sintoma que gere preocupação.',
+      },
+      {
+        question: 'Posso usar o cronômetro em qualquer fase da gravidez?',
+        answer:
+          'Ele é mais útil no final da gestação, quando há dúvida sobre padrão de contrações. Antes disso, contrações ou dor precisam ser avaliadas conforme o contexto.',
+      },
+    ],
+    relatedCalculators: [
+      'calculadora-data-provavel-parto',
+      'calculadora-cronograma-pre-natal',
+      'calculadora-risco-pre-eclampsia',
+      'calculadora-ganho-peso-gestacional',
+    ],
+    relatedServices: [
+      'obstetricia-goiania',
+      'gestacao-alto-risco-goiania',
+      'avaliacao-fetal-goiania',
+    ],
+    medicalReviewNote:
+      'Ferramenta de apoio para observação do padrão das contrações, sem substituir triagem obstétrica.',
+    disclaimer:
+      'O cronômetro não confirma trabalho de parto e não substitui orientação da equipe, avaliação clínica ou procura por maternidade quando houver sinais de alerta.',
+    whatItShows:
+      'O cronômetro registra cada contração e resume duração média, intervalo médio e regularidade para ajudar a descrever o padrão à equipe médica.',
+    howToUse: [
+      'Toque em “Iniciar contração” quando a contração começar.',
+      'Toque em “Encerrar contração” quando ela passar.',
+      'Observe o resumo gerado após alguns registros e use as informações para orientar a conversa com a equipe.',
+    ],
+    resultNotes: [
+      'O padrão importa mais do que uma contração isolada.',
+      'Intervalos menores e contrações mais regulares podem justificar contato com a equipe.',
+      'Dor intensa persistente, perda de líquido e sangramento não devem esperar apenas o cronômetro.',
+    ],
+    whenToTalkToDoctor: [
+      'Se as contrações estiverem ficando regulares e mais frequentes.',
+      'Se houver perda de líquido, sangramento, diminuição de movimentos fetais ou dor intensa.',
+      'Se você estiver em gestação de risco ou tiver dúvida sobre quando ir para a maternidade.',
+    ],
+    ctaTitle: 'Quer orientação sobre contrações e momento de procurar a maternidade?',
+    ctaDescription:
+      'A equipe pode orientar o que observar, quando sair de casa e quando uma avaliação presencial é mais adequada.',
+    ctaLabel: 'Falar no WhatsApp',
+  },
+];
+
+export const calculatorHubIntro =
+  'As calculadoras desta página foram organizadas para ajudar em dúvidas frequentes sobre fertilidade, pré-natal, ganho de peso, risco gestacional e sinais do fim da gravidez. Elas funcionam como apoio educativo e devem ser interpretadas junto com orientação médica.';
+
+export function getCalculatorBySlug(slug: string): CalculatorItem | undefined {
+  return calculators.find((calculator) => calculator.slug === slug);
+}
+
+export function getRelatedCalculators(
+  calculator: CalculatorItem,
+  limit = 4,
+): CalculatorItem[] {
+  return calculator.relatedCalculators
+    .map((slug) => getCalculatorBySlug(slug))
+    .filter((item): item is CalculatorItem => item !== undefined)
+    .slice(0, limit);
+}
+
+export function getCalculatorRelatedServices(
+  calculator: CalculatorItem,
+  limit = 3,
+): ExtendedServiceItem[] {
+  return calculator.relatedServices
+    .map((slug) => getServiceBySlug(slug))
+    .filter((item): item is ExtendedServiceItem => item !== undefined)
+    .slice(0, limit);
+}
+
+export const serviceCalculatorLinks: Record<string, string[]> = {
+  'obstetricia-goiania': [
+    'calculadora-data-provavel-parto',
+    'calculadora-cronograma-pre-natal',
+    'calculadora-cronometro-contracoes',
+  ],
+  'gestacao-alto-risco-goiania': [
+    'calculadora-risco-pre-eclampsia',
+    'calculadora-ganho-peso-gestacional',
+    'calculadora-cronograma-pre-natal',
+  ],
+  'ginecologia-goiania': ['calculadora-periodo-fertil-ovulacao'],
+  'monitoracao-ovulacao-goiania': ['calculadora-periodo-fertil-ovulacao'],
+  'medicina-fetal-goiania': ['calculadora-cronograma-pre-natal'],
+  'nipt-goiania': ['calculadora-cronograma-pre-natal'],
+  'ultrassom-morfologico-primeiro-trimestre-goiania': [
+    'calculadora-data-provavel-parto',
+    'calculadora-cronograma-pre-natal',
+  ],
+  'ultrassom-obstetrico-doppler-goiania': [
+    'calculadora-cronograma-pre-natal',
+    'calculadora-risco-pre-eclampsia',
+  ],
+  'avaliacao-fetal-goiania': ['calculadora-cronometro-contracoes'],
+};
+
+export function getCalculatorsForServiceSlug(
+  serviceSlug: string,
+  limit = 3,
+): CalculatorItem[] {
+  return (serviceCalculatorLinks[serviceSlug] ?? [])
+    .map((slug) => getCalculatorBySlug(slug))
+    .filter((item): item is CalculatorItem => item !== undefined)
+    .slice(0, limit);
+}

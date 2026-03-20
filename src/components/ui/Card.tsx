@@ -3,7 +3,7 @@ import type { ServiceItem } from '../../types';
 
 interface Props {
   item?: ServiceItem;
-  type?: 'service' | 'exam' | 'procedure';
+  type?: 'service' | 'exam' | 'procedure' | 'calculator';
   title?: string;
   description?: string;
   href?: string;
@@ -49,6 +49,20 @@ const Card: React.FC<Props> = ({
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
         <polyline points="22 4 12 14.01 9 11.01"/>
+      </svg>
+    ),
+    calculator: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="16" height="20" x="4" y="2" rx="2"/>
+        <line x1="8" x2="16" y1="6" y2="6"/>
+        <line x1="8" x2="8" y1="10" y2="10"/>
+        <line x1="12" x2="12" y1="10" y2="10"/>
+        <line x1="16" x2="16" y1="10" y2="10"/>
+        <line x1="8" x2="8" y1="14" y2="14"/>
+        <line x1="12" x2="12" y1="14" y2="14"/>
+        <line x1="16" x2="16" y1="14" y2="14"/>
+        <line x1="8" x2="8" y1="18" y2="18"/>
+        <line x1="12" x2="16" y1="18" y2="18"/>
       </svg>
     )
   };

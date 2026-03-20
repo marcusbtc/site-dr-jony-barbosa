@@ -8,9 +8,14 @@ import type { FaqItem } from '../../types';
 interface Props {
   faqs: FaqItem[];
   serviceTitle: string;
+  subtitle?: string;
 }
 
-const ServiceFaq: React.FC<Props> = ({ faqs, serviceTitle }) => {
+const ServiceFaq: React.FC<Props> = ({
+  faqs,
+  serviceTitle,
+  subtitle = 'Tire suas dúvidas sobre o procedimento',
+}) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   if (!faqs || faqs.length === 0) return null;
@@ -20,7 +25,7 @@ const ServiceFaq: React.FC<Props> = ({ faqs, serviceTitle }) => {
       <div className="page-container max-w-4xl">
         <h2 className="text-center font-['EB_Garamond'] text-[38px] font-medium tracking-[0.4px] text-[var(--ds-color-text-strong)] md:text-[44px]">Perguntas Frequentes sobre {serviceTitle}</h2>
         <p className="mb-12 mt-3 text-center font-['Questrial'] text-[18px] leading-[32px] text-[var(--ds-color-text-muted)]">
-          Tire suas dúvidas sobre o procedimento
+          {subtitle}
         </p>
 
         <div className="mt-8 space-y-4">

@@ -155,8 +155,8 @@ const servicesExtended = [
         relatedServices: [
             'consulta-medica-goiania',
             'ultrassom-mamas-goiania',
-            'histeroscopia-goiania',
-            'videolaparoscopia-goiania'
+            'insercao-diu-goiania',
+            'colposcopia-goiania'
         ],
         faq: [
             {
@@ -1137,7 +1137,7 @@ const servicesExtended = [
         estimatedDuration: '10-15 minutos'
     },
     // ============================================
-    // SERVIÇOS/PROCEDIMENTOS (6)
+    // SERVIÇOS/PROCEDIMENTOS (7)
     // ============================================
     {
         title: 'Avaliação Fetal',
@@ -1279,7 +1279,7 @@ const servicesExtended = [
             'Retorno às atividades em 2-3 semanas'
         ],
         relatedServices: [
-            'videolaparoscopia-goiania',
+            'laqueadura-tubaria-goiania',
             'consulta-medica-goiania',
             'ginecologia-goiania'
         ],
@@ -1294,220 +1294,214 @@ const servicesExtended = [
         estimatedDuration: '90-120 minutos (cirurgia)'
     },
     {
-        title: 'Histeroscopia',
-        slug: 'histeroscopia-goiania',
-        description: 'Visualização interna do útero com câmera para diagnóstico e tratamento.',
+        title: 'Vasectomia',
+        slug: 'vasectomia-goiania',
+        description: 'Procedimento definitivo de contracepção masculina com recuperação rápida.',
         category: 'servico',
-        metaTitle: 'Histeroscopia em Goiânia | Dr. Jony Barbosa - Diagnóstica e Cirúrgica',
-        metaDescription: 'Histeroscopia diagnóstica e cirúrgica em Goiânia. Remoção de pólipos e miomas. Dr. Jony Barbosa. Agende: (62) 9950-4788',
+        metaTitle: 'Vasectomia em Goiânia | Dr. Jony Barbosa - Planejamento Familiar',
+        metaDescription: 'Vasectomia em Goiânia com técnica segura, recuperação rápida e orientação completa de planejamento familiar. Agende: (62) 9950-4788',
         keywords: [
-            'histeroscopia goiânia',
-            'remoção pólipo útero goiás',
-            'histeroscopia cirúrgica goiânia'
+            'vasectomia goiânia',
+            'planejamento familiar masculino goiás',
+            'cirurgia contraceptiva masculina goiânia'
         ],
-        canonicalUrl: 'https://drjonybarbosa.com.br/servicos/histeroscopia-goiania',
-        longDescription: 'Exame e procedimento que permite visualizar e tratar o interior do útero.',
-        whatIsIt: 'Histeroscopia introduz câmera fina pelo colo uterino para visualizar cavidade uterina. Pode ser diagnóstica (apenas visualização) ou cirúrgica (remove pólipos, miomas submucosos, septo uterino). Feita ambulatorialmente ou com sedação conforme complexidade.',
+        canonicalUrl: 'https://drjonybarbosa.com.br/servicos/vasectomia-goiania',
+        longDescription: 'Procedimento cirúrgico definitivo para contracepção masculina com recuperação rápida.',
+        whatIsIt: 'A vasectomia é um procedimento cirúrgico de pequeno porte que interrompe a passagem dos espermatozoides pelos canais deferentes. É uma opção definitiva de planejamento familiar para homens que já definiram o número de filhos ou desejam um método contraceptivo duradouro para o casal.',
         whoNeedsIt: [
-            'Sangramento uterino anormal',
-            'Pólipos endometriais',
-            'Mioma submucoso',
-            'Sinéquias (aderências intrauterinas)',
-            'Investigação de infertilidade',
-            'Abortos de repetição'
+            'Homens com prole definida',
+            'Casais que desejam método contraceptivo definitivo',
+            'Quem busca alternativa à laqueadura tubária',
+            'Pacientes que não desejam manter uso contínuo de anticoncepcionais',
+            'Casais em planejamento familiar definitivo'
         ],
         howItWorks: [
-            'Histeroscopia diagnóstica: ambulatorial, anestesia local',
-            'Histeroscopia cirúrgica: sedação ou anestesia geral',
-            'Introdução de histeroscópio pelo colo uterino',
-            'Visualização da cavidade e ressecção de lesões',
-            'Procedimento dura 10-30 minutos',
-            'Alta no mesmo dia'
+            'Consulta inicial para avaliação clínica e alinhamento sobre planejamento familiar',
+            'Procedimento realizado com anestesia local e técnica minimamente invasiva',
+            'Pequena abertura na bolsa escrotal para acesso aos canais deferentes',
+            'Bloqueio e secção dos canais deferentes',
+            'Alta no mesmo dia com orientações de repouso curto',
+            'Espermograma de controle após o procedimento para confirmar a eficácia'
         ],
         benefits: [
-            'Diagnóstico e tratamento em mesmo procedimento',
-            'Minimamente invasivo (sem incisões)',
-            'Recuperação rápida (1-3 dias)',
-            'Resolve sangramento anormal',
-            'Melhora fertilidade quando há lesões intrauterinas'
+            'Método contraceptivo definitivo',
+            'Recuperação rápida',
+            'Procedimento ambulatorial',
+            'Baixo índice de complicações quando realizado com técnica adequada',
+            'Reduz a necessidade de métodos contraceptivos contínuos no casal'
         ],
         relatedServices: [
-            'videolaparoscopia-goiania',
-            'ginecologia-goiania',
-            'consulta-medica-goiania'
-        ],
-        faq: [
-            {
-                question: 'Histeroscopia dói?',
-                answer: 'A diagnóstica ambulatorial causa desconforto leve tipo cólica. A cirúrgica é feita com sedação/anestesia, então não há dor durante. Após, cólica leve controlada com analgésicos.'
-            }
-        ],
-        schemaType: 'MedicalProcedure',
-        performedAt: 'Goiânia, Goiás',
-        estimatedDuration: '15-30 minutos'
-    },
-    {
-        title: 'Videolaparoscopia',
-        slug: 'videolaparoscopia-goiania',
-        description: 'Cirurgia ginecológica minimamente invasiva por pequenas incisões.',
-        category: 'servico',
-        metaTitle: 'Videolaparoscopia em Goiânia | Dr. Jony Barbosa - Cirurgia Minimamente Invasiva',
-        metaDescription: 'Videolaparoscopia ginecológica em Goiânia. Tratamento de endometriose, cistos, miomas. Dr. Jony Barbosa. Agende: (62) 9950-4788',
-        keywords: [
-            'videolaparoscopia goiânia',
-            'cirurgia minimamente invasiva goiás',
-            'endometriose laparoscopia goiânia'
-        ],
-        canonicalUrl: 'https://drjonybarbosa.com.br/servicos/videolaparoscopia-goiania',
-        longDescription: 'Cirurgia através de 3-4 pequenas incisões com câmera e instrumentos especializados.',
-        whatIsIt: 'Videolaparoscopia é técnica cirúrgica que utiliza câmera e instrumentos finos inseridos por pequenas incisões (0,5-1cm) no abdome. Permite tratar endometriose, cistos ovarianos, miomas, gravidez ectópica, laqueadura tubária e outras condições com mínimo trauma.',
-        whoNeedsIt: [
-            'Endometriose com dor pélvica crônica',
-            'Cistos ovarianos >5cm ou suspeitos',
-            'Miomas pediculados ou subserosos',
-            'Gravidez ectópica íntegra',
-            'Investigação de infertilidade (verificar tubas)',
-            'Laqueadura tubária definitiva'
-        ],
-        howItWorks: [
-            'Cirurgia sob anestesia geral',
-            '3-4 pequenas incisões no abdome',
-            'Insuflação de CO2 para criar espaço',
-            'Câmera HD e instrumentos cirúrgicos especializados',
-            'Realização do procedimento visualizando em monitor',
-            'Internação de 12-24 horas',
-            'Recuperação em 7-14 dias'
-        ],
-        benefits: [
-            'Incisões mínimas (melhor estética)',
-            'Menos dor pós-operatória',
-            'Recuperação 3-4x mais rápida que cirurgia aberta',
-            'Menor risco de aderências',
-            'Retorno ao trabalho em 1-2 semanas'
-        ],
-        relatedServices: [
-            'histerectomia-goiania',
+            'laqueadura-tubaria-goiania',
             'consulta-medica-goiania',
             'ginecologia-goiania'
         ],
         faq: [
             {
-                question: 'Quanto tempo de recuperação da videolaparoscopia?',
-                answer: 'Depende do procedimento. Cirurgias simples: 7-10 dias. Cirurgias complexas (endometriose avançada): 2-3 semanas. Sempre menor que cirurgia aberta equivalente.'
+                question: 'A vasectomia faz efeito imediatamente?',
+                answer: 'Não. É necessário manter outro método contraceptivo até o espermograma confirmar ausência de espermatozoides no sêmen, conforme orientação médica.'
             }
         ],
         schemaType: 'MedicalProcedure',
         performedAt: 'Goiânia, Goiás',
-        estimatedDuration: '60-180 minutos (conforme procedimento)'
+        estimatedDuration: '30-45 minutos'
     },
     {
-        title: 'Videohisteroscopia',
-        slug: 'videohisteroscopia-goiania',
-        description: 'Histeroscopia com sistema de vídeo de alta definição para diagnóstico e cirurgia.',
+        title: 'Inserção de DIU',
+        slug: 'insercao-diu-goiania',
+        description: 'Colocação de DIU hormonal ou de cobre com orientação individualizada.',
         category: 'servico',
-        metaTitle: 'Videohisteroscopia em Goiânia | Dr. Jony Barbosa',
-        metaDescription: 'Videohisteroscopia diagnóstica e cirúrgica em Goiânia com alta definição. Dr. Jony Barbosa. Agende: (62) 9950-4788',
+        metaTitle: 'Inserção de DIU em Goiânia | Dr. Jony Barbosa - Contracepção',
+        metaDescription: 'Inserção de DIU hormonal ou de cobre em Goiânia com avaliação cuidadosa e orientação completa. Agende: (62) 9950-4788',
         keywords: [
-            'videohisteroscopia goiânia',
-            'histeroscopia hd goiás',
-            'pólipo útero cirurgia goiânia'
+            'inserção diu goiânia',
+            'diu hormonal goiás',
+            'diu de cobre goiânia'
         ],
-        canonicalUrl: 'https://drjonybarbosa.com.br/servicos/videohisteroscopia-goiania',
-        longDescription: 'Histeroscopia com câmera de alta definição e sistema de vídeo para precisão diagnóstica.',
-        whatIsIt: 'Videohisteroscopia é histeroscopia realizada com sistema de vídeo HD que permite visualização ampliada e detalhada da cavidade uterina. A imagem ampliada facilita identificação de lesões pequenas e melhora precisão cirúrgica na remoção de pólipos, miomas e septos.',
+        canonicalUrl: 'https://drjonybarbosa.com.br/servicos/insercao-diu-goiania',
+        longDescription: 'Procedimento para colocação de DIU hormonal ou de cobre com foco em segurança e conforto.',
+        whatIsIt: 'A inserção de DIU é um procedimento ambulatorial para posicionar o dispositivo intrauterino dentro do útero. Pode ser feita com DIU hormonal ou de cobre, conforme o perfil clínico e os objetivos contraceptivos da paciente.',
         whoNeedsIt: [
-            'Sangramento uterino anormal',
-            'Pólipos endometriais',
-            'Espessamento endometrial em pós-menopausa',
-            'Mioma submucoso pequeno',
-            'Septo uterino',
-            'Remoção de DIU retido'
+            'Mulheres que desejam contracepção de longa duração',
+            'Pacientes que preferem método sem uso diário',
+            'Quem busca alternativa à pílula anticoncepcional',
+            'Mulheres em pós-parto ou pós-aborto, conforme avaliação',
+            'Pacientes que desejam método reversível de alta eficácia'
         ],
         howItWorks: [
-            'Sistema de vídeo HD conectado ao histeroscópio',
-            'Visualização ampliada em monitor',
-            'Permite documentação em foto/vídeo',
-            'Maior precisão na ressecção de lesões',
-            'Mesma técnica da histeroscopia, com melhor visualização'
+            'Consulta para avaliação clínica e escolha do tipo de DIU',
+            'Exame ginecológico prévio e, quando necessário, ultrassonografia',
+            'Inserção ambulatorial com técnica asséptica',
+            'Orientações sobre desconforto esperado e sinais de alerta',
+            'Revisão do posicionamento conforme necessidade',
+            'Acompanhamento após o procedimento'
         ],
         benefits: [
-            'Imagem HD permite detectar lesões menores',
-            'Documentação visual para acompanhamento',
-            'Maior precisão cirúrgica',
-            'Paciente pode ver imagens após (se desejar)'
+            'Alta eficácia contraceptiva',
+            'Longa duração',
+            'Método reversível',
+            'Reduz falhas associadas ao esquecimento de medicações',
+            'Opções hormonais e não hormonais conforme o perfil da paciente'
         ],
         relatedServices: [
-            'histeroscopia-goiania',
-            'videolaparoscopia-goiania',
-            'ginecologia-goiania'
+            'consulta-medica-goiania',
+            'ginecologia-goiania',
+            'colposcopia-goiania'
         ],
         faq: [
             {
-                question: 'Qual diferença entre histeroscopia e videohisteroscopia?',
-                answer: 'Tecnicamente são a mesma coisa. "Vídeo" refere-se ao sistema de câmera HD acoplado. Atualmente a maioria das histeroscopias usa sistema de vídeo.'
+                question: 'A inserção de DIU dói muito?',
+                answer: 'A intensidade varia conforme cada paciente, mas geralmente o desconforto é breve e controlável. A avaliação prévia ajuda a definir a melhor forma de realizar o procedimento com mais conforto.'
             }
         ],
         schemaType: 'MedicalProcedure',
         performedAt: 'Goiânia, Goiás',
-        estimatedDuration: '15-30 minutos'
+        estimatedDuration: '20-30 minutos'
     },
     {
-        title: 'Cirurgia Ginecológica',
-        slug: 'cirurgia-ginecologica-goiania',
-        description: 'Histerectomia, miomectomia e procedimentos minimamente invasivos.',
+        title: 'Colposcopia',
+        slug: 'colposcopia-goiania',
+        description: 'Avaliação detalhada do colo do útero, vagina e vulva para investigação preventiva.',
         category: 'servico',
-        metaTitle: 'Cirurgia Ginecológica em Goiânia | Dr. Jony Barbosa',
-        metaDescription: 'Cirurgia ginecológica minimamente invasiva em Goiânia: histerectomia, miomectomia, laparoscopia. Dr. Jony Barbosa. Agende: (62) 9950-4788',
+        metaTitle: 'Colposcopia em Goiânia | Dr. Jony Barbosa - Exame do Colo do Útero',
+        metaDescription: 'Colposcopia em Goiânia para investigação do colo do útero, HPV e alterações no preventivo. Agende: (62) 9950-4788',
         keywords: [
-            'cirurgia ginecológica goiânia',
-            'miomectomia goiás',
-            'histerectomia laparoscópica goiânia'
+            'colposcopia goiânia',
+            'exame colo do útero goiás',
+            'hpv colposcopia goiânia'
         ],
-        canonicalUrl: 'https://drjonybarbosa.com.br/servicos/cirurgia-ginecologica-goiania',
-        longDescription: 'Cirurgias ginecológicas realizadas preferencialmente por técnicas minimamente invasivas.',
-        whatIsIt: 'Conjunto de procedimentos cirúrgicos para tratamento de condições ginecológicas. Dr. Jony Barbosa é habilitado em cirurgias minimamente invasivas (videolaparoscopia e videohisteroscopia), que resultam em menor trauma, recuperação mais rápida e melhor resultado estético. Inclui histerectomia, miomectomia, tratamento de endometriose, cistos ovarianos e muito mais.',
+        canonicalUrl: 'https://drjonybarbosa.com.br/servicos/colposcopia-goiania',
+        longDescription: 'Exame ginecológico que amplia a visualização do colo do útero para investigação de alterações.',
+        whatIsIt: 'A colposcopia é um exame realizado com aparelho de aumento que permite avaliar de forma detalhada o colo do útero, a vagina e a vulva. É indicada principalmente quando há alterações no preventivo, suspeita de HPV ou necessidade de investigar lesões precursoras.',
         whoNeedsIt: [
-            'Miomas uterinos sintomáticos',
-            'Endometriose com dor pélvica',
-            'Cistos ovarianos complexos ou volumosos',
-            'Sangramento uterino anormal refratário',
-            'Prolapso genital',
-            'Necessidade de laqueadura tubária'
+            'Pacientes com preventivo alterado',
+            'Suspeita de HPV',
+            'Investigação de lesões no colo do útero',
+            'Acompanhamento de alterações cervicais',
+            'Avaliação complementar após exame ginecológico'
         ],
         howItWorks: [
-            'Consulta pré-operatória detalhada',
-            'Avaliação com exames de imagem (ultrassom/ressonância)',
-            'Cirurgia sob anestesia geral',
-            'Técnica minimamente invasiva quando possível',
-            'Internação de 1-2 dias',
-            'Acompanhamento pós-operatório'
+            'Consulta e revisão dos exames prévios',
+            'Exame ginecológico com visualização ampliada por colposcópio',
+            'Aplicação de soluções específicas para destacar áreas suspeitas',
+            'Registro das alterações encontradas',
+            'Biópsia direcionada quando necessário',
+            'Definição de acompanhamento ou tratamento conforme o resultado'
         ],
         benefits: [
-            'Preferência por técnicas minimamente invasivas',
-            'Menor dor e trauma cirúrgico',
-            'Recuperação mais rápida',
-            'Cicatrizes menores',
-            'Retorno precoce às atividades',
-            'Menor risco de complicações'
+            'Ajuda na detecção precoce de alterações cervicais',
+            'Permite investigação mais precisa',
+            'Pode ser feita em ambiente ambulatorial',
+            'Direciona conduta e acompanhamento com mais segurança'
         ],
         relatedServices: [
-            'videolaparoscopia-goiania',
-            'histerectomia-goiania',
-            'histeroscopia-goiania'
+            'consulta-medica-goiania',
+            'ginecologia-goiania',
+            'insercao-diu-goiania'
         ],
         faq: [
             {
-                question: 'Todas cirurgias podem ser feitas por videolaparoscopia?',
-                answer: 'A maioria sim. Dr. Jony avalia cada caso individualmente. Algumas condições (massas muito volumosas, aderências extensas) podem necessitar cirurgia aberta, mas mesmo assim priorizamos a menor incisão possível.'
+                question: 'Colposcopia substitui o preventivo?',
+                answer: 'Não. A colposcopia é complementar ao preventivo e costuma ser indicada quando o resultado do Papanicolau ou o exame ginecológico mostram necessidade de investigação mais detalhada.'
+            }
+        ],
+        schemaType: 'MedicalProcedure',
+        performedAt: 'Goiânia, Goiás',
+        estimatedDuration: '20-30 minutos'
+    },
+    {
+        title: 'Laqueadura Tubária',
+        slug: 'laqueadura-tubaria-goiania',
+        description: 'Procedimento definitivo de contracepção feminina com planejamento e segurança.',
+        category: 'servico',
+        metaTitle: 'Laqueadura Tubária em Goiânia | Dr. Jony Barbosa - Planejamento Familiar',
+        metaDescription: 'Laqueadura tubária em Goiânia com avaliação individualizada e foco em planejamento familiar definitivo. Agende: (62) 9950-4788',
+        keywords: [
+            'laqueadura tubária goiânia',
+            'laqueadura goiás',
+            'planejamento familiar definitivo goiânia'
+        ],
+        canonicalUrl: 'https://drjonybarbosa.com.br/servicos/laqueadura-tubaria-goiania',
+        longDescription: 'Procedimento cirúrgico definitivo para contracepção feminina com avaliação individualizada.',
+        whatIsIt: 'A laqueadura tubária é um método contraceptivo definitivo que bloqueia as trompas, impedindo o encontro entre óvulo e espermatozoide. Pode ser planejada em contexto cirúrgico apropriado, sempre com avaliação clínica, orientações detalhadas e respeito às normas vigentes para planejamento familiar.',
+        whoNeedsIt: [
+            'Mulheres com prole definida',
+            'Pacientes que desejam método contraceptivo definitivo',
+            'Quem busca alternativa ao uso prolongado de anticoncepcionais',
+            'Casais em planejamento familiar definitivo',
+            'Pacientes que desejam discutir esterilização cirúrgica com avaliação médica'
+        ],
+        howItWorks: [
+            'Consulta para avaliação clínica e orientação sobre o caráter definitivo do método',
+            'Planejamento do momento cirúrgico mais adequado',
+            'Procedimento realizado em ambiente hospitalar',
+            'Bloqueio ou secção das trompas conforme a técnica indicada',
+            'Recuperação pós-operatória com acompanhamento médico',
+            'Revisão após o procedimento com orientações sobre retorno às atividades'
+        ],
+        benefits: [
+            'Método definitivo de alta eficácia',
+            'Reduz dependência de métodos de uso contínuo',
+            'Possibilidade de planejamento familiar mais previsível',
+            'Realização com acompanhamento médico e segurança'
+        ],
+        relatedServices: [
+            'vasectomia-goiania',
+            'consulta-medica-goiania',
+            'histerectomia-goiania'
+        ],
+        faq: [
+            {
+                question: 'Laqueadura tubária é reversível?',
+                answer: 'A laqueadura deve ser encarada como método definitivo. Embora existam tentativas de reversão em contextos específicos, o procedimento deve ser escolhido apenas quando houver convicção sobre o planejamento familiar.'
             },
             {
-                question: 'Quanto tempo de afastamento após cirurgia ginecológica?',
-                answer: 'Depende do procedimento. Histeroscopia: 3-5 dias. Laparoscopia simples: 7-14 dias. Histerectomia: 2-4 semanas. Sempre menor que cirurgia aberta equivalente.'
+                question: 'Qual a diferença entre laqueadura e DIU?',
+                answer: 'O DIU é um método reversível de longa duração. Já a laqueadura é definitiva e exige avaliação específica antes de ser indicada.'
             }
         ],
         schemaType: 'MedicalProcedure',
         performedAt: 'Goiânia, Goiás',
-        estimatedDuration: '60-180 minutos'
+        estimatedDuration: '60-90 minutos'
     }
 ];
 function getServiceBySlug(slug) {
@@ -2113,9 +2107,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$site$2d$data$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/site-data.ts [app-rsc] (ecmascript)");
 ;
 ;
-const Footer = ({ clinic })=>{
-    const clinicName = clinic ? clinic.name : "Dr. Jony Rodrigues Barbosa Ginecologista e Obstetra em Goiânia";
-    const mapUrlToDisplay = clinic ? clinic.mapEmbedUrl : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.0269040169446!2d-49.26921852485097!3d-16.675537084095318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef3c3787ab911%3A0x861f2a60dd5f0deb!2sDr.%20Jony%20Rodrigues%20Barbosa%20Ginecologista%20e%20Obstetra%20Goi%C3%A2nia!5e0!3m2!1spt-BR!2sbr!4v1773170528459!5m2!1spt-BR!2sbr";
+const defaultMapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.0269040169446!2d-49.26921852485097!3d-16.675537084095318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef3c3787ab911%3A0x861f2a60dd5f0deb!2sDr.%20Jony%20Rodrigues%20Barbosa%20Ginecologista%20e%20Obstetra%20Goi%C3%A2nia!5e0!3m2!1spt-BR!2sbr!4v1773170528459!5m2!1spt-BR!2sbr";
+const Footer = ()=>{
     const navItemClass = "transition-colors hover:text-[var(--ds-color-brand-700)]";
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
         id: "contato",
@@ -2127,15 +2120,15 @@ const Footer = ({ clinic })=>{
                     className: "mb-12 text-center",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                         className: "font-['EB_Garamond'] text-[40px] font-medium tracking-[0.5px] text-[var(--ds-color-text-strong)]",
-                        children: clinicName
+                        children: "Dr. Jony Rodrigues Barbosa Ginecologista e Obstetra em Goiânia"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Footer.tsx",
-                        lineNumber: 18,
+                        lineNumber: 13,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/components/Footer.tsx",
-                    lineNumber: 17,
+                    lineNumber: 12,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2149,7 +2142,7 @@ const Footer = ({ clinic })=>{
                                     children: "Navegação"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Footer.tsx",
-                                    lineNumber: 23,
+                                    lineNumber: 18,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -2162,12 +2155,12 @@ const Footer = ({ clinic })=>{
                                                 children: "Início"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Footer.tsx",
-                                                lineNumber: 25,
+                                                lineNumber: 20,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 25,
+                                            lineNumber: 20,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2177,12 +2170,12 @@ const Footer = ({ clinic })=>{
                                                 children: "Sobre o Dr. Jony"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Footer.tsx",
-                                                lineNumber: 26,
+                                                lineNumber: 21,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 26,
+                                            lineNumber: 21,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2192,12 +2185,12 @@ const Footer = ({ clinic })=>{
                                                 children: "Especialidades"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Footer.tsx",
-                                                lineNumber: 27,
+                                                lineNumber: 22,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 27,
+                                            lineNumber: 22,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2207,12 +2200,12 @@ const Footer = ({ clinic })=>{
                                                 children: "Exames"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Footer.tsx",
-                                                lineNumber: 28,
+                                                lineNumber: 23,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 28,
+                                            lineNumber: 23,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2222,24 +2215,24 @@ const Footer = ({ clinic })=>{
                                                 children: "Serviços e Cirurgias"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Footer.tsx",
-                                                lineNumber: 29,
+                                                lineNumber: 24,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 29,
+                                            lineNumber: 24,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Footer.tsx",
-                                    lineNumber: 24,
+                                    lineNumber: 19,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Footer.tsx",
-                            lineNumber: 22,
+                            lineNumber: 17,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2250,7 +2243,7 @@ const Footer = ({ clinic })=>{
                                     children: "Bairros Atendidos"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Footer.tsx",
-                                    lineNumber: 34,
+                                    lineNumber: 29,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -2263,12 +2256,12 @@ const Footer = ({ clinic })=>{
                                                 children: "Setor Bueno"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Footer.tsx",
-                                                lineNumber: 36,
+                                                lineNumber: 31,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 36,
+                                            lineNumber: 31,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2278,12 +2271,12 @@ const Footer = ({ clinic })=>{
                                                 children: "Setor Marista"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Footer.tsx",
-                                                lineNumber: 37,
+                                                lineNumber: 32,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 37,
+                                            lineNumber: 32,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2293,12 +2286,12 @@ const Footer = ({ clinic })=>{
                                                 children: "Setor Sul"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Footer.tsx",
-                                                lineNumber: 38,
+                                                lineNumber: 33,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 38,
+                                            lineNumber: 33,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2308,12 +2301,12 @@ const Footer = ({ clinic })=>{
                                                 children: "Setor Oeste"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Footer.tsx",
-                                                lineNumber: 39,
+                                                lineNumber: 34,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 39,
+                                            lineNumber: 34,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2323,95 +2316,63 @@ const Footer = ({ clinic })=>{
                                                 children: "Alphaville Flamboyant"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Footer.tsx",
-                                                lineNumber: 40,
+                                                lineNumber: 35,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 40,
+                                            lineNumber: 35,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Footer.tsx",
-                                    lineNumber: 35,
+                                    lineNumber: 30,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Footer.tsx",
-                            lineNumber: 33,
+                            lineNumber: 28,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
-                        clinic ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "surface-card md:col-span-2 flex h-fit flex-col justify-start rounded-[18px] p-8",
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "md:col-span-2 flex flex-col gap-4",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: "mb-4 flex items-center gap-2 font-['Poppins'] text-xl font-medium text-[var(--ds-color-brand-700)]",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                            xmlns: "http://www.w3.org/2000/svg",
-                                            width: "24",
-                                            height: "24",
-                                            viewBox: "0 0 24 24",
-                                            fill: "none",
-                                            stroke: "currentColor",
-                                            strokeWidth: "2",
-                                            strokeLinecap: "round",
-                                            strokeLinejoin: "round",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                d: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/components/Footer.tsx",
-                                                lineNumber: 48,
-                                                columnNumber: 20
-                                            }, ("TURBOPACK compile-time value", void 0))
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                            className: "mb-3 font-['Poppins'] text-xl font-medium text-[var(--ds-color-brand-700)]",
+                                            children: "Locais de atendimento do Dr. Jony"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 47,
-                                            columnNumber: 18
+                                            lineNumber: 41,
+                                            columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
-                                        clinic.phone
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-sm leading-relaxed tracking-[0.2px] text-[var(--ds-color-text-muted)]",
+                                            children: "Endereços das duas unidades utilizadas para consultas, exames e acompanhamento."
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/Footer.tsx",
+                                            lineNumber: 44,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Footer.tsx",
-                                    lineNumber: 46,
-                                    columnNumber: 15
+                                    lineNumber: 40,
+                                    columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "mb-2 font-['Questrial'] text-[var(--ds-color-text-body)]",
-                                    children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$site$2d$data$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["contactInfo"].email
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/Footer.tsx",
-                                    lineNumber: 52,
-                                    columnNumber: 15
-                                }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "font-['Questrial'] text-sm leading-relaxed tracking-[0.2px] text-[var(--ds-color-text-muted)]",
-                                    children: clinic.address
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/Footer.tsx",
-                                    lineNumber: 53,
-                                    columnNumber: 15
-                                }, ("TURBOPACK compile-time value", void 0))
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/Footer.tsx",
-                            lineNumber: 45,
-                            columnNumber: 13
-                        }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "md:col-span-2 flex flex-col gap-4",
-                            children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "surface-card rounded-[18px] p-6",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                             className: "mb-2 font-['Poppins'] text-lg font-medium text-[var(--ds-color-brand-700)]",
-                                            children: "FetalCenter Medicina Fetal e Ultrassonografia Goiânia"
+                                            children: "Dr. Jony Barbosa | Setor Aeroporto"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 58,
-                                            columnNumber: 17
+                                            lineNumber: 50,
+                                            columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "mb-2 flex items-center gap-2 font-medium text-[var(--ds-color-brand-700)]",
@@ -2431,13 +2392,13 @@ const Footer = ({ clinic })=>{
                                                         d: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Footer.tsx",
-                                                        lineNumber: 61,
-                                                        columnNumber: 21
+                                                        lineNumber: 53,
+                                                        columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Footer.tsx",
-                                                    lineNumber: 60,
-                                                    columnNumber: 19
+                                                    lineNumber: 52,
+                                                    columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "flex flex-col",
@@ -2446,8 +2407,8 @@ const Footer = ({ clinic })=>{
                                                             children: "(62) 3224-5276"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Footer.tsx",
-                                                            lineNumber: 64,
-                                                            columnNumber: 21
+                                                            lineNumber: 56,
+                                                            columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                             href: "https://api.whatsapp.com/send?phone=556296136640",
@@ -2457,53 +2418,53 @@ const Footer = ({ clinic })=>{
                                                             children: "(62) 99613-6640 (WhatsApp)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Footer.tsx",
-                                                            lineNumber: 65,
-                                                            columnNumber: 21
+                                                            lineNumber: 57,
+                                                            columnNumber: 19
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/Footer.tsx",
-                                                    lineNumber: 63,
-                                                    columnNumber: 19
+                                                    lineNumber: 55,
+                                                    columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 59,
-                                            columnNumber: 17
+                                            lineNumber: 51,
+                                            columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "mb-1 text-sm leading-relaxed tracking-[0.2px] text-[var(--ds-color-text-muted)]",
                                             children: "contato@fetalcenter.com.br"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 70,
-                                            columnNumber: 17
+                                            lineNumber: 62,
+                                            columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "text-sm leading-relaxed tracking-[0.2px] text-[var(--ds-color-text-muted)]",
                                             children: "Rua 3A, Policlínica São Luiz, 211 - St. Aeroporto, Goiânia - GO, 74075-090"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 71,
-                                            columnNumber: 17
+                                            lineNumber: 63,
+                                            columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Footer.tsx",
-                                    lineNumber: 57,
-                                    columnNumber: 15
+                                    lineNumber: 49,
+                                    columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "surface-card rounded-[18px] p-6",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                             className: "mb-2 font-['Poppins'] text-lg font-medium text-[var(--ds-color-brand-700)]",
-                                            children: "Fetalcenter Centro Médico Goiânia"
+                                            children: "Dr. Jony Barbosa | Setor Bueno"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 75,
-                                            columnNumber: 17
+                                            lineNumber: 67,
+                                            columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "mb-2 flex items-center gap-2 font-medium text-[var(--ds-color-brand-700)]",
@@ -2523,53 +2484,53 @@ const Footer = ({ clinic })=>{
                                                         d: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Footer.tsx",
-                                                        lineNumber: 78,
-                                                        columnNumber: 21
+                                                        lineNumber: 70,
+                                                        columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Footer.tsx",
-                                                    lineNumber: 77,
-                                                    columnNumber: 19
+                                                    lineNumber: 69,
+                                                    columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 "(62) 3070-5555"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 76,
-                                            columnNumber: 17
+                                            lineNumber: 68,
+                                            columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "mb-1 text-sm leading-relaxed tracking-[0.2px] text-[var(--ds-color-text-muted)]",
                                             children: "contato@fetalcentercentromedico.com.br"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 82,
-                                            columnNumber: 17
+                                            lineNumber: 74,
+                                            columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "text-sm leading-relaxed tracking-[0.2px] text-[var(--ds-color-text-muted)]",
                                             children: "Edificio Absolut Business Style - 2 Andar - Av. T-4, 1478 - St. Bueno, Goiânia - GO, 74230-030"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 83,
-                                            columnNumber: 17
+                                            lineNumber: 75,
+                                            columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Footer.tsx",
-                                    lineNumber: 74,
-                                    columnNumber: 15
+                                    lineNumber: 66,
+                                    columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Footer.tsx",
-                            lineNumber: 56,
-                            columnNumber: 13
+                            lineNumber: 39,
+                            columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Footer.tsx",
-                    lineNumber: 21,
+                    lineNumber: 16,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2598,27 +2559,27 @@ const Footer = ({ clinic })=>{
                                                     r: "10"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Footer.tsx",
-                                                    lineNumber: 93,
+                                                    lineNumber: 84,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
                                                     points: "12 6 12 12 16 14"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Footer.tsx",
-                                                    lineNumber: 94,
+                                                    lineNumber: 85,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 92,
+                                            lineNumber: 83,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         "Horários"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Footer.tsx",
-                                    lineNumber: 91,
+                                    lineNumber: 82,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -2633,37 +2594,37 @@ const Footer = ({ clinic })=>{
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/Footer.tsx",
-                                                    lineNumber: 101,
+                                                    lineNumber: 92,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: schedule.hours
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Footer.tsx",
-                                                    lineNumber: 102,
+                                                    lineNumber: 93,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, schedule.day, true, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 100,
+                                            lineNumber: 91,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Footer.tsx",
-                                    lineNumber: 98,
+                                    lineNumber: 89,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Footer.tsx",
-                            lineNumber: 90,
+                            lineNumber: 81,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "surface-card relative h-64 overflow-hidden rounded-[18px] lg:w-2/3",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
-                                src: mapUrlToDisplay,
+                                src: defaultMapEmbedUrl,
                                 width: "100%",
                                 height: "100%",
                                 style: {
@@ -2675,18 +2636,18 @@ const Footer = ({ clinic })=>{
                                 className: "absolute inset-0 w-full h-full"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Footer.tsx",
-                                lineNumber: 109,
+                                lineNumber: 100,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/Footer.tsx",
-                            lineNumber: 108,
+                            lineNumber: 99,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Footer.tsx",
-                    lineNumber: 89,
+                    lineNumber: 80,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2699,14 +2660,14 @@ const Footer = ({ clinic })=>{
                                     children: "Dr. Jony Rodrigues Barbosa"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Footer.tsx",
-                                    lineNumber: 124,
+                                    lineNumber: 115,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     children: "MÉDICO | CRM-GO 7652 | RQE 3900 (Ginecologia e Obstetrícia) | RQE 9229 (Ultrassonografia)"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Footer.tsx",
-                                    lineNumber: 125,
+                                    lineNumber: 116,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2714,13 +2675,13 @@ const Footer = ({ clinic })=>{
                                     children: "Responsável técnico pelo conteúdo médico deste site: Dr. Jony Rodrigues Barbosa (CRM-GO 7652)."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Footer.tsx",
-                                    lineNumber: 126,
+                                    lineNumber: 117,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Footer.tsx",
-                            lineNumber: 123,
+                            lineNumber: 114,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2729,12 +2690,12 @@ const Footer = ({ clinic })=>{
                                 children: "Copyright © 2025 Dr. Jony Rodrigues Barbosa"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Footer.tsx",
-                                lineNumber: 129,
+                                lineNumber: 120,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/Footer.tsx",
-                            lineNumber: 128,
+                            lineNumber: 119,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2764,14 +2725,14 @@ const Footer = ({ clinic })=>{
                                                     ry: "5"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Footer.tsx",
-                                                    lineNumber: 136,
+                                                    lineNumber: 127,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                     d: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Footer.tsx",
-                                                    lineNumber: 137,
+                                                    lineNumber: 128,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -2781,13 +2742,13 @@ const Footer = ({ clinic })=>{
                                                     y2: "6.5"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Footer.tsx",
-                                                    lineNumber: 138,
+                                                    lineNumber: 129,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 135,
+                                            lineNumber: 126,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         social.platform === 'facebook' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -2804,12 +2765,12 @@ const Footer = ({ clinic })=>{
                                                 d: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Footer.tsx",
-                                                lineNumber: 143,
+                                                lineNumber: 134,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 142,
+                                            lineNumber: 133,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         social.platform === 'youtube' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -2827,48 +2788,48 @@ const Footer = ({ clinic })=>{
                                                     d: "M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Footer.tsx",
-                                                    lineNumber: 148,
+                                                    lineNumber: 139,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("polygon", {
                                                     points: "10 15 15 12 10 9 10 15"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Footer.tsx",
-                                                    lineNumber: 149,
+                                                    lineNumber: 140,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Footer.tsx",
-                                            lineNumber: 147,
+                                            lineNumber: 138,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, social.platform, true, {
                                     fileName: "[project]/src/components/Footer.tsx",
-                                    lineNumber: 133,
+                                    lineNumber: 124,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)))
                         }, void 0, false, {
                             fileName: "[project]/src/components/Footer.tsx",
-                            lineNumber: 131,
+                            lineNumber: 122,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Footer.tsx",
-                    lineNumber: 122,
+                    lineNumber: 113,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Footer.tsx",
-            lineNumber: 16,
+            lineNumber: 11,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/components/Footer.tsx",
-        lineNumber: 15,
+        lineNumber: 10,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -3486,7 +3447,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$C
 ;
 ;
 ;
-const RelatedServices = ({ service, category })=>{
+const categoryPaths = {
+    especialidade: 'especialidades',
+    exame: 'exames',
+    servico: 'servicos'
+};
+const RelatedServices = ({ service })=>{
     const relatedServices = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$services$2d$extended$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getRelatedServices"])(service, 3);
     if (relatedServices.length === 0) return null;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3499,7 +3465,7 @@ const RelatedServices = ({ service, category })=>{
                     children: "Serviços Relacionados"
                 }, void 0, false, {
                     fileName: "[project]/src/components/service-page/RelatedServices.tsx",
-                    lineNumber: 19,
+                    lineNumber: 24,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3507,7 +3473,7 @@ const RelatedServices = ({ service, category })=>{
                     children: "Conheça outros serviços que podem complementar seu tratamento"
                 }, void 0, false, {
                     fileName: "[project]/src/components/service-page/RelatedServices.tsx",
-                    lineNumber: 20,
+                    lineNumber: 25,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3515,27 +3481,27 @@ const RelatedServices = ({ service, category })=>{
                     children: relatedServices.map((relatedService, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                             title: relatedService.title,
                             description: relatedService.description,
-                            href: `/${category}/${relatedService.slug}`,
+                            href: `/${categoryPaths[relatedService.category]}/${relatedService.slug}`,
                             linkText: "Saiba Mais"
                         }, i, false, {
                             fileName: "[project]/src/components/service-page/RelatedServices.tsx",
-                            lineNumber: 26,
+                            lineNumber: 31,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/src/components/service-page/RelatedServices.tsx",
-                    lineNumber: 24,
+                    lineNumber: 29,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/service-page/RelatedServices.tsx",
-            lineNumber: 18,
+            lineNumber: 23,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/components/service-page/RelatedServices.tsx",
-        lineNumber: 17,
+        lineNumber: 22,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -3939,8 +3905,7 @@ const ServiceLayout = ({ service, category, children })=>{
                     }, ("TURBOPACK compile-time value", void 0)),
                     children,
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$service$2d$page$2f$RelatedServices$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                        service: service,
-                        category: category
+                        service: service
                     }, void 0, false, {
                         fileName: "[project]/src/components/service-page/ServiceLayout.tsx",
                         lineNumber: 43,

@@ -50,6 +50,174 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/calculadoras/calculadora-cronograma-pre-natal": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/calculadoras/[slug]",
+      "dataRoute": "/calculadoras/calculadora-cronograma-pre-natal.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/calculadoras/calculadora-cronometro-contracoes": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/calculadoras/[slug]",
+      "dataRoute": "/calculadoras/calculadora-cronometro-contracoes.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/calculadoras/calculadora-data-provavel-parto": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/calculadoras/[slug]",
+      "dataRoute": "/calculadoras/calculadora-data-provavel-parto.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/calculadoras/calculadora-ganho-peso-gestacional": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/calculadoras/[slug]",
+      "dataRoute": "/calculadoras/calculadora-ganho-peso-gestacional.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/calculadoras/calculadora-periodo-fertil-ovulacao": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/calculadoras/[slug]",
+      "dataRoute": "/calculadoras/calculadora-periodo-fertil-ovulacao.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/calculadoras/calculadora-risco-pre-eclampsia": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/calculadoras/[slug]",
+      "dataRoute": "/calculadoras/calculadora-risco-pre-eclampsia.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/calculadoras": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/calculadoras",
+      "dataRoute": "/calculadoras.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/contato": {
       "experimentalBypassFor": [
         {
@@ -770,6 +938,35 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/robots.txt": {
+      "initialHeaders": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/plain",
+        "x-next-cache-tags": "_N_T_/layout,_N_T_/robots.txt/layout,_N_T_/robots.txt/route,_N_T_/robots.txt"
+      },
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/robots.txt",
+      "dataRoute": null,
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/servicos/avaliacao-fetal-goiania": {
       "experimentalBypassFor": [
         {
@@ -794,7 +991,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/servicos/cirurgia-ginecologica-goiania": {
+    "/servicos/colposcopia-goiania": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -808,7 +1005,7 @@
       ],
       "initialRevalidateSeconds": false,
       "srcRoute": "/servicos/[slug]",
-      "dataRoute": "/servicos/cirurgia-ginecologica-goiania.rsc",
+      "dataRoute": "/servicos/colposcopia-goiania.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -866,7 +1063,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/servicos/histeroscopia-goiania": {
+    "/servicos/insercao-diu-goiania": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -880,7 +1077,7 @@
       ],
       "initialRevalidateSeconds": false,
       "srcRoute": "/servicos/[slug]",
-      "dataRoute": "/servicos/histeroscopia-goiania.rsc",
+      "dataRoute": "/servicos/insercao-diu-goiania.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -890,7 +1087,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/servicos/videohisteroscopia-goiania": {
+    "/servicos/laqueadura-tubaria-goiania": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -904,7 +1101,7 @@
       ],
       "initialRevalidateSeconds": false,
       "srcRoute": "/servicos/[slug]",
-      "dataRoute": "/servicos/videohisteroscopia-goiania.rsc",
+      "dataRoute": "/servicos/laqueadura-tubaria-goiania.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -914,7 +1111,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/servicos/videolaparoscopia-goiania": {
+    "/servicos/vasectomia-goiania": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -928,7 +1125,7 @@
       ],
       "initialRevalidateSeconds": false,
       "srcRoute": "/servicos/[slug]",
-      "dataRoute": "/servicos/videolaparoscopia-goiania.rsc",
+      "dataRoute": "/servicos/vasectomia-goiania.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -953,6 +1150,35 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/servicos",
       "dataRoute": "/servicos.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/sitemap.xml": {
+      "initialHeaders": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "application/xml",
+        "x-next-cache-tags": "_N_T_/layout,_N_T_/sitemap.xml/layout,_N_T_/sitemap.xml/route,_N_T_/sitemap.xml"
+      },
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/sitemap.xml",
+      "dataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -988,6 +1214,33 @@
     }
   },
   "dynamicRoutes": {
+    "/calculadoras/[slug]": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "routeRegex": "^/calculadoras/([^/]+?)(?:/)?$",
+      "dataRoute": "/calculadoras/[slug].rsc",
+      "fallback": null,
+      "fallbackRouteParams": [],
+      "dataRouteRegex": "^/calculadoras/([^/]+?)\\.rsc$",
+      "prefetchDataRoute": null,
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/especialidades/[slug]": {
       "experimentalBypassFor": [
         {

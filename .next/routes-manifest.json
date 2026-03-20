@@ -12,6 +12,30 @@
       "priority": true,
       "statusCode": 308,
       "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    },
+    {
+      "source": "/servicos/histeroscopia-goiania",
+      "destination": "/servicos",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/servicos/histeroscopia-goiania(?:/)?$"
+    },
+    {
+      "source": "/servicos/videolaparoscopia-goiania",
+      "destination": "/servicos",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/servicos/videolaparoscopia-goiania(?:/)?$"
+    },
+    {
+      "source": "/servicos/videohisteroscopia-goiania",
+      "destination": "/servicos",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/servicos/videohisteroscopia-goiania(?:/)?$"
+    },
+    {
+      "source": "/servicos/cirurgia-ginecologica-goiania",
+      "destination": "/servicos",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/servicos/cirurgia-ginecologica-goiania(?:/)?$"
     }
   ],
   "headers": [],
@@ -21,6 +45,14 @@
     "fallback": []
   },
   "dynamicRoutes": [
+    {
+      "page": "/calculadoras/[slug]",
+      "regex": "^/calculadoras/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/calculadoras/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
     {
       "page": "/especialidades/[slug]",
       "regex": "^/especialidades/([^/]+?)(?:/)?$",
@@ -74,6 +106,12 @@
       "namedRegex": "^/_not\\-found(?:/)?$"
     },
     {
+      "page": "/calculadoras",
+      "regex": "^/calculadoras(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/calculadoras(?:/)?$"
+    },
+    {
       "page": "/contato",
       "regex": "^/contato(?:/)?$",
       "routeKeys": {},
@@ -98,10 +136,22 @@
       "namedRegex": "^/localizacao(?:/)?$"
     },
     {
+      "page": "/robots.txt",
+      "regex": "^/robots\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/robots\\.txt(?:/)?$"
+    },
+    {
       "page": "/servicos",
       "regex": "^/servicos(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/servicos(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
     },
     {
       "page": "/sobre",

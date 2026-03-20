@@ -8,6 +8,7 @@ import ServiceContent from './ServiceContent';
 import RelatedServices from './RelatedServices';
 import ServiceFaq from './ServiceFaq';
 import ServiceCta from './ServiceCta';
+import ServiceCalculatorLinks from '../calculators/ServiceCalculatorLinks';
 
 interface Props {
   service: ExtendedServiceItem;
@@ -60,6 +61,7 @@ const ServiceLayout: React.FC<Props> = ({ service, category, children }) => {
         <ServiceHero service={service} />
         <ServiceContent service={service} />
         {children}
+        <ServiceCalculatorLinks service={service} />
         <RelatedServices service={service} />
         <ServiceFaq faqs={service.faq || []} serviceTitle={service.title} />
         <ServiceCta service={service} />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { calculators } from '../data/calculators';
 import Button from './ui/Button';
 import MobileMenu from './MobileMenu';
 
@@ -17,6 +18,11 @@ const mobileLinks = [
   { label: "Especialidades", href: "/especialidades" },
   { label: "Exames", href: "/exames" },
   { label: "Serviços", href: "/servicos" },
+  { label: "Calculadoras", href: "/calculadoras" },
+  ...calculators.map((calculator) => ({
+    label: `• ${calculator.title}`,
+    href: `/calculadoras/${calculator.slug}`,
+  })),
   { label: "Contato", href: "/contato" },
   { label: "📍 Setor Bueno", href: "/localizacao/ginecologista-setor-bueno-goiania" },
   { label: "📍 Setor Marista", href: "/localizacao/ginecologista-setor-marista-goiania" },
@@ -42,6 +48,33 @@ const Header: React.FC = () => {
               {link.label}
             </a>
           ))}
+          <div className="relative group">
+            <button className="flex items-center gap-1 py-2 hover:text-[var(--ds-color-brand-700)]">
+              Calculadoras
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:rotate-180 duration-300"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div className="invisible absolute right-0 top-full z-50 mt-0 w-[22rem] pt-3 opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100 lg:-left-4">
+              <div className="surface-card flex cursor-default flex-col overflow-hidden rounded-[18px] py-2">
+                <a
+                  href="/calculadoras"
+                  className="flex items-center gap-2 px-5 py-3 text-sm font-medium text-[var(--ds-color-brand-700)] transition-colors hover:bg-[rgba(72,98,132,0.05)]"
+                >
+                  Ver todas as calculadoras
+                </a>
+                <div className="mx-5 border-t border-[rgba(72,98,132,0.08)]" />
+                {calculators.map((calculator) => (
+                  <a
+                    key={calculator.slug}
+                    href={`/calculadoras/${calculator.slug}`}
+                    className="flex items-center gap-2 px-5 py-3 text-sm text-[var(--ds-color-text-muted)] transition-colors hover:bg-[rgba(72,98,132,0.05)] hover:text-[var(--ds-color-brand-700)]"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-[var(--ds-color-brand-500)]" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="8" x2="8" y1="10" y2="10"/><line x1="12" x2="12" y1="10" y2="10"/><line x1="16" x2="16" y1="10" y2="10"/></svg>
+                    <span className="leading-5">{calculator.title}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
           <div className="relative group">
             <button className="flex items-center gap-1 py-2 hover:text-[var(--ds-color-brand-700)]">
               Localização

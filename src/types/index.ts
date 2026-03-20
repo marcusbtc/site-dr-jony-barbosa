@@ -4,6 +4,62 @@ export interface ServiceItem {
   description: string;
 }
 
+export interface CalculatorFieldOption {
+  value: string;
+  label: string;
+  description?: string;
+}
+
+export interface CalculatorInputField {
+  id: string;
+  label: string;
+  type: 'date' | 'number' | 'select' | 'checkbox-group';
+  placeholder?: string;
+  hint?: string;
+  min?: number;
+  max?: number;
+  step?: number;
+  suffix?: string;
+  options?: CalculatorFieldOption[];
+}
+
+export interface CalculatorTimelineItem {
+  label: string;
+  timing: string;
+  details: string;
+}
+
+export interface CalculatorItem extends ServiceItem {
+  metaTitle: string;
+  metaDescription: string;
+  keywords: string[];
+  canonicalUrl: string;
+  primaryKeyword: string;
+  heroIntro: string;
+  intentLabel: string;
+  calculatorType:
+    | 'due-date'
+    | 'prenatal-schedule'
+    | 'fertile-window'
+    | 'weight-gain'
+    | 'preeclampsia-risk'
+    | 'contraction-timer';
+  inputs: CalculatorInputField[];
+  faq: FaqItem[];
+  relatedCalculators: string[];
+  relatedServices: string[];
+  medicalReviewNote: string;
+  disclaimer: string;
+  whatItShows: string;
+  howToUse: string[];
+  resultNotes: string[];
+  whenToTalkToDoctor: string[];
+  ctaTitle: string;
+  ctaDescription: string;
+  ctaLabel: string;
+  timelineHighlights?: CalculatorTimelineItem[];
+}
+
 export interface ExtendedServiceItem extends ServiceItem {
   // SEO Metadata
   metaTitle: string;

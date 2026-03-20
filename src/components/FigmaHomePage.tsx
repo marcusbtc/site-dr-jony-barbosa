@@ -101,8 +101,9 @@ function StickyExamCard({
 }) {
   return (
     <article
-      className="surface-card relative overflow-hidden rounded-[28px] border border-[rgba(72,98,132,0.1)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(244,248,249,0.92))] p-7 lg:sticky lg:top-32 lg:min-h-[21rem] lg:p-8"
+      className="surface-card relative overflow-hidden rounded-[28px] border border-[rgba(72,98,132,0.1)] p-7 lg:sticky lg:top-32 lg:min-h-[21rem] lg:p-8"
       style={{
+        backgroundColor: "rgba(72, 98, 132, 0.45)",
         zIndex: total + index,
       }}
     >

@@ -1,6 +1,8 @@
 {
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
+  "/calculadoras/[slug]/page": "/calculadoras/[slug]",
+  "/calculadoras/page": "/calculadoras",
   "/contato/page": "/contato",
   "/especialidades/[slug]/page": "/especialidades/[slug]",
   "/especialidades/page": "/especialidades",
@@ -9,7 +11,9 @@
   "/localizacao/[slug]/page": "/localizacao/[slug]",
   "/localizacao/page": "/localizacao",
   "/page": "/",
+  "/robots.txt/route": "/robots.txt",
   "/servicos/[slug]/page": "/servicos/[slug]",
   "/servicos/page": "/servicos",
+  "/sitemap.xml/route": "/sitemap.xml",
   "/sobre/page": "/sobre"
 }

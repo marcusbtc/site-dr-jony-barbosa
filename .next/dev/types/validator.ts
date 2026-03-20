@@ -36,6 +36,24 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
 }
 
 
+// Validate ../../../src/app/calculadoras/[slug]/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/calculadoras/[slug]">> = Specific
+  const handler = {} as typeof import("../../../src/app/calculadoras/[slug]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../src/app/calculadoras/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/calculadoras">> = Specific
+  const handler = {} as typeof import("../../../src/app/calculadoras/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../src/app/contato/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/contato">> = Specific

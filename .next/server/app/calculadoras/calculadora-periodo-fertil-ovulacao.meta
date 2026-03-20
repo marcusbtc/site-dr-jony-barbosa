@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/calculadoras/layout,_N_T_/calculadoras/[slug]/layout,_N_T_/calculadoras/[slug]/page,_N_T_/calculadoras/calculadora-periodo-fertil-ovulacao"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/calculadoras/$d$slug/__PAGE__",
+    "/calculadoras/$d$slug",
+    "/calculadoras",
+    "/_index",
+    "/_head"
+  ]
+}

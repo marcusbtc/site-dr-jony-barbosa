@@ -295,7 +295,29 @@
     "turbopack": {
       "root": "/Users/marcus/Downloads/dr.-jony-barbosa---ginecologista-goiânia"
     },
-    "distDirRoot": ".next"
+    "distDirRoot": ".next",
+    "_originalRedirects": [
+      {
+        "source": "/servicos/histeroscopia-goiania",
+        "destination": "/servicos",
+        "permanent": true
+      },
+      {
+        "source": "/servicos/videolaparoscopia-goiania",
+        "destination": "/servicos",
+        "permanent": true
+      },
+      {
+        "source": "/servicos/videohisteroscopia-goiania",
+        "destination": "/servicos",
+        "permanent": true
+      },
+      {
+        "source": "/servicos/cirurgia-ginecologica-goiania",
+        "destination": "/servicos",
+        "permanent": true
+      }
+    ]
   },
   "appDir": "/Users/marcus/Downloads/dr.-jony-barbosa---ginecologista-goiânia",
   "relativeAppDir": "",
