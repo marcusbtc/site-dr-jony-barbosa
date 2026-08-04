@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { contactInfo, businessHours, socialLinks } from '../data/site-data';
 
 const defaultMapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.0269040169446!2d-49.26921852485097!3d-16.675537084095318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef3c3787ab911%3A0x861f2a60dd5f0deb!2sDr.%20Jony%20Rodrigues%20Barbosa%20Ginecologista%20e%20Obstetra%20Goi%C3%A2nia!5e0!3m2!1spt-BR!2sbr!4v1773170528459!5m2!1spt-BR!2sbr";
@@ -17,23 +18,23 @@ const Footer: React.FC = () => {
           <div className="md:col-span-1">
             <h3 className="mb-4 font-['Poppins'] text-xl font-medium text-[var(--ds-color-brand-700)]">Navegação</h3>
             <ul className="space-y-2 font-['Questrial'] text-[var(--ds-color-text-muted)]">
-              <li><a href="/" className={navItemClass}>Início</a></li>
-              <li><a href="/sobre" className={navItemClass}>Sobre o Dr. Jony</a></li>
-              <li><a href="/especialidades" className={navItemClass}>Especialidades</a></li>
-              <li><a href="/exames" className={navItemClass}>Exames</a></li>
-              <li><a href="/servicos" className={navItemClass}>Serviços e Cirurgias</a></li>
+              <li><Link href="/" className={navItemClass}>Início</Link></li>
+              <li><Link href="/sobre" className={navItemClass}>Sobre o Dr. Jony</Link></li>
+              <li><Link href="/especialidades" className={navItemClass}>Especialidades</Link></li>
+              <li><Link href="/exames" className={navItemClass}>Exames</Link></li>
+              <li><Link href="/servicos" className={navItemClass}>Serviços e Cirurgias</Link></li>
             </ul>
           </div>
           
           <div className="md:col-span-1">
             <h3 className="mb-4 font-['Poppins'] text-xl font-medium text-[var(--ds-color-brand-700)]">Bairros Atendidos</h3>
             <ul className="space-y-2 font-['Questrial'] text-[var(--ds-color-text-muted)]">
-              <li><a href="/localizacao/ginecologista-setor-bueno-goiania" className={navItemClass}>Setor Bueno</a></li>
-              <li><a href="/localizacao/ginecologista-setor-marista-goiania" className={navItemClass}>Setor Marista</a></li>
-              <li><a href="/localizacao/ginecologista-setor-sul-goiania" className={navItemClass}>Setor Sul</a></li>
-              <li><a href="/localizacao/ginecologista-setor-oeste-goiania" className={navItemClass}>Setor Oeste</a></li>
-              <li><a href="/localizacao/ginecologista-alphaville-flamboyant-goiania" className={navItemClass}>Alphaville Flamboyant</a></li>
-              <li><a href="/localizacao/ginecologista-jardim-goias-goiania" className={navItemClass}>Jardim Goiás</a></li>
+              <li><Link href="/localizacao/ginecologista-setor-bueno-goiania" className={navItemClass}>Setor Bueno</Link></li>
+              <li><Link href="/localizacao/ginecologista-setor-marista-goiania" className={navItemClass}>Setor Marista</Link></li>
+              <li><Link href="/localizacao/ginecologista-setor-sul-goiania" className={navItemClass}>Setor Sul</Link></li>
+              <li><Link href="/localizacao/ginecologista-setor-oeste-goiania" className={navItemClass}>Setor Oeste</Link></li>
+              <li><Link href="/localizacao/ginecologista-alphaville-flamboyant-goiania" className={navItemClass}>Alphaville Flamboyant</Link></li>
+              <li><Link href="/localizacao/ginecologista-jardim-goias-goiania" className={navItemClass}>Jardim Goiás</Link></li>
             </ul>
           </div>
 

@@ -49,7 +49,7 @@ const IntroSection: React.FC = () => {
             </div>
             <div>
               <p className="italic text-slate-700 leading-relaxed text-sm mb-2">
-                "Minha missão é transformar a experiência da saúde feminina, trazendo segurança e autonomia para minhas pacientes."
+                &ldquo;Minha missão é transformar a experiência da saúde feminina, trazendo segurança e autonomia para minhas pacientes.&rdquo;
               </p>
               <div className="font-bold text-primary">Dr. Jony Barbosa</div>
             </div>

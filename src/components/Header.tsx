@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { calculators } from '../data/calculators';
 import Button from './ui/Button';
 import MobileMenu from './MobileMenu';
@@ -37,9 +38,9 @@ const Header: React.FC = () => {
     <header className="fixed top-0 z-50 w-full border-b border-[rgba(72,98,132,0.08)] bg-[rgba(239,242,246,0.88)] backdrop-blur-md">
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-4">
         <div className="flex items-center gap-2">
-          <a href="/" className="font-['EB_Garamond'] text-[30px] font-medium tracking-[0.5px] text-[var(--ds-color-brand-700)]">
+          <Link href="/" className="font-['EB_Garamond'] text-[30px] font-medium tracking-[0.5px] text-[var(--ds-color-brand-700)]">
             Dr. Jony Barbosa
-          </a>
+          </Link>
         </div>
 
         <nav className="hidden items-center gap-7 font-['Questrial'] text-[15px] tracking-[0.3px] text-[var(--ds-color-text-muted)] lg:flex">
@@ -55,12 +56,12 @@ const Header: React.FC = () => {
             </button>
             <div className="invisible absolute right-0 top-full z-50 mt-0 w-[22rem] pt-3 opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100 lg:-left-4">
               <div className="surface-card flex cursor-default flex-col overflow-hidden rounded-[18px] py-2">
-                <a
+                <Link
                   href="/calculadoras"
                   className="flex items-center gap-2 px-5 py-3 text-sm font-medium text-[var(--ds-color-brand-700)] transition-colors hover:bg-[rgba(72,98,132,0.05)]"
                 >
                   Ver todas as calculadoras
-                </a>
+                </Link>
                 <div className="mx-5 border-t border-[rgba(72,98,132,0.08)]" />
                 {calculators.map((calculator) => (
                   <a
