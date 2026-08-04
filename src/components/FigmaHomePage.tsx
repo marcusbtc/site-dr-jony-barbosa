@@ -1,5 +1,6 @@
 import Footer from "./Footer";
 import Header from "./Header";
+import Link from "next/link";
 import Slider from "./ui/Slider";
 import { faqs } from "../data/site-data";
 import { servicesExtended } from "../data/services-extended";
@@ -289,19 +290,19 @@ export default function FigmaHomePage() {
                   pré-natal, exames de rotina, planejamento reprodutivo ou
                   tratamento ginecológico, aqui você encontra cuidado
                   personalizado do início ao fim. Você pode conhecer mais sobre{" "}
-                  <a
+                  <Link
                     href="/especialidades/obstetricia-goiania"
                     className="font-medium text-[#486284] underline decoration-[#486284]/30 underline-offset-4 hover:text-[#2f465d]"
                   >
                     obstetrícia
-                  </a>{" "}
+                  </Link>{" "}
                   e{" "}
-                  <a
+                  <Link
                     href="/especialidades/ginecologia-goiania"
                     className="font-medium text-[#486284] underline decoration-[#486284]/30 underline-offset-4 hover:text-[#2f465d]"
                   >
                     ginecologia
-                  </a>
+                  </Link>
                   .
                 </p>
               </div>
@@ -369,12 +370,12 @@ export default function FigmaHomePage() {
                   O acompanhamento obstétrico combina consultas regulares,
                   ultrassonografia de alta precisão e orientação objetiva para
                   cada decisão da gestação, inclusive em casos de{" "}
-                  <a
+                  <Link
                     href="/especialidades/gestacao-alto-risco-goiania"
                     className="font-medium text-[#486284] underline decoration-[#486284]/30 underline-offset-4 hover:text-[#2f465d]"
                   >
                     pré-natal de alto risco
-                  </a>
+                  </Link>
                   .
                 </p>
                 <p>
@@ -424,12 +425,12 @@ export default function FigmaHomePage() {
                   diagnósticos complementares realizados em Goiânia com
                   tecnologia moderna e leitura cuidadosa. Para ver a lista
                   completa, acesse a página de{" "}
-                  <a
+                  <Link
                     href="/exames"
                     className="font-medium text-[#486284] underline decoration-[#486284]/30 underline-offset-4 hover:text-[#2f465d]"
                   >
                     exames ginecológicos e obstétricos
-                  </a>
+                  </Link>
                   .
                 </p>
               </div>
@@ -443,12 +444,12 @@ export default function FigmaHomePage() {
                 >
                   Agendar consulta
                 </a>
-                <a
+                <Link
                   href="/exames"
                   className="inline-flex items-center justify-center rounded-[26px] border border-[#486284] px-[15px] py-[10px] font-['DM_Sans'] text-[16px] tracking-[0.5px] text-[#486284] transition-colors duration-200 hover:bg-white/70"
                 >
                   Ver página de exames
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -476,19 +477,19 @@ export default function FigmaHomePage() {
                   Além das consultas, você encontra procedimentos
                   ginecológicos, planejamento reprodutivo e atendimentos
                   direcionados para diferentes fases da vida da mulher, como{" "}
-                  <a
+                  <Link
                     href="/servicos/insercao-diu-goiania"
                     className="font-medium text-[#486284] underline decoration-[#486284]/30 underline-offset-4 hover:text-[#2f465d]"
                   >
                     inserção de DIU
-                  </a>{" "}
+                  </Link>{" "}
                   e{" "}
-                  <a
+                  <Link
                     href="/servicos/histerectomia-goiania"
                     className="font-medium text-[#486284] underline decoration-[#486284]/30 underline-offset-4 hover:text-[#2f465d]"
                   >
                     histerectomia
-                  </a>
+                  </Link>
                   .
                 </p>
                 <p>
@@ -515,9 +516,9 @@ export default function FigmaHomePage() {
             </div>
 
             <div className="mt-10 flex justify-center">
-              <a className={primaryButtonClass} href="/servicos">
+              <Link className={primaryButtonClass} href="/servicos">
                 Ver página de procedimentos
-              </a>
+              </Link>
             </div>
           </div>
         </section>
