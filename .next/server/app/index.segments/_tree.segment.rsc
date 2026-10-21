@@ -1,8 +1,0 @@
-:HL["/_next/static/chunks/769a8c81086e4174.css","style"]
-:HL["https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=EB+Garamond:wght@500;600&family=Inter:wght@400;700&family=Lato:wght@500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@500;700&family=Questrial&display=swap","style"]
-:HL["/figma-home/hero-background.svg","image"]
-:HL["/figma-home/hero-ultrasound.png","image"]
-:HL["/figma-home/hero-pregnant.png","image"]
-:HL["/figma-home/hero-doctor.png","image"]
-:HL["/figma-home/hero-wave.svg","image"]
-0:{"buildId":"rYd-iQH6WxKZNbiRWHYdQ","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
